@@ -4,6 +4,7 @@ import ComputingSystemsPlanner from "./ComputingSystemsPlanner"
 import HCIPlanner from "./HCIPlanner"
 import BasicTable from "./BasicTable";
 import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRoboticsPlanner";
+import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
 
 function Planner() {
   const [reviews, setReviews] = useState([])
@@ -42,6 +43,7 @@ function Planner() {
       { specialization === "Computing Systems" && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       { specialization === "Human-Computer Interaction" && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       { specialization === "Computation Perception & Robotics" && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
+      { specialization === "Interactive Intelligence" && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       <h1>Chosen Course Plan:</h1>
       <BasicTable rows={ chosenCourseList } initiallySorted={ false } />
     </div>
