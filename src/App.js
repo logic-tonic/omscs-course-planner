@@ -9,7 +9,10 @@ function App() {
       <div className="App-body">
         <div className="requirements">
           <p>Welcome! This site helps you plan your course list for the Online Masters of Science in Computer Science (OMSCS) from Georgia Tech.</p>
-          <p>All data comes from <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and the <a href="https://omscs.gatech.edu/program-info/specializations" target="_blank" rel="noreferrer">Official OMSCS site</a>. The latest review info is fetched on pageload, and the list of specialization requirements was last updated June 2023. When you select a course, it appears in your constructed plan at the very bottom of the page.</p>
+          <p>All data comes from <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and the <a href="https://omscs.gatech.edu/program-info/specializations" target="_blank" rel="noreferrer">Official OMSCS site</a>.
+          The latest review info is fetched on pageload, and the list of specialization requirements was last updated June 2023.
+          When you select a course, it appears in your constructed plan at the very bottom of the page.
+          After selecting courses, you can check their availabilities at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>.</p>
 
           <h2>Degree requirements:</h2>
           <ul>

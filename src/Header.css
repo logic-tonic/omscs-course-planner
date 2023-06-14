@@ -1,0 +1,15 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.Header .actions .coffee img {
+    width: 10em;
+    margin-right: 1em;
+}
+
+.Header .actions .github {
+    width: 3em;
+}
