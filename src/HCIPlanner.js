@@ -12,7 +12,6 @@ const electivesPartOne = [
 ];
 const electivesPartTwo = [
   "Introduction to Health Informatics",
-  "Mobile and Ubiquitous Computing",
 ];
 
 function HCIPlanner({ courses, addToCourseList }) {
