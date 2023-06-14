@@ -1,18 +1,33 @@
 import React, { useState, useEffect } from "react";
 import "./BasicTable.css"
 
-function BasicTable({rows, addToCourseList, showCheckbox }) {
+function BasicTable({ rows, addToCourseList, showCheckbox, initiallySorted = true}) {
   const [sortedRows, setSortedRows] = useState(rows)
   const [currentlySortedBy, setCurrentlySortedBy] = useState("")
   const [sortDirection, setSortDirection] = useState("ascending")
 
   useEffect(() => {
-    sortRows("Course")
+    if (initiallySorted) setCurrentlySortedBy("Course")
   }, [])
 
   useEffect(() => {
+      sortRows(currentlySortedBy)
+  }, [currentlySortedBy, sortDirection])
+
+
+  useEffect(() => {
     sortRows(currentlySortedBy)
-  }, [rows])
+  }, [rows.length])
+
+  const handleHeaderClick = (event) => {
+    const clickedHeader = event.target.childNodes[0]?.textContent.trim();
+    if (clickedHeader === currentlySortedBy || ["↑", "↓"].includes(clickedHeader)) {
+      setSortDirection(sortDirection === "ascending" ? "descending" : "ascending") }
+    else {
+      setSortDirection("ascending")
+      setCurrentlySortedBy(clickedHeader)
+    }
+  }
 
   const sortCompareFunction = (a, b, propertyName, direction) => {
     if (a[propertyName] < b[propertyName]) {
@@ -24,7 +39,6 @@ function BasicTable({rows, addToCourseList, showCheckbox }) {
     return 0;
   }
   const sortRows = (sortHeader) => {
-    setCurrentlySortedBy(sortHeader)
     let propertyName;
     if (sortHeader === "Course") { propertyName = "name" }
     else if (sortHeader === "Foundational?") { propertyName = "isFoundational" }
@@ -32,11 +46,8 @@ function BasicTable({rows, addToCourseList, showCheckbox }) {
     else if (sortHeader === "Difficulty") { propertyName = "difficulty" }
     else if (sortHeader === "Workload") { propertyName = "workload" }
     else if (sortHeader === "Reviews") { propertyName = "reviewCount" }
-    let direction;
-    if (sortHeader === currentlySortedBy) { direction = sortDirection === "ascending" ? "descending" : "ascending" }
-    else { direction = "ascending"}
-    setSortedRows(rows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, direction)))
-    setSortDirection(direction)
+    setSortedRows(rows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, sortDirection)))
+    setSortDirection(sortDirection)
   }
 
   const formatNumber = (value) => {
@@ -52,22 +63,22 @@ function BasicTable({rows, addToCourseList, showCheckbox }) {
             <thead>
               <tr>
                 { showCheckbox && <th scope="col">Added to Course Plan</th> }
-                <th scope="col" onClick={(event) => sortRows(event.target.childNodes[0]?.textContent.trim())}>
+                <th scope="col" onClick={ handleHeaderClick }>
                   Course {currentlySortedBy === "Course" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={(event) => sortRows(event.target.childNodes[0]?.textContent.trim())}>
+                <th scope="col" onClick={ handleHeaderClick }>
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={(event) => sortRows(event.target.childNodes[0]?.textContent.trim())}>
+                <th scope="col" onClick={ handleHeaderClick }>
                   Rating {currentlySortedBy === "Rating" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={(event) => sortRows(event.target.childNodes[0]?.textContent.trim())}>
+                <th scope="col" onClick={ handleHeaderClick }>
                   Difficulty {currentlySortedBy === "Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={(event) => sortRows(event.target.childNodes[0]?.textContent.trim())}>
+                <th scope="col" onClick={ handleHeaderClick }>
                   Workload {currentlySortedBy === "Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={(event) => sortRows(event.target.childNodes[0]?.textContent.trim())}>
+                <th scope="col" onClick={ handleHeaderClick }>
                   Reviews {currentlySortedBy === "Reviews" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
               </tr>

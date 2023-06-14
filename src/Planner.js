@@ -1,4 +1,3 @@
-import './Planner.css';
 import React, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
 import ComputingSystemsPlanner from "./ComputingSystemsPlanner"
@@ -40,7 +39,7 @@ function Planner() {
       </Form.Select>
       { specialization === "Computing Systems" && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       <h1>Chosen Course Plan:</h1>
-      <BasicTable rows={ chosenCourseList } />
+      <BasicTable rows={ chosenCourseList } initiallySorted={ false } />
     </div>
   );
 }
