@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
 import ComputingSystemsPlanner from "./ComputingSystemsPlanner"
+import HCIPlanner from "./HCIPlanner"
 import BasicTable from "./BasicTable.js";
 
 function Planner() {
@@ -38,6 +39,7 @@ function Planner() {
         <option value="Machine Learning">Machine Learning</option>
       </Form.Select>
       { specialization === "Computing Systems" && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
+      { specialization === "Human-Computer Interaction" && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       <h1>Chosen Course Plan:</h1>
       <BasicTable rows={ chosenCourseList } initiallySorted={ false } />
     </div>
