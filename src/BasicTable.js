@@ -10,6 +10,10 @@ function BasicTable({rows, addToCourseList, showCheckbox }) {
     sortRows("Course")
   }, [])
 
+  useEffect(() => {
+    sortRows(currentlySortedBy)
+  }, [rows])
+
   const sortCompareFunction = (a, b, propertyName, direction) => {
     if (a[propertyName] < b[propertyName]) {
       return direction == "ascending" ? -1 : 1;
@@ -31,7 +35,7 @@ function BasicTable({rows, addToCourseList, showCheckbox }) {
     let direction;
     if (sortHeader === currentlySortedBy) { direction = sortDirection === "ascending" ? "descending" : "ascending" }
     else { direction = "ascending"}
-    setSortedRows(sortedRows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, direction)))
+    setSortedRows(rows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, direction)))
     setSortDirection(direction)
   }
 

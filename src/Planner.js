@@ -40,10 +40,7 @@ function Planner() {
       </Form.Select>
       { specialization === "Computing Systems" && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       <h1>Chosen Course Plan:</h1>
-      <BasicTable 
-        rows={ chosenCourseList }
-        addToCourseList={ addToCourseList }
-      />
+      <BasicTable rows={ chosenCourseList } />
     </div>
   );
 }
