@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/omscs-course-planner/static/css/main.7dd41744.css",
-    "main.js": "/omscs-course-planner/static/js/main.f2cc2a7b.js",
-    "index.html": "/omscs-course-planner/index.html",
-    "main.7dd41744.css.map": "/omscs-course-planner/static/css/main.7dd41744.css.map",
-    "main.f2cc2a7b.js.map": "/omscs-course-planner/static/js/main.f2cc2a7b.js.map"
+    "main.css": "/static/css/main.7dd41744.css",
+    "main.js": "/static/js/main.f2cc2a7b.js",
+    "index.html": "/index.html",
+    "main.7dd41744.css.map": "/static/css/main.7dd41744.css.map",
+    "main.f2cc2a7b.js.map": "/static/js/main.f2cc2a7b.js.map"
   },
   "entrypoints": [
     "static/css/main.7dd41744.css",
