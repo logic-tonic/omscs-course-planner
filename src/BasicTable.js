@@ -30,10 +30,10 @@ function BasicTable({ rows, addToCourseList, showCheckbox, initiallySorted = tru
   }
 
   const sortCompareFunction = (a, b, propertyName, direction) => {
-    if (a[propertyName] < b[propertyName]) {
+    if ((a[propertyName] || 0) < (b[propertyName] || 0)) {
       return direction == "ascending" ? -1 : 1;
     }
-    if (a[propertyName] > b[propertyName]) {
+    if ((a[propertyName] || 0) > (b[propertyName] || 0)) {
       return direction == "ascending" ? 1 : -1;
     }
     return 0;
