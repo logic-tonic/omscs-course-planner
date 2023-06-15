@@ -13,6 +13,7 @@ function Planner() {
   const [reviews, setReviews] = useState([])
   const [specialization, setSpecialization] = useState('')
   const [chosenCourseList, setChosenCourseList] = useState([]);
+  const [copied, setCopied] = useState(false);
 
   const addToCourseList = (row) => {
     if (chosenCourseList.find(course => course.id === row.id)) {
@@ -44,6 +45,7 @@ function Planner() {
         range.select();
     }
     document.execCommand("copy");
+    setCopied(true)
   }
   
   const fetchReviews = () => {
@@ -73,7 +75,7 @@ function Planner() {
       { specialization === "Interactive Intelligence" && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       { specialization === "Machine Learning" && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       <h1>Chosen Course Plan:</h1>
-      <Button variant="primary" onClick={ handleCopy }>Copy</Button>
+      <Button variant="primary" onClick={ handleCopy }>{ copied ? "✓" : "Copy" }</Button>
       <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />
     </div>
   );
