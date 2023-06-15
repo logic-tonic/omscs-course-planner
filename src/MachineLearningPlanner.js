@@ -15,7 +15,7 @@ const electives = [
   "Reinforcement Learning and Decision Making",
   "Deep Learning",
   "Machine Learning for Trading",
-  "Natural Language",
+  "Natural Language Processing",
   "Data and Visual Analytics",
   "Big Data Analytics for Healthcare",
   "Introduction to Theory and Practice of Bayesian Statistics",
@@ -39,7 +39,6 @@ function MachineLearningPlanner({ courses, addToCourseList }) {
       />
       <h2>Electives</h2>
       <h3>Pick three (3) of:</h3>
-      <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will be automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable 
         rows={ courses.filter(course => electives.includes(course.name)) }
         addToCourseList={ addToCourseList }

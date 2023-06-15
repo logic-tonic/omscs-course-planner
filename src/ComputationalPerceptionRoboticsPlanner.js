@@ -13,7 +13,7 @@ const electivesPartOne = [
   "Computational Photography",
   "Introduction to Computer Vision",
   "Cyber Physical Design and Analysis",
-  "Natural Language"
+  "Natural Language Processing"
 ];
 const electivesPartTwo = [
   "Artificial Intelligence Techniques for Robotics",
@@ -39,7 +39,6 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
       <h3>Pick three (3) courses from Perception and Robotics, with at least one (1) course from each:</h3>
       <br />
       <h4>Perception</h4>
-      <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable 
         rows={ courses.filter(course => electivesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }

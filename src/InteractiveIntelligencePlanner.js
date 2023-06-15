@@ -53,7 +53,6 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList }) {
         showCheckbox
       />
       <h4>AI Methods:</h4>
-      <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable
         rows={ courses.filter(course => electivesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
