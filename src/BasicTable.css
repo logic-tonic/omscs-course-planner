@@ -1,3 +1,9 @@
 .container {
     width: auto;
 }
+
+.container .table thead {
+    position: sticky;
+    top: 0;
+    background-color: #edecec;
+}
