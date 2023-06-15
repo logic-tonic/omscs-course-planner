@@ -54,6 +54,11 @@ function Planner() {
     .then(data => setReviews(data?.pageProps?.courses))
   }
 
+  const handleSpecializationChange = (event) => {
+    setChosenCourseList([])
+    setSpecialization(event.target.value)
+  }
+
   useEffect(() => {
     fetchReviews()
   }, [])
@@ -61,7 +66,7 @@ function Planner() {
   return (
     <div className="Planner">
       <h2>Pick a specialization to begin:</h2>
-      <Form.Select size="lg" onChange={(event) => setSpecialization(event.target.value)}>
+      <Form.Select size="lg" onChange={ handleSpecializationChange }>
         <option>Choose your specialization</option>
         <option value="Computation Perception & Robotics">Computation Perception & Robotics</option>
         <option value="Computing Systems">Computing Systems</option>
