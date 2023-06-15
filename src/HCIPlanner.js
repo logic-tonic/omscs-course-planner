@@ -1,5 +1,6 @@
 import React from "react";
 import BasicTable from "./BasicTable.js";
+import { freeElectives } from "./utils.js";
 
 const coreCourses = [
   "Mobile and Ubiquitous Computing",
@@ -42,7 +43,7 @@ function HCIPlanner({ courses, addToCourseList }) {
       <h3>Pick five (5) of:</h3>
       <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable 
-        rows={ courses.filter(course => !coreCourses.concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)) }
+        rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCourses.concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />

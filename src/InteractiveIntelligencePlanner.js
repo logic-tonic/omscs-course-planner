@@ -1,5 +1,6 @@
 import React from "react";
 import BasicTable from "./BasicTable.js";
+import { freeElectives } from "./utils.js";
 
 const coreCoursesPartOne = [
   "Software Development Process",
@@ -67,7 +68,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList }) {
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
       <BasicTable 
-        rows={ courses.filter(course => !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).concat(electivesPartThree).includes(course.name)) }
+        rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).concat(electivesPartThree).includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />
