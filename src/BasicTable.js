@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./BasicTable.css"
 
-function BasicTable({ rows, addToCourseList, showCheckbox, initiallySorted = true}) {
+function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySorted = true}) {
   const [sortedRows, setSortedRows] = useState(rows)
   const [currentlySortedBy, setCurrentlySortedBy] = useState("")
   const [sortDirection, setSortDirection] = useState("ascending")
@@ -59,7 +59,7 @@ function BasicTable({ rows, addToCourseList, showCheckbox, initiallySorted = tru
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <table className="table table-bordered">
+          <table className="table table-bordered" id={ tableId } >
             <thead>
               <tr>
                 { showCheckbox && <th scope="col">Add</th> }

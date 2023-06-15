@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import ComputingSystemsPlanner from "./ComputingSystemsPlanner"
 import HCIPlanner from "./HCIPlanner"
 import BasicTable from "./BasicTable";
 import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRoboticsPlanner";
 import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
+import './Planner.css'
 
 function Planner() {
   const [reviews, setReviews] = useState([])
@@ -18,6 +20,30 @@ function Planner() {
     } else {
       setChosenCourseList(chosenCourseList.concat(row))
     }
+  }
+
+  const handleCopy = () => {
+    const el = document.getElementById('chosenCourses')
+
+    var body = document.body, range, sel;
+    if (document.createRange && window.getSelection) {
+        range = document.createRange();
+        sel = window.getSelection();
+        sel.removeAllRanges();
+        console.log(el)
+        try {
+            range.selectNodeContents(el);
+            sel.addRange(range);
+        } catch (e) {
+            range.selectNode(el);
+            sel.addRange(range);
+        }
+    } else if (body.createTextRange) {
+        range = body.createTextRange();
+        range.moveToElementText(el);
+        range.select();
+    }
+    document.execCommand("copy");
   }
   
   const fetchReviews = () => {
@@ -47,7 +73,8 @@ function Planner() {
       { specialization === "Interactive Intelligence" && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       { specialization === "Machine Learning" && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
       <h1>Chosen Course Plan:</h1>
-      <BasicTable rows={ chosenCourseList } initiallySorted={ false } />
+      <Button variant="primary" onClick={ handleCopy }>Copy</Button>
+      <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />
     </div>
   );
 }
