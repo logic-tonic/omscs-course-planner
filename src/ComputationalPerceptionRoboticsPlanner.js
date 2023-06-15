@@ -22,21 +22,23 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
   return (
     <div>
       <h2>Core Courses</h2>
-      <h3>Pick one of:</h3>
+      <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />
-      <h3>Pick one of:</h3>
+      <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />
       <h2>Electives</h2>
-      <h3>Pick three (3) courses from Perception and Robotics, with at least one (1) course from each.</h3>
+      <h3>Pick three (3) courses from Perception and Robotics, with at least one (1) course from each:</h3>
+      <br />
       <h4>Perception</h4>
+      <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable 
         rows={ courses.filter(course => electivesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
@@ -49,7 +51,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
         showCheckbox
       />
       <h2>Free Electives</h2>
-      <h3>Pick five of:</h3>
+      <h3>Pick five (5) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)) }
         addToCourseList={ addToCourseList }

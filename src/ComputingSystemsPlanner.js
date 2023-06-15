@@ -34,28 +34,29 @@ function ComputingSystemsPlanner({ courses, addToCourseList }) {
   return (
     <div>
       <h2>Core Courses</h2>
-      <p>Note: Any Core Courses in excess of the 9 hour (3 class) requirement may be used as Computing Systems Electives.</p>
-      <h3>Pick two of:</h3>
+      <h5>Note: Any Core Courses in excess of the 9 hour (3 class) requirement may be used as Computing Systems Electives.</h5>
+      <h3>Pick two (2) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />
-      <h3>Pick one of:</h3>
+      <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />
       <h2>Electives</h2>
-      <h3>Pick three of:</h3>
+      <h3>Pick three (3) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => electives.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
       />
       <h2>Free Electives</h2>
-      <h3>Pick four of:</h3>
+      <h3>Pick four (4) of:</h3>
+      <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable 
         rows={ courses.filter(course => !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)) }
         addToCourseList={ addToCourseList }

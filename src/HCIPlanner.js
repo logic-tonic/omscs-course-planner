@@ -18,7 +18,7 @@ function HCIPlanner({ courses, addToCourseList }) {
   return (
     <div>
       <h2>Core Courses</h2>
-      <h3>Pick two of:</h3>
+      <h3>Pick two (2) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCourses.includes(course.name)) }
         addToCourseList={ addToCourseList }
@@ -39,7 +39,8 @@ function HCIPlanner({ courses, addToCourseList }) {
         showCheckbox
       />
       <h2>Free Electives</h2>
-      <h3>Pick five of:</h3>
+      <h3>Pick five (5) of:</h3>
+      <h5>NOTE: <a href="https://omscs.gatech.edu/cs-7650-natural-language-processing" target="_blank" rel="noreferrer">Natural Language Processing</a> should also be on this list. It will automatically appear here when it's added to OMSCentral.</h5>
       <BasicTable 
         rows={ courses.filter(course => !coreCourses.concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)) }
         addToCourseList={ addToCourseList }
