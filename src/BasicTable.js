@@ -122,7 +122,12 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                         reviewCount,
                       })}/>
                     </td> }
-                    <td><div>{ name }</div><div><a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a></div></td>
+                    <td>
+                      <div>{ name }</div>
+                      <div>
+                        <a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a>
+                      </div>
+                    </td>
                     <td>{ formatNumber(rating) }</td>
                     <td>{ formatNumber(difficulty) }</td>
                     <td>{ formatNumber(workload) }</td>

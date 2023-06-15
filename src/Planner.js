@@ -47,11 +47,45 @@ function Planner() {
     document.execCommand("copy");
     setCopied(true)
   }
+
+  const cleanData = (data) => {
+    const reviews = data?.pageProps?.courses;
+    const cleanedReviews = reviews.map(review => {
+      if (review.name === "Mobile and Ubiquitous Computing") { return Object.assign(review, { isFoundational: true }) }
+      else { return review }
+    })
+    return cleanedReviews.concat({
+      "codes": [
+          "CS-7650"
+      ],
+      "creditHours": 3,
+      "description": "This course gives an overview of modern data-driven techniques for natural language processing.",
+      "id": "external-import-CS-7650",
+      "isDeprecated": false,
+      "isFoundational": true,
+      "name": "Natural Language Processing",
+      "officialURL": "https://omscs.gatech.edu/cs-7650-natural-language-processing",
+      "reviewCount": 0,
+    }).concat({
+      "codes": [
+        "CS-8803-O16"
+      ],
+      "creditHours": 3,
+      "description": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities.",
+      "id": "external-import-CS-8803-O16",
+      "isDeprecated": false,
+      "isFoundational": false,
+      "name": "Digital Health Equity",
+      "officialURL": "https://omscs.gatech.edu/cs-8803-o16-digital-health-equity",
+      "reviewCount": 0,
+    })
+  }
   
   const fetchReviews = () => {
     fetch("https://www.omscentral.com/_next/data/RbJpKU_7gp7Gm26pP9748/index.json")
     .then(response => response.json())
-    .then(data => setReviews(data?.pageProps?.courses))
+    .then(data => cleanData(data))
+    .then(cleanedData => setReviews(cleanedData))
   }
 
   const handleSpecializationChange = (event) => {
