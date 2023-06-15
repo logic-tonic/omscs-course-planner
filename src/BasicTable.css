@@ -7,3 +7,9 @@
     top: 0;
     background-color: #edecec;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        overflow-x: scroll;
+    }
+}

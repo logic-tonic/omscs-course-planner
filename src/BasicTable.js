@@ -62,7 +62,7 @@ function BasicTable({ rows, addToCourseList, showCheckbox, initiallySorted = tru
           <table className="table table-bordered">
             <thead>
               <tr>
-                { showCheckbox && <th scope="col">Added to Course Plan</th> }
+                { showCheckbox && <th scope="col">Add</th> }
                 <th scope="col" onClick={ handleHeaderClick }>
                   Course {currentlySortedBy === "Course" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
