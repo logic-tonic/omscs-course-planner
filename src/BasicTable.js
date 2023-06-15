@@ -86,7 +86,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
             <tbody>
               { sortedRows.length === 0 ? (
                 <tr className="empty-table">
-                  There's nothing here yet. Pick a specialization and add some classes to populate your course list!
+                  <td>There's nothing here yet. Pick a specialization and add some classes to populate your course list!</td>
                 </tr>
               ) : sortedRows.map(
                 (
