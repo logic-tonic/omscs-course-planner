@@ -67,9 +67,6 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                   Course {currentlySortedBy === "Course" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
-                  Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th scope="col" onClick={ handleHeaderClick }>
                   Rating {currentlySortedBy === "Rating" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
@@ -80,6 +77,9 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
                   Reviews {currentlySortedBy === "Reviews" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
+                </th>
+                <th scope="col" onClick={ handleHeaderClick }>
+                  Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
               </tr>
             </thead>
@@ -119,11 +119,11 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                       })}/>
                     </td> }
                     <td><div>{ name }</div><div><a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a></div></td>
-                    <td>{ isFoundational ? "yes" : "no" }</td>
                     <td>{ formatNumber(rating) }</td>
                     <td>{ formatNumber(difficulty) }</td>
                     <td>{ formatNumber(workload) }</td>
                     <td>{ reviewCount }</td>
+                    <td>{ isFoundational ? "yes" : "no" }</td>
                   </tr>
                   )
                 )}
