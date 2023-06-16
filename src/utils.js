@@ -61,3 +61,23 @@ export const freeElectives = [
     "Digital Marketing",
     "Information Security Policies and Strategies"
 ]
+export const Specialization = {
+    ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',
+    ComputingSystems: 'Computing Systems',
+    HumanComputerInteraction: 'Human-Computer Interaction',
+    InteractiveIntelligence: 'Interactive Intelligence',
+    MachineLearning: 'Machine Learning',
+}
+
+export const LocalStorageKeys = {
+    Specialization: 'specialization',
+    SelectedCourses: 'selectedCourses'
+}
+
+export const writeToLocalStorage = (key, value) => {
+    window.localStorage.setItem(key, value)
+}
+
+export const readFromLocalStorage = (key) => {
+    return window.localStorage.getItem(key)
+}

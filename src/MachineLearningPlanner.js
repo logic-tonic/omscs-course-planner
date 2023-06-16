@@ -21,7 +21,7 @@ const electives = [
   "Introduction to Theory and Practice of Bayesian Statistics",
 ];
 
-function MachineLearningPlanner({ courses, addToCourseList }) {
+function MachineLearningPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
       <h2>Core Courses</h2>
@@ -30,12 +30,14 @@ function MachineLearningPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => coreCoursesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h2>Electives</h2>
       <h3>Pick three (3) of:</h3>
@@ -43,6 +45,7 @@ function MachineLearningPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => electives.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
@@ -50,6 +53,7 @@ function MachineLearningPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
     </div>
   );
