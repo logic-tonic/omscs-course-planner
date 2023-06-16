@@ -15,7 +15,7 @@ const electivesPartTwo = [
   "Introduction to Health Informatics",
 ];
 
-function HCIPlanner({ courses, addToCourseList }) {
+function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
       <h2>Core Courses</h2>
@@ -24,6 +24,7 @@ function HCIPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => coreCourses.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h2>Electives</h2>
       <h3>Pick three (3) courses from the two sub-areas below, including at least one from each sub-area:</h3>
@@ -32,12 +33,14 @@ function HCIPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => electivesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h4>Sub-area: Interactive technology</h4>
       <BasicTable 
         rows={ courses.filter(course => electivesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
@@ -45,6 +48,7 @@ function HCIPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCourses.concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
     </div>
   );

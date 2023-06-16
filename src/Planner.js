@@ -8,19 +8,31 @@ import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRob
 import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
 import './Planner.css'
+import {LocalStorageKeys, Specialization, writeToLocalStorage, readFromLocalStorage} from './utils.js'
+
 
 function Planner() {
   const [reviews, setReviews] = useState([])
-  const [specialization, setSpecialization] = useState('')
+  const [chosenSpecialization, setChosenSpecialization] = useState('')
   const [chosenCourseList, setChosenCourseList] = useState([]);
   const [copied, setCopied] = useState(false);
 
   const addToCourseList = (row) => {
+    let newChosenCourseList;
     if (chosenCourseList.find(course => course.id === row.id)) {
-      setChosenCourseList(chosenCourseList.filter(course => course.id !== row.id))
+      newChosenCourseList = chosenCourseList.filter(course => course.id !== row.id)
     } else {
-      setChosenCourseList(chosenCourseList.concat(row))
+      newChosenCourseList = chosenCourseList.concat(row)
     }
+    setChosenCourseList(newChosenCourseList)
+    writeToLocalStorage(LocalStorageKeys.SelectedCourses, JSON.stringify(newChosenCourseList))
+  }
+
+  const handleReset = () => {
+    setChosenCourseList([])
+    setChosenSpecialization('')
+    writeToLocalStorage(LocalStorageKeys.Specialization, '')
+    writeToLocalStorage(LocalStorageKeys.SelectedCourses, [])
   }
 
   const handleCopy = () => {
@@ -31,6 +43,7 @@ function Planner() {
         range = document.createRange();
         sel = window.getSelection();
         sel.removeAllRanges();
+        console.log(el)
         try {
             range.selectNodeContents(el);
             sel.addRange(range);
@@ -80,7 +93,7 @@ function Planner() {
     })
   }
   
-  const fetchReviews = () => {
+  const fetchReviews = async () => {
     fetch("https://www.omscentral.com/_next/data/RbJpKU_7gp7Gm26pP9748/index.json")
     .then(response => response.json())
     .then(data => cleanData(data))
@@ -89,29 +102,40 @@ function Planner() {
 
   const handleSpecializationChange = (event) => {
     setChosenCourseList([])
-    setSpecialization(event.target.value)
+    setChosenSpecialization(event.target.value)
+    writeToLocalStorage(LocalStorageKeys.Specialization, event.target.value)
+    writeToLocalStorage(LocalStorageKeys.SelectedCourses, [])
   }
 
   useEffect(() => {
     fetchReviews()
   }, [])
 
+  useEffect(() => {
+    const specializationFromStorage = readFromLocalStorage(LocalStorageKeys.Specialization);
+    const coursesFromStorage = readFromLocalStorage(LocalStorageKeys.SelectedCourses)
+    if (Object.values(Specialization).includes(specializationFromStorage)) {
+      setChosenSpecialization(specializationFromStorage)
+      if(coursesFromStorage) {
+        const listCourses = JSON.parse(coursesFromStorage)
+        setChosenCourseList(listCourses.filter(course => reviews.find(row => row.id === course.id)))
+      }
+    }
+  }, [reviews])
+
   return (
     <div className="Planner">
+    <Button variant="primary" onClick={ handleReset }>Reset</Button>
       <h2>Pick a specialization to begin:</h2>
-      <Form.Select size="lg" onChange={ handleSpecializationChange }>
+      <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization}>
         <option>Choose your specialization</option>
-        <option value="Computation Perception & Robotics">Computation Perception & Robotics</option>
-        <option value="Computing Systems">Computing Systems</option>
-        <option value="Human-Computer Interaction">Human-Computer Interaction</option>
-        <option value="Interactive Intelligence">Interactive Intelligence</option>
-        <option value="Machine Learning">Machine Learning</option>
+        {Object.values(Specialization).map(spec => <option value={spec} key={spec} >{spec}</option>)}
       </Form.Select>
-      { specialization === "Computing Systems" && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
-      { specialization === "Human-Computer Interaction" && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
-      { specialization === "Computation Perception & Robotics" && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
-      { specialization === "Interactive Intelligence" && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } /> }
-      { specialization === "Machine Learning" && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } /> }
+      { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       <h1>Chosen Course Plan:</h1>
       <Button variant="primary" onClick={ handleCopy }>{ copied ? "✓" : "Copy" }</Button>
       <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />

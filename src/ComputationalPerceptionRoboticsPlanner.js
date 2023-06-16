@@ -19,7 +19,7 @@ const electivesPartTwo = [
   "Artificial Intelligence Techniques for Robotics",
 ];
 
-function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
+function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
       <h2>Core Courses</h2>
@@ -28,12 +28,14 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => coreCoursesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h2>Electives</h2>
       <h3>Pick three (3) courses from Perception and Robotics, with at least one (1) course from each:</h3>
@@ -43,12 +45,14 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => electivesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h4>Robotics</h4>
       <BasicTable 
         rows={ courses.filter(course => electivesPartTwo.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
@@ -56,6 +60,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList }) {
         rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
+        selectedCourses={ selectedCourses }
       />
     </div>
   );
