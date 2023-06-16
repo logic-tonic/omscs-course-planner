@@ -31,7 +31,6 @@ function Planner() {
         range = document.createRange();
         sel = window.getSelection();
         sel.removeAllRanges();
-        console.log(el)
         try {
             range.selectNodeContents(el);
             sel.addRange(range);

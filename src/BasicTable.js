@@ -11,7 +11,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
   }, [])
 
   useEffect(() => {
-      sortRows(currentlySortedBy)
+    sortRows(currentlySortedBy)
   }, [currentlySortedBy, sortDirection])
 
 
@@ -46,6 +46,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
     else if (sortHeader === "Difficulty") { propertyName = "difficulty" }
     else if (sortHeader === "Workload") { propertyName = "workload" }
     else if (sortHeader === "Reviews") { propertyName = "reviewCount" }
+    else if (sortHeader === "Code(s)") { propertyName = "codes" }
     setSortedRows(rows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, sortDirection)))
     setSortDirection(sortDirection)
   }
@@ -80,6 +81,9 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
+                </th>
+                <th scope="col" onClick={ handleHeaderClick }>
+                  Code(s) {currentlySortedBy === "Code(s)" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
               </tr>
             </thead>
@@ -133,6 +137,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                     <td>{ formatNumber(workload) }</td>
                     <td>{ reviewCount }</td>
                     <td>{ isFoundational ? "yes" : "no" }</td>
+                    <td>{ codes.join(', ') }</td>
                   </tr>
                   )
                 )}
