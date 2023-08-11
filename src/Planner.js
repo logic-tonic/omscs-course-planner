@@ -82,7 +82,7 @@ function Planner() {
   }
   
   const fetchReviews = () => {
-    fetch("https://www.omscentral.com/_next/data/Fpr2fSBexpG2V5I8xzGBn/index.json")
+    fetch("https://www.omscentral.com/_next/data/vdoWr7n1qDV28v70AQPrk/index.json")
     .then(response => response.json())
     .then(data => cleanData(data))
     .then(cleanedData => setReviews(cleanedData))
