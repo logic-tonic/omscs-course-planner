@@ -51,6 +51,7 @@ function Planner() {
     const reviews = data?.pageProps?.courses;
     const cleanedReviews = reviews.map(review => {
       if (review.name === "Mobile and Ubiquitous Computing") { return Object.assign(review, { isFoundational: true }) }
+      if (review.name === "Video Game Design and Programming") { return Object.assign(review, { isFoundational: true }) }
       else { return review }
     })
     return cleanedReviews.concat({
