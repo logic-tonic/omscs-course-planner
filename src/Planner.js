@@ -48,7 +48,7 @@ function Planner() {
   }
 
   const cleanData = (data) => {
-    const reviews = data?.pageProps?.courses;
+    const reviews = data?.result;
     const cleanedReviews = reviews.map(review => {
       if (review.name === "Mobile and Ubiquitous Computing") { return Object.assign(review, { isFoundational: true }) }
       if (review.name === "Video Game Design and Programming") { return Object.assign(review, { isFoundational: true }) }
@@ -69,12 +69,52 @@ function Planner() {
     })
   }
   
+  // const fetchReviews = () => {
+  //   fetch("https://www.omscentral.com/_next/data/TD61NkXhGHooJ12py3vhc/index.json", { mode: 'no-cors' })
+  //   .then(response => response.json())
+  //   .then(data => cleanData(data))
+  //   .then(cleanedData => setReviews(cleanedData))
+  // }
+  // Select the DOM-element, so that you can replace it with content
+  const PROJECT_ID = "3yw11hu2";
+  let DATASET = "production";
+  let QUERY = encodeURIComponent('*[_type == "course"]');
+  let PROJECT_URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+
+  // fetch the content
   const fetchReviews = () => {
-    fetch("https://www.omscentral.com/_next/data/TD61NkXhGHooJ12py3vhc/index.json")
-    .then(response => response.json())
+    fetch(PROJECT_URL)
+    .then((res) => res.json())
     .then(data => cleanData(data))
     .then(cleanedData => setReviews(cleanedData))
+    // .then(({ result }) => {
+    //   console.log("result", result)
+    //   // get the list element, and the first item
+    //   // let list = document.querySelector("ul");
+    //   // let firstListItem = document.querySelector("ul li");
+  
+    //   // if (result.length > 0) {
+    //   //   // remove the placeholder content
+    //   //   list.removeChild(firstListItem);
+  
+    //   //   result.forEach((pet) => {
+    //   //     // create a list element for each pet
+    //   //     let listItem = document.createElement("li");
+  
+    //   //     // add the pet name as the text content
+    //   //     listItem.textContent = pet?.name;
+  
+    //   //     // add the item to the list
+    //   //     list.appendChild(listItem);
+    //   //   });
+    //   //   let pre = document.querySelector("pre");
+    //   //   // add the raw data to the preformatted element
+    //   //   pre.textContent = JSON.stringify(result, null, 2);
+    //   // }
+    // })
+    .catch((err) => console.error(err));
   }
+
 
   const handleSpecializationChange = (event) => {
     setChosenCourseList([])
