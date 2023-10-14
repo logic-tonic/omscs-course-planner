@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <Header />
       <div className="App-body">
+      <h2>Attention: I'm waiting on omscentral.com to fix a bug with their CORS policy, which has suddenly starting blocking my site from reading in reviews. I will remove this notice when the bug is fixed. Until then, the site is unusable. Apologies! </h2>
+
         <div className="requirements">
           <p>Welcome! This site helps you plan your course list for the Online Masters of Science in Computer Science (OMSCS) from Georgia Tech.</p>
           <p>All data comes from <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and the <a href="https://omscs.gatech.edu/program-info/specializations" target="_blank" rel="noreferrer">Official OMSCS site</a>.
