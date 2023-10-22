@@ -7,7 +7,8 @@ import BasicTable from "./BasicTable";
 import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRoboticsPlanner";
 import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
-import './Planner.css'
+import './Planner.css';
+import data from "./data.json";
 
 function Planner() {
   const [reviews, setReviews] = useState([])
@@ -70,11 +71,17 @@ function Planner() {
   }
   
   const fetchReviews = () => {
-    fetch("https://www.omscentral.com/_next/data/eyTae--QRrk_jJoacM79D/index.json")
-    .then(response => response.json())
-    .then(data => cleanData(data))
-    .then(cleanedData => setReviews(cleanedData))
+    const cleanedData = cleanData(data);
+    setReviews(cleanedData)
   }
+
+  // Don't use live data until the CORS error from omscentral has been fixed 
+  // const fetchReviews = () => {
+  //   fetch("https://www.omscentral.com/_next/data/eyTae--QRrk_jJoacM79D/index.json")
+  //   .then(response => response.json())
+  //   .then(data => cleanData(data))
+  //   .then(cleanedData => setReviews(cleanedData))
+  // }
 
   const handleSpecializationChange = (event) => {
     setChosenCourseList([])
