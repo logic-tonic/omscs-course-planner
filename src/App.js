@@ -14,6 +14,7 @@ function App() {
           When you select a course, it appears in your constructed plan at the very bottom of the page.
           After selecting courses, you can check their availabilities at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>.</p>
 
+          Check your orientation document for the most up-to-date information! For example, this is the <a href="https://omscs.gatech.edu/sites/default/files/documents/Other_docs/fall_2023_orientation_document.pdf" target="_blank" rel="noreferrer">Fall 2023 Orientation Document</a>.
           <h2>Degree requirements:</h2>
           <ul>
             <li>"The OMS CS degree requires 30 hours (10 courses).  Students must declare one specialization, which, depending on the specialization, is 15-18 hours (5-6 courses). The remaining 12-15 hours (4-5 courses) are 'free' electives and can be any courses offered through the OMS CS program." (<a href="https://omscs.gatech.edu/program-info/specializations" target="_blank" rel="noreferrer">Official OMSCS site</a>)</li>
