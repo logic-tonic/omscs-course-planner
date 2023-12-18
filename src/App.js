@@ -10,11 +10,11 @@ function App() {
         <div className="requirements">
           <p>Welcome! This site helps you plan your course list for the Online Masters of Science in Computer Science (OMSCS) from Georgia Tech.</p>
           <p>All data comes from <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and the <a href="https://omscs.gatech.edu/program-info/specializations" target="_blank" rel="noreferrer">Official OMSCS site</a>.
-          The list of specialization requirements was last updated on October 24, 2023.
+          The list of specialization requirements was last updated on December 18, 2023.
           When you select a course, it appears in your constructed plan at the very bottom of the page.
           After selecting courses, you can check their availabilities at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>.</p>
 
-          Check your orientation document for the most up-to-date information! For example, this is the <a href="https://omscs.gatech.edu/sites/default/files/documents/Other_docs/fall_2023_orientation_document.pdf" target="_blank" rel="noreferrer">Fall 2023 Orientation Document</a>.
+          Check your orientation document for the most up-to-date information! For example, this is the <a href="https://omscs.gatech.edu/sites/default/files/documents/Other_docs/spring_2024_omscs_orientation_document.pdf" target="_blank" rel="noreferrer">Spring 2024 Orientation Document</a>.
           There are also degree worksheets provided <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a>. 
           <h2>Degree requirements:</h2>
           <ul>

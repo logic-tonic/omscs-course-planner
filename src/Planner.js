@@ -97,7 +97,7 @@ function Planner() {
       <h2>Pick a specialization to begin:</h2>
       <Form.Select size="lg" onChange={ handleSpecializationChange }>
         <option>Choose your specialization</option>
-        <option value="Computation Perception & Robotics">Computation Perception & Robotics</option>
+        <option value="Computation Perception & Robotics">Computational Perception & Robotics</option>
         <option value="Computing Systems">Computing Systems</option>
         <option value="Human-Computer Interaction">Human-Computer Interaction</option>
         <option value="Interactive Intelligence">Interactive Intelligence</option>
