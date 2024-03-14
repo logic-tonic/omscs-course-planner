@@ -90,19 +90,19 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                   Difficulty {currentlySortedBy === "Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
-                  Rating:Difficulty {currentlySortedBy === "Rating:Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th scope="col" onClick={ handleHeaderClick }>
                   Workload {currentlySortedBy === "Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th scope="col" onClick={ handleHeaderClick }>
-                  Rating:Workload {currentlySortedBy === "Rating:Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
                   Reviews {currentlySortedBy === "Reviews" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
+                </th>
+                <th scope="col" onClick={ handleHeaderClick }>
+                  Rating:Difficulty {currentlySortedBy === "Rating:Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
+                </th>
+                <th scope="col" onClick={ handleHeaderClick }>
+                  Rating:Workload {currentlySortedBy === "Rating:Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
                 <th scope="col" onClick={ handleHeaderClick }>
                   Code(s) {currentlySortedBy === "Code(s)" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
@@ -156,11 +156,11 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                     </td>
                     <td>{ formatNumber(rating) }</td>
                     <td>{ formatNumber(difficulty) }</td>
-                    <td>{ formatNumber(rating / difficulty) }</td>
                     <td>{ formatNumber(workload) }</td>
-                    <td>{ formatNumber(rating / workload) }</td>
                     <td>{ reviewCount }</td>
                     <td>{ isFoundational ? "yes" : "no" }</td>
+                    <td>{ formatNumber(rating / difficulty) }</td>
+                    <td>{ formatNumber(rating / workload) }</td>
                     <td>{ codes.join(', ') }</td>
                   </tr>
                   )
