@@ -55,7 +55,7 @@ function Planner() {
       if (review.name === "Video Game Design and Programming") { return Object.assign(review, { isFoundational: true }) }
       else { return review }
     })
-    return cleanedReviews.concat({
+    return cleanedReviews.concat([{
       "codes": [
         "CS-8803-O16"
       ],
@@ -67,7 +67,34 @@ function Planner() {
       "name": "Digital Health Equity",
       "officialURL": "https://omscs.gatech.edu/cs-8803-o16-digital-health-equity",
       "reviewCount": 0,
-    })
+    },
+    {
+      "codes": [
+        "CS-8803-O21"
+      ],
+      "creditHours": 3,
+      "description": "This course explores the software and hardware aspects of GPU development.",
+      "id": "external-import-CS-8803-O21",
+      "isDeprecated": false,
+      "isFoundational": true,
+      "name": "Special Topics: GPU Hardware and Software",
+      "officialURL": "https://omscs.gatech.edu/cs-8803-o21-gpu-hardware-and-software",
+      "reviewCount": 0,
+    },
+    {
+      "codes": [
+        "CS-8803-O22"
+      ],
+      "creditHours": 3,
+      "description": "This course provides students with the background information and skill sets necessary to participate in and lead a cyber security incident response effort.",
+      "id": "external-import-CS-8803-O22",
+      "isDeprecated": false,
+      "isFoundational": false,
+      "name": "Special Topics: Security Incident Response",
+      "officialURL": "https://omscs.gatech.edu/cs-8803-o22-security-incident-response",
+      "reviewCount": 0,
+    }
+    ])
   }
   
   const fetchReviews = () => {

@@ -59,5 +59,8 @@ export const freeElectives = [
     "Deterministic Optimization",
     "Special Topics: High-Dimensional Data Analytics",
     "Digital Marketing",
-    "Information Security Policies and Strategies"
+    "Information Security Policies and Strategies",
+    "Special Topics: Financial Modeling",
+    "Special Topics: GPU Hardware and Software",
+    "Special Topics: Security Incident Response",
 ]
