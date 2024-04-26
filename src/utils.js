@@ -3,7 +3,7 @@ export const freeElectives = [
     "Computing for Good",
     "Graduate Introduction to Operating Systems",
     "Advanced Operating Systems",
-    "Special Topics: Systems Issues in Cloud Computing",
+    "Special Topics: Systems Design for Cloud Computing",
     "Secure Computer Systems",
     "Computer Networks",
     "Applied Cryptography",

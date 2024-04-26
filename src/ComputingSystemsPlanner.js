@@ -27,7 +27,7 @@ const electives = [
   "Network Science: Methods and Applications",
   "High Performance Computing",
   "Special Topics: Compilers - Theory and Practice",
-  "Special Topics: Systems Issues in Cloud Computing",
+  "Special Topics: Systems Design for Cloud Computing",
   "Special Topics: Quantum Computing"
 ];
 
