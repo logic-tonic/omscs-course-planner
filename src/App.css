@@ -1,9 +1,16 @@
 .App {
   margin: 4em;
 }
+.App .Header h1 {
+  margin: 0;
+}
 
 @media only screen and (max-width: 600px) {
   .App {
     margin: 2em;
+  }
+
+  .App .Header h1 {
+    margin-bottom: 2vh;
   }
 }
