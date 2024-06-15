@@ -7,7 +7,7 @@ import BasicTable from "./BasicTable";
 import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRoboticsPlanner";
 import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
-import './Planner.css'
+import './Planner.css';
 import data from "./data.json";
 import {LocalStorageKeys, Specialization, writeToLocalStorage, readFromLocalStorage} from './utils.js'
 
@@ -162,7 +162,7 @@ function Planner() {
       <h2>Pick a specialization to begin:</h2>
       <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization}>
         <option>Choose your specialization</option>
-        <option value="Computation Perception & Robotics">Computational Perception & Robotics</option>
+        <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
         <option value="Computing Systems">Computing Systems</option>
         <option value="Human-Computer Interaction">Human-Computer Interaction</option>
         <option value="Interactive Intelligence">Interactive Intelligence</option>

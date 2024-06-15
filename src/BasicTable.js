@@ -11,7 +11,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
   }, [])
 
   useEffect(() => {
-      sortRows(currentlySortedBy)
+    sortRows(currentlySortedBy)
   }, [currentlySortedBy, sortDirection])
 
 
