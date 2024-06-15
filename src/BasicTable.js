@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./BasicTable.css"
 
-function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySorted = true}) {
+function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySorted = true, selectedCourses }) {
   const [sortedRows, setSortedRows] = useState(rows)
   const [currentlySortedBy, setCurrentlySortedBy] = useState("")
   const [sortDirection, setSortDirection] = useState("ascending")
@@ -11,7 +11,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
   }, [])
 
   useEffect(() => {
-    sortRows(currentlySortedBy)
+      sortRows(currentlySortedBy)
   }, [currentlySortedBy, sortDirection])
 
 
@@ -62,7 +62,6 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
     else if (sortHeader === "Workload") { propertyName = "workload" }
     else if (sortHeader === "Rating:Workload") { propertyName = "ratingWorkloadRatio" }
     else if (sortHeader === "Reviews") { propertyName = "reviewCount" }
-    else if (sortHeader === "Code(s)") { propertyName = "codes" }
     setSortedRows(rows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, sortDirection)))
     setSortDirection(sortDirection)
   }
@@ -135,18 +134,20 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                     className={index % 2 === 0 ? undefined : "bg-gray-50"}
                   >
                     { showCheckbox && <td>
-                      <input type="checkbox" className="course-checkbox" onChange={(event) => addToCourseList({
-                        id,
-                        slug,
-                        codes,
-                        isFoundational,
-                        name,
-                        officialURL,
-                        rating,
-                        difficulty,
-                        workload,
-                        reviewCount,
-                      })}/>
+                      <input type="checkbox" className="course-checkbox" 
+                        checked={selectedCourses && selectedCourses.find(row => row.id === id)}
+                        onChange={(event) => addToCourseList({ 
+                          id,
+                          slug,
+                          codes,
+                          isFoundational,
+                          name,
+                          officialURL,
+                          rating,
+                          difficulty,
+                          workload,
+                          reviewCount,
+                        })}/>
                     </td> }
                     <td>
                       <div>{ name }</div>
