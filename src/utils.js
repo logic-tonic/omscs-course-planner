@@ -64,3 +64,23 @@ export const freeElectives = [
     "Special Topics: GPU Hardware and Software",
     "Special Topics: Security Incident Response",
 ]
+export const Specialization = {
+    ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',
+    ComputingSystems: 'Computing Systems',
+    HumanComputerInteraction: 'Human-Computer Interaction',
+    InteractiveIntelligence: 'Interactive Intelligence',
+    MachineLearning: 'Machine Learning',
+}
+
+export const LocalStorageKeys = {
+    Specialization: 'specialization',
+    SelectedCourses: 'selectedCourses'
+}
+
+export const writeToLocalStorage = (key, value) => {
+    window.localStorage.setItem(key, value)
+}
+
+export const readFromLocalStorage = (key) => {
+    return window.localStorage.getItem(key)
+}
