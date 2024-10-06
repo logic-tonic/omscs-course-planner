@@ -62,6 +62,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
     else if (sortHeader === "Workload") { propertyName = "workload" }
     else if (sortHeader === "Rating:Workload") { propertyName = "ratingWorkloadRatio" }
     else if (sortHeader === "Reviews") { propertyName = "reviewCount" }
+    else if (sortHeader === "Code(s)") { propertyName = "codes" }
     setSortedRows(rows.toSorted((a, b) => sortCompareFunction(a, b, propertyName, sortDirection)))
     setSortDirection(sortDirection)
   }
