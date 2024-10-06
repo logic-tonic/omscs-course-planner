@@ -158,7 +158,6 @@ function Planner() {
 
   return (
     <div className="Planner">
-    <Button variant="primary" onClick={ handleReset }>Reset</Button>
       <h2>Pick a specialization to begin:</h2>
       <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization}>
         <option>Choose your specialization</option>
@@ -176,6 +175,7 @@ function Planner() {
       <h1>Chosen Course Plan:</h1>
       <Button variant="primary" onClick={ handleCopy }>{ copied ? "✓" : "Copy" }</Button>
       <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />
+      <Button variant="danger" onClick={ handleReset }>Reset</Button>
     </div>
   );
 }
