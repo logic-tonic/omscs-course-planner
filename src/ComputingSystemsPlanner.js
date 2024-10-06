@@ -28,7 +28,8 @@ const electives = [
   "High Performance Computing",
   "Special Topics: Compilers - Theory and Practice",
   "Special Topics: Systems Design for Cloud Computing",
-  "Special Topics: Quantum Computing"
+  "Special Topics: Quantum Computing",
+  "Special Topics: GPU Hardware and Software"
 ];
 
 function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) {

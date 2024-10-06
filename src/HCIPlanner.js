@@ -7,12 +7,14 @@ const coreCourses = [
   "Human-Computer Interaction"
 ];
 const electivesPartOne = [
+  "Digital Health Equity",
   "Video Game Design and Programming",
   "Educational Technology: Conceptual Foundations",
   "Introduction to Cognitive Science"
 ];
 const electivesPartTwo = [
   "Introduction to Health Informatics",
+  "Game Artificial Intelligence"
 ];
 
 function HCIPlanner({ courses, addToCourseList, selectedCourses }) {

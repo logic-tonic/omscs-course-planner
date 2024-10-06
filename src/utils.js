@@ -62,7 +62,10 @@ export const freeElectives = [
     "Information Security Policies and Strategies",
     "Special Topics: Financial Modeling",
     "Special Topics: GPU Hardware and Software",
-    "Special Topics: Security Incident Response",
+    "Security Incident Response",
+    "Modern Internet Research Methods",
+    "Intro to Research",
+    "Special Topics: Geopolitics of Cybersecurity"
 ]
 export const Specialization = {
     ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',

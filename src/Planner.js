@@ -76,47 +76,62 @@ function Planner() {
       if (review.name === "Introduction to Information Security") { return Object.assign(review, { officialURL: "https://omscs.gatech.edu/cs-6035-introduction-information-security" }) }
       if (review.name === "Software Architecture and Design") { return Object.assign(review, { officialURL: "https://omscs.gatech.edu/cs-6310-software-architecture-and-design" }) }
       if (review.name === "Special Topics: Systems Design for Cloud Computing") { return Object.assign(review, { officialURL: "https://omscs.gatech.edu/cs-6211-system-design-cloud-computing" }) }
+      if (review.name === "Security Incident Response") { return Object.assign(review, { officialURL: "https://omscs.gatech.edu/cs-6261-security-incident-response" }) }
       else { return review }
     })
-    return cleanedReviews.concat([{
-      "codes": [
-        "CS-8803-O16"
-      ],
-      "creditHours": 3,
-      "description": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities.",
-      "id": "external-import-CS-8803-O16",
-      "isDeprecated": false,
-      "isFoundational": false,
-      "name": "Digital Health Equity",
-      "officialURL": "https://omscs.gatech.edu/cs-8803-o16-digital-health-equity",
-      "reviewCount": 0,
-    },
-    {
-      "codes": [
-        "CS-8803-O21"
-      ],
-      "creditHours": 3,
-      "description": "This course explores the software and hardware aspects of GPU development.",
-      "id": "external-import-CS-8803-O21",
-      "isDeprecated": false,
-      "isFoundational": true,
-      "name": "Special Topics: GPU Hardware and Software",
-      "officialURL": "https://omscs.gatech.edu/cs-8803-o21-gpu-hardware-and-software",
-      "reviewCount": 0,
-    },
-    {
-      "codes": [
-        "CS-8803-O22"
-      ],
-      "creditHours": 3,
-      "description": "This course provides students with the background information and skill sets necessary to participate in and lead a cyber security incident response effort.",
-      "id": "external-import-CS-8803-O22",
-      "isDeprecated": false,
-      "isFoundational": false,
-      "name": "Special Topics: Security Incident Response",
-      "officialURL": "https://omscs.gatech.edu/cs-8803-o22-security-incident-response",
-      "reviewCount": 0,
-    }
+    return cleanedReviews.concat([
+      {
+        "codes": [
+          "CS-8803-O16"
+        ],
+        "creditHours": 3,
+        "description": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities.",
+        "id": "external-import-CS-8803-O16",
+        "isDeprecated": false,
+        "isFoundational": true,
+        "name": "Digital Health Equity",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o16-digital-health-equity",
+        "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-8803-O21"
+        ],
+        "creditHours": 3,
+        "description": "This course explores the software and hardware aspects of GPU development.",
+        "id": "external-import-CS-8803-O21",
+        "isDeprecated": false,
+        "isFoundational": true,
+        "name": "Special Topics: GPU Hardware and Software",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o21-gpu-hardware-and-software",
+        "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-8803-O23"
+        ],
+        "creditHours": 3,
+        "description": "This is a research oriented course that covers new developments in Internet measurement techniques, with an emphasis on topics related to reliability, freedom and security of modern Internet platforms.",
+        "id": "external-import-CS-8803-O23",
+        "isDeprecated": false,
+        "isFoundational": false,
+        "name": "Modern Internet Research Methods",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o23-modern-internet-research-methods",
+        "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-8803-O24"
+        ],
+        "creditHours": 3,
+        "description": "This course serves as a general introduction to research methods and CS research more specifically.",
+        "id": "external-import-CS-8803-O24",
+        "isDeprecated": false,
+        "isFoundational": false,
+        "name": "Intro to Research",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o24-intro-research",
+        "reviewCount": 0,
+      }
     ])
   }
   
