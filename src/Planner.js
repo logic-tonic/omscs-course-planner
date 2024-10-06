@@ -173,7 +173,17 @@ function Planner() {
       { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       <h1>Chosen Course Plan:</h1>
-      <Button variant="primary" onClick={ handleCopy }>{ copied ? "✓" : "Copy" }</Button>
+      <div className="button-container">
+        <Button variant="primary" onClick={ handleCopy }>{ copied ? "✓" : "Copy" }</Button>
+        <Button 
+              href="https://eatstash.com/" 
+              target="_blank" 
+              rel="noreferrer"
+              className="eatstash-button"
+            >
+              ❤️ &nbsp; Support my other project
+          </Button>
+      </div>
       <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />
       <Button variant="danger" onClick={ handleReset }>Reset</Button>
     </div>

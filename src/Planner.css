@@ -1,3 +1,26 @@
 .Planner .container {
     margin-top: 10px;
 }
+
+.button-container {
+    display: flex;
+    gap: 1em;
+}
+
+.Planner .button-container .eatstash-button {
+    background-color: #FFDD00 !important;
+    border-color : #e6c700;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 14px;
+    padding-left: 14px;
+    font-weight: 500;
+    border-radius: 7px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.Planner .button-container .eatstash-button:hover {
+    background-color: #e6c700 !important;
+    color: white;
+}
