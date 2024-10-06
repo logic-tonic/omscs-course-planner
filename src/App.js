@@ -14,7 +14,7 @@ function App() {
           When you select a course, it appears in your constructed plan at the very bottom of the page.
           After selecting courses, you can check their availabilities at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>.</p>
 
-          <p>Check your orientation document for the most up-to-date information! For example, this is the <a href="http://doc.omscs.rocks/" target="_blank" rel="noreferrer">latest orientation document</a>.
+          <p>Check your orientation document for the most up-to-date information! For example, this is the <a href="https://omscs.gatech.edu/orientation-documents" target="_blank" rel="noreferrer">latest orientation document</a>.
           There are also degree worksheets provided <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a>.</p>
 
           <p>OMSCS also offers one credit-hour seminars that don't count towards graduation requirements. They are not listed among the courses below, but are emailed to you during Phase II registration.
