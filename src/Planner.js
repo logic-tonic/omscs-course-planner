@@ -199,6 +199,7 @@ function Planner() {
               ❤️ &nbsp; Support my other project
           </Button>
       </div>
+      <h3>{chosenCourseList.length}/10 classes selected.</h3>
       <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />
       <Button variant="danger" onClick={ handleReset }>Reset</Button>
     </div>
