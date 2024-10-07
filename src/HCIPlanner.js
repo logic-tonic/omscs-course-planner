@@ -29,6 +29,7 @@ function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => coreCourses.includes(course.name)).length}</h5>
       <h2>Electives</h2>
       <h3>Pick three (3) courses from the two sub-areas below, including at least one from each sub-area:</h3>
       <h4>Sub-area: Design and evaluation concepts</h4>
@@ -38,6 +39,7 @@ function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartOne.includes(course.name)).length}</h5>
       <h4>Sub-area: Interactive technology</h4>
       <BasicTable 
         rows={ courses.filter(course => electivesPartTwo.includes(course.name)) }
@@ -45,6 +47,7 @@ function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartTwo.includes(course.name)).length}</h5>
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
       <BasicTable 
@@ -53,6 +56,7 @@ function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCourses.concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)).length}</h5>
     </div>
   );
 }

@@ -39,6 +39,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</h5>
       <h3>Pick two (2) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
@@ -46,6 +47,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h5>
       <h2>Electives</h2>
       <h3>Pick two (2) courses from the three (3) sections below:</h3>
       <br/>
@@ -56,6 +58,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartOne.includes(course.name)).length}</h5>
       <h4>AI Methods:</h4>
       <BasicTable
         rows={ courses.filter(course => electivesPartTwo.includes(course.name)) }
@@ -63,6 +66,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartTwo.includes(course.name)).length}</h5>
       <h4>Cognition:</h4>
       <BasicTable 
         rows={ courses.filter(course => electivesPartThree.includes(course.name)) }
@@ -70,6 +74,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartThree.includes(course.name)).length}</h5>
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
       <BasicTable 
@@ -78,6 +83,7 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
         showCheckbox
         selectedCourses={ selectedCourses }
       />
+      <h5 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).concat(electivesPartThree).includes(course.name)).length}</h5>
     </div>
   );
 }
