@@ -8,18 +8,15 @@ function App() {
       <Header />
       <div className="App-body">
         <div className="requirements">
-          <p>Welcome! This site helps you plan your course list for the Online Masters of Science in Computer Science (OMSCS) from Georgia Tech.</p>
-          <p>All data comes from <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and the <a href="https://omscs.gatech.edu/current-courses" target="_blank" rel="noreferrer">Official OMSCS site</a>.
-          The list of courses and specialization requirements was last updated on <i>October 6, 2024</i>.
-          When you select a course, it appears in your constructed plan at the very bottom of the page.
-          After selecting courses, you can check their availabilities at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>.</p>
-
-          <p>Check your orientation document for the most up-to-date information! For example, this is the <a href="https://omscs.gatech.edu/orientation-documents" target="_blank" rel="noreferrer">latest orientation document</a>.
-          There are also degree worksheets provided <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a>.</p>
-
-          <p>OMSCS also offers one credit-hour seminars that don't count towards graduation requirements. They are not listed among the courses below, but are emailed to you during Phase II registration.
-            You can see <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">here</a> what seminars have been offered recently. 
+          <p>Welcome! This site helps you plan your course list for Georgia Tech's Online Masters of Science in Computer Science (OMSCS).</p>
+          <p>All data is from <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and the <a href="https://omscs.gatech.edu/current-courses" target="_blank" rel="noreferrer">Official OMSCS site</a>, with the latest updates as of <i>October 6, 2024</i>.
+          Selected courses appear at the bottom of the page, and you can check their availability at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>
           </p>
+
+          <p>Check your <a href="https://omscs.gatech.edu/orientation-documents" target="_blank" rel="noreferrer">orientation document</a> for the most up-to-date information!
+         Degree worksheets are also available <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a>.</p>
+
+          <p>Note: OMSCS offers one credit-hour <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">seminars</a> that don't count towards graduation requirements. These are not listed below but will be emailed to you during Phase II registration.</p>
 
           <h2>Degree requirements:</h2>
           <ul>
