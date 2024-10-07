@@ -22,6 +22,7 @@ const electivesPartTwo = [
 function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
+      <h1>Computational Perception & Robotics</h1>
       <h2>Core Courses</h2>
       <h3>Pick one (1) of:</h3>
       <BasicTable 

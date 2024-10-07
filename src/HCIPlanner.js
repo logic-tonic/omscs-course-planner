@@ -20,6 +20,7 @@ const electivesPartTwo = [
 function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
+      <h1>Human-Computer Interaction</h1>
       <h2>Core Courses</h2>
       <h3>Pick two (2) of:</h3>
       <BasicTable 

@@ -24,6 +24,7 @@ const electives = [
 function MachineLearningPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
+      <h1>Machine Learning</h1>
       <h2>Core Courses</h2>
       <h3>Pick one (1) of:</h3>
       <BasicTable 

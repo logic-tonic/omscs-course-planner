@@ -35,6 +35,7 @@ const electives = [
 function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
+      <h1>Computing Systems</h1>
       <h2>Core Courses</h2>
       <h5>Note: Any Core Courses in excess of the 9 hour (3 class) requirement may be used as Computing Systems Electives.</h5>
       <h3>Pick two (2) of:</h3>

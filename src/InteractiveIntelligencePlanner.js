@@ -30,6 +30,7 @@ const electivesPartThree = [
 function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
+      <h1>Interactive Intelligence</h1>
       <h2>Core Courses</h2>
       <h3>Pick one (1) of:</h3>
       <BasicTable 
