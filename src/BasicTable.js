@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Table from 'react-bootstrap/Table';
 import "./BasicTable.css"
 
 function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySorted = true, selectedCourses }) {
@@ -73,38 +74,36 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
       : value.toFixed(2);
   }
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <table className="table table-bordered" id={ tableId } >
+    <div className="tableContainer">
+          <Table striped bordered hover responsive>
             <thead>
               <tr>
-                { showCheckbox && <th scope="col">Add</th> }
-                <th scope="col" onClick={ handleHeaderClick }>
+                { showCheckbox && <th>Add</th> }
+                <th onClick={ handleHeaderClick }>
                   Course {currentlySortedBy === "Course" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Rating {currentlySortedBy === "Rating" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Difficulty {currentlySortedBy === "Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Workload {currentlySortedBy === "Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Reviews {currentlySortedBy === "Reviews" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Rating:Difficulty {currentlySortedBy === "Rating:Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Rating:Workload {currentlySortedBy === "Rating:Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th scope="col" onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick }>
                   Code(s) {currentlySortedBy === "Code(s)" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
               </tr>
@@ -132,7 +131,6 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                 ) => (
                   <tr
                     key={id}
-                    className={index % 2 === 0 ? undefined : "bg-gray-50"}
                   >
                     { showCheckbox && <td>
                       <input type="checkbox" className="course-checkbox" 
@@ -168,9 +166,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                   )
                 )}
             </tbody>
-          </table>
-        </div>
-      </div>
+          </Table>
   </div>
   )
 }

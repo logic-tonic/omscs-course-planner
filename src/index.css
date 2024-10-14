@@ -7,7 +7,63 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-size: 14px;
+  line-height: 1.6;
 }
+
+/* Global header styles */
+body h1 {
+  font-size: 2.5rem; /* 35px */
+  margin: 1.5rem 0;  /* 24px vertical margin */
+  line-height: 1.3;
+}
+
+body h2 {
+  font-size: 2rem; /* 28px */
+  margin: 1.25rem 0; /* 20px vertical margin */
+  line-height: 1.4;
+}
+
+body h3 {
+  font-size: 1.75rem; /* 24.5px */
+  margin: 1rem 0; /* 16px vertical margin */
+  line-height: 1.4;
+}
+
+body h4 {
+  font-size: 1.5rem; /* 21px */
+  margin: 0.75rem 0; /* 12px vertical margin */
+  line-height: 1.4;
+}
+
+body h5 {
+  font-size: 1.25rem; /* 17.5px */
+  margin: 0.5rem 0; /* 8px vertical margin */
+  line-height: 1.4;
+}
+
+body h6 {
+  font-size: 1.1rem; /* 15.4px */
+  margin: 0.5rem 0; /* 8px vertical margin */
+  line-height: 1.4;
+}
+
+/* h1 {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 50px;
+} */

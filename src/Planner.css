@@ -5,23 +5,39 @@
 .button-container {
     display: flex;
     gap: 1em;
+    margin-top: 40px;
+}
+
+.Planner .button-container button {
+    font-size: 1.4rem;
+}
+
+.Planner .specialization {
+    width: 30rem;
+    font-size: 1.4rem;
 }
 
 .Planner .button-container .eatstash-button {
     background-color: #FFDD00 !important;
-    border-color : #e6c700;
+    border: 1px solid #FFDD00;
     color: black;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 1.4rem;
     padding-right: 14px;
     padding-left: 14px;
     font-weight: 500;
-    border-radius: 7px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 3.75px;
+}
+
+.Planner .button-container .danger:hover {
+    background-color: darkred;
+    border-color: darkred;
 }
 
 .Planner .button-container .eatstash-button:hover {
     background-color: #e6c700 !important;
+    border-color : #e6c700;
     color: white;
 }
 
@@ -29,27 +45,6 @@
     color: green;
 }
 
-.Planner h1 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.Planner h2 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.Planner h3 {
-    margin-top: 40px;
-    margin-bottom: 0;
-}
-
-/* .Planner h4 {
-    margin-top: 40px;
-    margin-bottom: 0;
-} */
-
-.Planner h5 {
-    margin-top: 0;
-    margin-bottom: 50px;
+.tab-pane {
+    opacity: 100;
 }

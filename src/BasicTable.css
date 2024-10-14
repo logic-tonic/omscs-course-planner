@@ -1,20 +1,20 @@
-.container {
-    width: auto;
+.tableContainer {
+    margin: 0;
 }
 
-.container .table thead {
+.tableContainer .table thead {
     position: sticky;
     top: 0;
     background-color: #edecec;
 }
 
-.container .course-checkbox {
+.tableContainer .course-checkbox {
     height: 30px;
     width: 30px
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
+    .tableContainer {
         overflow-x: scroll;
     }
 }

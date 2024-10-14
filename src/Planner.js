@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Tab, Tabs, Button, Form } from 'react-bootstrap';
 import ComputingSystemsPlanner from "./ComputingSystemsPlanner"
 import HCIPlanner from "./HCIPlanner"
 import BasicTable from "./BasicTable";
@@ -16,7 +15,6 @@ function Planner() {
   const [reviews, setReviews] = useState([])
   const [chosenSpecialization, setChosenSpecialization] = useState('')
   const [chosenCourseList, setChosenCourseList] = useState([]);
-  const [copied, setCopied] = useState(false);
 
   const addToCourseList = (row) => {
     let newChosenCourseList;
@@ -34,31 +32,6 @@ function Planner() {
     setChosenSpecialization('')
     writeToLocalStorage(LocalStorageKeys.Specialization, '')
     writeToLocalStorage(LocalStorageKeys.SelectedCourses, [])
-  }
-
-  const handleCopy = () => {
-    const el = document.getElementById('chosenCourses')
-
-    var body = document.body, range, sel;
-    if (document.createRange && window.getSelection) {
-        range = document.createRange();
-        sel = window.getSelection();
-        sel.removeAllRanges();
-        console.log(el)
-        try {
-            range.selectNodeContents(el);
-            sel.addRange(range);
-        } catch (e) {
-            range.selectNode(el);
-            sel.addRange(range);
-        }
-    } else if (body.createTextRange) {
-        range = body.createTextRange();
-        range.moveToElementText(el);
-        range.select();
-    }
-    document.execCommand("copy");
-    setCopied(true)
   }
 
   const cleanData = (data) => {
@@ -174,7 +147,7 @@ function Planner() {
   return (
     <div className="Planner">
       <h2>Pick a specialization to begin:</h2>
-      <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization}>
+      <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization">
         <option>Choose your specialization</option>
         <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
         <option value="Computing Systems">Computing Systems</option>
@@ -188,20 +161,34 @@ function Planner() {
       { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       <h1>Chosen Course Plan:</h1>
+      <h3>{chosenCourseList.length}/10 classes selected.</h3>
+      <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">
+        <Tab eventKey="simple" title="Simple view">
+          {
+            chosenCourseList.length === 0 ? (
+              <div>There's nothing here yet. Pick a specialization and add some classes to populate your course list!</div>
+            ) : (
+              <ul>
+                {chosenCourseList.map(x => <li key={x.id}>{x.codes.join(', ')} {x.name}</li>)}
+              </ul>
+            )
+          }
+        </Tab>
+        <Tab eventKey="full" title="Full view">
+          <BasicTable tableId="chosenCourses" rows={chosenCourseList} initiallySorted={false} />
+        </Tab>
+      </Tabs>
       <div className="button-container">
-        <Button variant="primary" onClick={ handleCopy }>{ copied ? "✓" : "Copy" }</Button>
-        <Button 
-              href="https://eatstash.com/" 
+          <Button 
+              href="" 
               target="_blank" 
               rel="noreferrer"
               className="eatstash-button"
             >
               ❤️ &nbsp; Support my other project
           </Button>
+          <Button variant="danger" className="danger" onClick={ handleReset }>Reset</Button>
       </div>
-      <h3>{chosenCourseList.length}/10 classes selected.</h3>
-      <BasicTable tableId="chosenCourses" rows={ chosenCourseList } initiallySorted={ false } />
-      <Button variant="danger" onClick={ handleReset }>Reset</Button>
     </div>
   );
 }

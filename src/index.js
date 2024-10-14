@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import * as Sentry from "@sentry/react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 Sentry.init({
   dsn: "https://a258afd1c6e74a54bcca1a36926a013a@o4505422794653696.ingest.sentry.io/4505422796816384",
