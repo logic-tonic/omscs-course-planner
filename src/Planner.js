@@ -160,8 +160,8 @@ function Planner() {
       { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      <h1>Chosen Course Plan:</h1>
-      <h3>{chosenCourseList.length}/10 classes selected.</h3>
+      <h1>Chosen Course Plan</h1>
+      <h3>{chosenCourseList.length}/10 classes selected</h3>
       <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">
         <Tab eventKey="simple" title="Simple view">
           {
