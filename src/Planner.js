@@ -180,7 +180,7 @@ function Planner() {
       </Tabs>
       <div className="button-container">
           <Button 
-              href="" 
+              href="https://eatstash.com/" 
               target="_blank" 
               rel="noreferrer"
               className="eatstash-button"
