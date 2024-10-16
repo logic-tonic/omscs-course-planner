@@ -40,7 +40,11 @@
     border-color : #e6c700;
     color: white;
 }
-  
+
+.eatstash-button:focus{
+    outline-style: none;
+}
+
 @media only screen and (max-width: 600px) {
     .Header {
         flex-direction: column;
