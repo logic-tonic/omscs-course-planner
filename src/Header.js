@@ -13,7 +13,7 @@ export default function Header() {
             rel="noreferrer"
             className="eatstash-button"
           >
-            ❤️ &nbsp; Support my other project
+            Like to cook?
           </Button>
           <a 
             href="https://github.com/logic-tonic/omscs-course-planner" 
