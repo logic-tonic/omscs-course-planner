@@ -75,7 +75,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
   }
   return (
     <div className="tableContainer">
-          <Table striped bordered hover responsive>
+          <Table striped bordered hover>
             <thead>
               <tr>
                 { showCheckbox && <th>Add</th> }
