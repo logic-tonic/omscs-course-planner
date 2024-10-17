@@ -186,7 +186,7 @@ function Planner() {
               rel="noreferrer"
               className="eatstash-button"
             >
-              Like to cook?
+              Try my cooking app!
           </Button>
           <Button variant="danger" className="danger" onClick={ handleReset }>Reset</Button>
       </div>
