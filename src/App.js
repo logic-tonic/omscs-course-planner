@@ -9,13 +9,12 @@ function App() {
       <div className="App-body">
         <div className="requirements">
           <p>Welcome! This site helps you plan your course list for Georgia Tech's Online Masters of Science in Computer Science (OMSCS).</p>
-          <p>All data is from the <a href="https://omscs.gatech.edu/current-courses" target="_blank" rel="noreferrer">Official OMSCS site</a> and <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a>.
-          I receive notifications when changes are made to these sources and then update this site within a few days.
+          <p>Data is from the <a href="https://omscs.gatech.edu/current-courses" target="_blank" rel="noreferrer">official OMSCS site</a> and <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a>, with updates made within a few days of any changes.
           </p>
 
           <p>Check your <a href="https://omscs.gatech.edu/orientation-documents" target="_blank" rel="noreferrer">orientation document</a> for the most up-to-date information!
-         Degree worksheets are also available <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a>.
-         Once you've planned your courses, you can check their availability at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a>.
+         Degree worksheets are available <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a>.
+         After planning, check course availability at <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> and key dates on the <a href="https://registrar.gatech.edu/calendar/" target="_blank" rel="noreferrer">academic calendar</a>. 
          </p>
 
           <p>Note: OMSCS offers one credit-hour <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">seminars</a> that don't count towards graduation requirements. These are not listed below but instead emailed to you during Phase II registration.</p>
