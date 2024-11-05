@@ -183,7 +183,7 @@ function Planner() {
           <Button 
               href="https://eatstash.com/" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener"
               className="eatstash-button"
             >
               Try my cooking app!
