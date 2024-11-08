@@ -65,7 +65,9 @@ export const freeElectives = [
     "Security Incident Response",
     "Modern Internet Research Methods",
     "Intro to Research",
-    "Special Topics: Geopolitics of Cybersecurity"
+    "Special Topics: Geopolitics of Cybersecurity",
+    "Foundations of Computer Graphics",
+    "Database System Implementation",
 ]
 export const Specialization = {
     ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',
@@ -73,6 +75,7 @@ export const Specialization = {
     HumanComputerInteraction: 'Human-Computer Interaction',
     InteractiveIntelligence: 'Interactive Intelligence',
     MachineLearning: 'Machine Learning',
+    ComputerGraphicsPlanner: 'Computer Graphics'
 }
 
 export const LocalStorageKeys = {

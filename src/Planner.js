@@ -6,6 +6,7 @@ import BasicTable from "./BasicTable";
 import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRoboticsPlanner";
 import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
+import ComputerGraphicsPlanner from "./ComputerGraphicsPlanner.js";
 import './Planner.css';
 import data from "./data.json";
 import {LocalStorageKeys, Specialization, writeToLocalStorage, readFromLocalStorage} from './utils.js'
@@ -104,6 +105,32 @@ function Planner() {
         "name": "Intro to Research",
         "officialURL": "https://omscs.gatech.edu/cs-8803-o24-intro-research",
         "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-6422"
+        ],
+        "creditHours": 3,
+        "description": "This course offers a hands-on dive into designing and implementing relational database management systems.",
+        "id": "external-import-CS-6422",
+        "isDeprecated": false,
+        "isFoundational": true,
+        "name": "Database System Implementation",
+        "officialURL": "https://omscs.gatech.edu/cs-6422-database-system-implementation",
+        "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-6491"
+        ],
+        "creditHours": 3,
+        "description": "This course explores the mathematical, physical, and perceptual principles behind computer graphics, focusing on techniques for creating, representing, and displaying three dimensional shapes and their properties",
+        "id": "external-import-CS-6491",
+        "isDeprecated": false,
+        "isFoundational": true,
+        "name": "Foundations of Computer Graphics",
+        "officialURL": "https://omscs.gatech.edu/cs-6491-foundations-computer-graphics",
+        "reviewCount": 0,
       }
     ])
   }
@@ -154,12 +181,14 @@ function Planner() {
         <option value="Human-Computer Interaction">Human-Computer Interaction</option>
         <option value="Interactive Intelligence">Interactive Intelligence</option>
         <option value="Machine Learning">Machine Learning</option>
+        <option value="Computer Graphics">Computer Graphics</option>
       </Form.Select>
       { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       <h1>Chosen Course Plan:</h1>
       <h3>{chosenCourseList.length}/10 classes selected</h3>
       <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">
