@@ -29,7 +29,9 @@ const electives = [
   "Special Topics: Compilers - Theory and Practice",
   "Special Topics: Systems Design for Cloud Computing",
   "Special Topics: Quantum Computing",
-  "Special Topics: GPU Hardware and Software"
+  "Special Topics: GPU Hardware and Software",
+  "Database System Implementation",
+  "Information Security Lab: System and Network Defenses"
 ];
 
 function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) {
