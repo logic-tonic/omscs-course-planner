@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Table from 'react-bootstrap/Table';
 import "./BasicTable.css"
 
-function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySorted = true, selectedCourses }) {
+function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = false, initiallySorted = true, selectedCourses }) {
   const [sortedRows, setSortedRows] = useState(rows)
   const [currentlySortedBy, setCurrentlySortedBy] = useState("")
   const [sortDirection, setSortDirection] = useState("ascending")
@@ -78,6 +78,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
           <Table striped bordered hover>
             <thead>
               <tr>
+                { showIndex && <th>#</th>}
                 { showCheckbox && <th>Add</th> }
                 <th onClick={ handleHeaderClick }>
                   Course {currentlySortedBy === "Course" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
@@ -132,6 +133,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, initiallySor
                   <tr
                     key={id}
                   >
+                    { showIndex && <td>{index + 1}</td> }
                     { showCheckbox && <td>
                       <input type="checkbox" className="course-checkbox" 
                         checked={selectedCourses && selectedCourses.find(row => row.id === id)}

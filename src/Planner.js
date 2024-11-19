@@ -193,21 +193,21 @@ function Planner() {
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       <h1>Chosen Course Plan:</h1>
-      <h3>{chosenCourseList.length}/10 classes selected</h3>
+      <h3 className="count">{chosenCourseList.length}/10 classes selected</h3>
       <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">
         <Tab eventKey="simple" title="Simple view">
           {
             chosenCourseList.length === 0 ? (
               <div>There's nothing here yet. Pick a specialization and add some classes to populate your course list!</div>
             ) : (
-              <ul>
+              <ol>
                 {chosenCourseList.map(x => <li key={x.id}>{x.codes.join(', ')} {x.name}</li>)}
-              </ul>
+              </ol>
             )
           }
         </Tab>
         <Tab eventKey="full" title="Full view">
-          <BasicTable tableId="chosenCourses" rows={chosenCourseList} initiallySorted={false} />
+          <BasicTable tableId="chosenCourses" rows={chosenCourseList} initiallySorted={false} showIndex={ true } />
         </Tab>
       </Tabs>
       <h4>Check <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> for course availability.</h4>
