@@ -5,7 +5,7 @@ import GithubIcon from "./assets/github-mark.png";
 export default function Header() {
   return (
     <div className='Header'>
-        <h1>🐝  OMSCS Course Planner</h1>
+        <h1>OMSCS Course Planner</h1>
         <div className="actions">
           <Button 
             href="https://eatstash.com/" 

@@ -174,15 +174,18 @@ function Planner() {
   return (
     <div className="Planner">
       <h2>Pick a specialization to begin:</h2>
-      <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization">
-        <option>Choose your specialization</option>
-        <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
-        <option value="Computing Systems">Computing Systems</option>
-        <option value="Human-Computer Interaction">Human-Computer Interaction</option>
-        <option value="Interactive Intelligence">Interactive Intelligence</option>
-        <option value="Machine Learning">Machine Learning</option>
-        <option value="Computer Graphics">Computer Graphics</option>
-      </Form.Select>
+      <div className="button-container">
+        <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization">
+          <option>Choose your specialization</option>
+          <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
+          <option value="Computing Systems">Computing Systems</option>
+          <option value="Human-Computer Interaction">Human-Computer Interaction</option>
+          <option value="Interactive Intelligence">Interactive Intelligence</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Computer Graphics">Computer Graphics</option>
+        </Form.Select>
+        <Button variant="danger" className="danger" onClick={ handleReset }>Reset</Button>
+      </div>
       { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
@@ -208,17 +211,14 @@ function Planner() {
         </Tab>
       </Tabs>
       <h4>Check <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> for course availability.</h4>
-      <div className="button-container">
-          <Button 
-              href="https://eatstash.com/" 
-              target="_blank" 
-              rel="noopener"
-              className="eatstash-button"
-            >
-              Try my cooking app!
-          </Button>
-          <Button variant="danger" className="danger" onClick={ handleReset }>Reset</Button>
-      </div>
+      {chosenCourseList.length > 0 && <Button 
+          href="https://eatstash.com/" 
+          target="_blank" 
+          rel="noopener"
+          className="eatstash-button"
+        >
+          Try my cooking app!
+      </Button>}
     </div>
   );
 }
