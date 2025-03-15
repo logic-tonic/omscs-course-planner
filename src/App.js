@@ -23,7 +23,7 @@ function App() {
           <p><b>Note:</b> OMSCS offers one credit-hour <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">seminars</a> that don't count towards graduation requirements. These are not listed below but instead emailed to you during registration.</p>
 
           <h2>Degree requirements</h2>
-          <p>All requirements below are from the <a href="https://omscs.gatech.edu/degree-requirements" target="_blank" rel="noreferrer">Official OMSCS site.</a></p>
+          <p>All requirements below are from either the official <a href="https://omscs.gatech.edu/degree-requirements" target="_blank" rel="noreferrer">degree requirements</a> or the official <a href="https://omscs.gatech.edu/admission-criteria" target="_blank" rel="noreferrer">admission criteria</a>.</p>
           <ul>
             <li>The OMSCS degree requires students to complete the requirements of one <a href="https://omscs.gatech.edu/specializations" target="_blank" rel="noreferrer">specialization</a>. Specializations each require 15 to 18 credit hours, and a grade of B or above is required for all courses fulfilling specialization requirements. The remaining 12-15 hours (4-5 courses) are “free” electives and can be any courses offered through the OMSCS program. </li>
             <li>The OMSCS degree requires students to complete 30 total credit hours (10 courses). A grade of C or above is required for a course to count toward this 30 credit-hour requirement. Students may take any free elective courses offered through the OMSCS program to complete the 30 credit-hour requirement beyond the requirements of their specialization. A maximum of 6 credit hours may be taken with a subject code other than CS or CSE.</li>
