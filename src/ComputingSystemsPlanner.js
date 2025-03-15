@@ -37,7 +37,7 @@ const electives = [
 function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
-      <h1>Core Courses</h1>
+      <h2>Core Courses</h2>
       <h5>Note: Any Core Courses in excess of the 9 hour (3 class) requirement may be used as Computing Systems Electives.</h5>
       <h3>Pick two (2) of:</h3>
       <BasicTable 
@@ -55,7 +55,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
         selectedCourses={ selectedCourses }
       />
       <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h4>
-      <h1>Electives</h1>
+      <h2>Electives</h2>
       <h3>Pick three (3) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => electives.includes(course.name)) }
@@ -64,7 +64,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
         selectedCourses={ selectedCourses }
       />
       <h4 className="count">Picked {selectedCourses.filter(course => electives.includes(course.name)).length}</h4>
-      <h1>Free Electives</h1>
+      <h2>Free Electives</h2>
       <h3>Pick four (4) free electives.</h3>
       <h4>Free electives may be any courses offered through the OMSCS program. If you take extra specialization core courses and/or extra specialization elective courses beyond what is required in your chosen specialization, the extra course(s) can be used only towards the "free" electives.</h4>
       <BasicTable 

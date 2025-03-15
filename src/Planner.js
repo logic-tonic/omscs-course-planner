@@ -185,7 +185,7 @@ function Planner() {
           <option value="Machine Learning">Machine Learning</option>
           <option value="Computer Graphics">Computer Graphics</option>
         </Form.Select>
-        <Button variant="danger" className="danger" onClick={ handleReset }>Reset</Button>
+        {chosenSpecialization && <Button variant="danger" className="danger" onClick={ handleReset }>Clear all choices</Button> }
       </div>
       { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
@@ -193,7 +193,7 @@ function Planner() {
       { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      <h1>Chosen Course Plan:</h1>
+      <h2>Chosen Course Plan:</h2>
       <h3 className="count">{chosenCourseList.length}/10 classes selected</h3>
       <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">
         <Tab eventKey="simple" title="Simple view">
@@ -211,7 +211,7 @@ function Planner() {
           <BasicTable tableId="chosenCourses" rows={chosenCourseList} initiallySorted={false} showIndex={ true } />
         </Tab>
       </Tabs>
-      <h4>Check <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> for course availability.</h4>
+      { chosenCourseList.length !== 0 && <h4>Check <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> for course availability.</h4>}
       {chosenCourseList.length > 0 && <Button 
           href="https://eatstash.com/" 
           target="_blank" 
