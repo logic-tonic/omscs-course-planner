@@ -56,7 +56,8 @@ function Planner() {
     return cleanedReviews.concat([
       {
         "codes": [
-          "CS-8803-O16"
+          "CS-6435",
+          "CS-8803-O16",
         ],
         "creditHours": 3,
         "description": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities.",

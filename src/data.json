@@ -51,6 +51,7 @@
                     }
                 ],
                 "codes": [
+                    "CS-7400",
                     "CS-8803-O13"
                 ],
                 "_type": "course",
@@ -3330,6 +3331,7 @@
                 ],
                 "description": "This course focuses on analysis of high-dimensional structured data including profiles, images, and other types of functional data using statistical machine learning.",
                 "codes": [
+                    "ISYE-6525",
                     "ISYE-8803"
                 ],
                 "isDeprecated": false,
