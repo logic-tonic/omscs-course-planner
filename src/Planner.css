@@ -54,3 +54,20 @@
 .tab-pane {
     opacity: 100;
 }
+
+@media screen and (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .Planner .specialization {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .Planner .button-container button {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}
