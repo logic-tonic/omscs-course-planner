@@ -132,6 +132,19 @@ function Planner() {
         "name": "Foundations of Computer Graphics",
         "officialURL": "https://omscs.gatech.edu/cs-6491-foundations-computer-graphics",
         "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-8803-O20"
+        ],
+        "creditHours": 3,
+        "description": "Quantum computing promises exponential speedups for a class of important problems.",
+        "id": "external-import-CS-8803-O20",
+        "isDeprecated": false,
+        "isFoundational": false,
+        "name": "Quantum Hardware",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o20-quantum-hardware",
+        "reviewCount": 0,
       }
     ])
   }

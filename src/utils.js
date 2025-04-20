@@ -68,6 +68,7 @@ export const freeElectives = [
     "Special Topics: Geopolitics of Cybersecurity",
     "Foundations of Computer Graphics",
     "Database System Implementation",
+    "Quantum Hardware"
 ]
 export const Specialization = {
     ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',
