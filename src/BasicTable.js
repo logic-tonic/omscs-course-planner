@@ -153,7 +153,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                     <td>
                       <div>{ name }</div>
                       <div>
-                        <a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a>
+                        <a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - {slug ? <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a> : "No reviews yet"}
                       </div>
                     </td>
                     <td>{ formatNumber(rating) }</td>
