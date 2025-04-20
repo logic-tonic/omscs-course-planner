@@ -2,36 +2,63 @@ import React from "react";
 import BasicTable from "./BasicTable.js";
 import { freeElectives } from "./utils.js";
 
-const coreCourses = [
+const coreCoursesPartOne = [
   "Foundations of Computer Graphics",
   "Video Game Design and Programming",
+  "Computer Animation",
+];
+
+const coreCoursesPartTwo = [
   "Introduction to Graduate Algorithms",
+];
+
+const electives = [
+  "Video Game Design and Programming",
   "Computational Photography",
   "Introduction to Computer Vision",
-];
+  "Foundations of Computer Graphics",
+  "Computer Animation",
+]
+
 
 function ComputerGraphicsPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
-      <h2>Core Courses + Electives</h2>
-      <h4>This is a simplified view of the information on the <a href="https://omscs.gatech.edu/specialization-computer-graphics" target="_blank" rel="noreferrer">CG specialization page</a>.</h4>
-      <h3>Pick all five (5) of: </h3>
+      <h2>Core Courses</h2>
+      <h3>Pick one (1) of: </h3>
       <BasicTable 
-        rows={ courses.filter(course => coreCourses.includes(course.name)) }
+        rows={ courses.filter(course => coreCoursesPartOne.includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => coreCourses.includes(course.name)).length}</h4>
+      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</h4>
+      <h3>Pick one (1) of: </h3>
+      <BasicTable 
+        rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
+        addToCourseList={ addToCourseList }
+        showCheckbox
+        selectedCourses={ selectedCourses }
+      />
+      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h4>
+      <h2>Electives</h2>
+      <h3>Pick three (3) of: </h3>
+      <BasicTable 
+        rows={ courses.filter(course => electives.includes(course.name)) }
+        addToCourseList={ addToCourseList }
+        showCheckbox
+        selectedCourses={ selectedCourses }
+      />
+      <h4 className="count">Picked {selectedCourses.filter(course => electives.includes(course.name)).length}</h4>
       <h2>Free Electives</h2>
       <h3>Pick five (5) of:</h3>
       <BasicTable 
-        rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCourses.includes(course.name)) }
+        rows={ courses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)) }
         addToCourseList={ addToCourseList }
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h5 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCourses.includes(course.name)).length}</h5>
+      <h5 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)).length}</h5>
     </div>
   );
 }

@@ -145,6 +145,19 @@ function Planner() {
         "name": "Quantum Hardware",
         "officialURL": "https://omscs.gatech.edu/cs-8803-o20-quantum-hardware",
         "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-7496"
+        ],
+        "creditHours": 3,
+        "description": "This course aims to understand the basic principles behind modern kinematic and physics-based animation techniques.",
+        "id": "external-import-CS-CS-7496",
+        "isDeprecated": false,
+        "isFoundational": true,
+        "name": "Computer Animation",
+        "officialURL": "https://omscs.gatech.edu/cs-7496-computer-animation",
+        "reviewCount": 0,
       }
     ])
   }
