@@ -16,6 +16,7 @@ function App() {
           <ul>
             <li><a href="https://omscs.gatech.edu/orientation-documents" target="_blank" rel="noreferrer">Orientation document</a> - Most up-to-date program information</li>
             <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">Course availability</a></li>
+            <li><a href="https://really.omscs.rocks/" target="_blank" rel="noreferrer">Course availability with frozen headers</a></li>
             <li><a href="https://registrar.gatech.edu/current-students/calendars" target="_blank" rel="noreferrer">Academic calendar</a></li>
             <li>The degree worksheets <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a></li>
           </ul>
