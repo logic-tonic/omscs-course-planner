@@ -55,6 +55,26 @@
     opacity: 100;
 }
 
+/* Show desktop text by default, hide mobile text */
+.eatstash-desktop-text {
+    display: inline;
+}
+
+.eatstash-mobile-text {
+    display: none;
+}
+
+/* On mobile screens, hide desktop text and show mobile text */
+@media screen and (max-width: 768px) {
+    .eatstash-desktop-text {
+        display: none;
+    }
+    
+    .eatstash-mobile-text {
+        display: inline;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .button-container {
         flex-direction: column;

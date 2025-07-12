@@ -244,7 +244,8 @@ function Planner() {
           rel="noopener"
           className="eatstash-button"
         >
-          Try my cooking app!
+          <span className="eatstash-desktop-text">Try my cooking app, EatStash!</span>
+          <span className="eatstash-mobile-text">Try my cooking app!</span>
       </Button>}
     </div>
   );
