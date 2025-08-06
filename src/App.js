@@ -21,7 +21,7 @@ function App() {
             <li>The degree worksheets <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a></li>
           </ul>
 
-          <p><b>Note:</b> OMSCS offers one credit-hour <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">seminars</a> that don't count towards graduation requirements. These are not listed below but instead emailed to you during registration.</p>
+          <p><b>Note:</b> OMSCS offers <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">seminars</a> that don't count towards graduation requirements. Beginning Fall 2025, these are non-credit offerings through Georgia Tech Professional Education (no longer CS8001 credit-hour courses). Registration is separate from regular course registration and they are not listed below but instead announced via email.</p>
 
           <h2>Degree requirements</h2>
           <p>All requirements below are from either the official <a href="https://omscs.gatech.edu/degree-requirements" target="_blank" rel="noreferrer">degree requirements</a> or the official <a href="https://omscs.gatech.edu/admission-criteria" target="_blank" rel="noreferrer">admission criteria</a>.</p>
