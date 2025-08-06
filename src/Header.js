@@ -13,8 +13,8 @@ export default function Header() {
             rel="noopener"
             className="eatstash-button"
           >
-            <span className="eatstash-desktop-text">Try my cooking app, EatStash!</span>
-            <span className="eatstash-mobile-text">Try my cooking app!</span>
+            <span className="eatstash-desktop-text">Try my recipe app, EatStash!</span>
+            <span className="eatstash-mobile-text">Try my recipe app!</span>
           </Button>
           <a 
             href="https://github.com/logic-tonic/omscs-course-planner" 
