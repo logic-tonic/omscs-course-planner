@@ -193,7 +193,27 @@ function Planner() {
       setChosenSpecialization(specializationFromStorage)
       if(coursesFromStorage) {
         const listCourses = JSON.parse(coursesFromStorage)
-        setChosenCourseList(listCourses.filter(course => reviews.find(row => row.id === course.id)))
+        // Merge stored course selections with fresh course data from reviews
+        const updatedCourseList = listCourses.map(storedCourse => {
+          const freshCourse = reviews.find(row => row.id === storedCourse.id)
+          return freshCourse || storedCourse // Use fresh data if available, fallback to stored data
+        }).filter(course => reviews.find(row => row.id === course.id)) // Only keep courses that still exist
+        setChosenCourseList(updatedCourseList)
+        
+        // Only update localStorage if the data has actually changed
+        const hasDataChanged = listCourses.some(storedCourse => {
+          const freshCourse = reviews.find(row => row.id === storedCourse.id)
+          return freshCourse && (
+            freshCourse.rating !== storedCourse.rating ||
+            freshCourse.difficulty !== storedCourse.difficulty ||
+            freshCourse.workload !== storedCourse.workload ||
+            freshCourse.reviewCount !== storedCourse.reviewCount
+          )
+        })
+        
+        if (hasDataChanged) {
+          writeToLocalStorage(LocalStorageKeys.SelectedCourses, JSON.stringify(updatedCourseList))
+        }
       }
     }
   }, [reviews])
