@@ -34,21 +34,22 @@
     background-color: var(--accent-gold) !important;
     border: 1px solid var(--accent-gold);
     color: var(--text-dark);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 14px;
-    padding-left: 14px;
+    padding: 8px 14px;
     font-size: 1.4rem;
     font-weight: 500;
-    border-radius: 3.75px;
-    margin-top: 20px;
+    border-radius: 8px;
     transition: all 0.2s ease;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Planner .eatstash-button:hover {
     background-color: var(--accent-gold-dark) !important;
     border-color: var(--accent-gold-dark);
     color: var(--white);
+    transform: translateY(-2px);
 }
 
 .eatstash-button:focus{
@@ -58,6 +59,31 @@
 .Planner .count {
     color: var(--success-green);
     font-weight: 600;
+}
+
+.Planner .footer-buttons {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.Planner .footer-buttons .coffee-button {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.Planner .footer-buttons .coffee-button img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.Planner .footer-buttons .coffee-button:hover img {
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
 
 .tab-pane {
@@ -98,5 +124,20 @@
     .Planner .button-container button {
         margin-top: 0.5rem;
         width: 100%;
+    }
+    
+    .Planner .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .Planner .footer-buttons .eatstash-button {
+        width: auto;
+        margin-bottom: 0.5em;
+    }
+    
+    .Planner .footer-buttons .coffee-button {
+        margin-bottom: 0.5em;
     }
 }

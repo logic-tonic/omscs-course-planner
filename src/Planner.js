@@ -259,15 +259,30 @@ function Planner() {
         </Tab>
       </Tabs>
       { chosenCourseList.length !== 0 && <h4>Check <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> for course availability.</h4>}
-      {chosenCourseList.length > 0 && <Button 
-          href="https://eatstash.com/" 
-          target="_blank" 
-          rel="noopener"
-          className="eatstash-button"
-        >
-          <span className="eatstash-desktop-text">Try my recipe app, EatStash!</span>
-          <span className="eatstash-mobile-text">Try my recipe app!</span>
-      </Button>}
+      {chosenCourseList.length > 0 && (
+        <div className="footer-buttons">
+          <Button 
+            href="https://eatstash.com/" 
+            target="_blank" 
+            rel="noopener"
+            className="eatstash-button"
+          >
+            <span className="eatstash-desktop-text">Try my recipe app, EatStash!</span>
+            <span className="eatstash-mobile-text">Try my recipe app!</span>
+          </Button>
+          <a 
+            href="https://www.buymeacoffee.com/logictonic" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="coffee-button"
+          >
+            <img 
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" 
+              alt="Buy Me A Coffee" 
+            />
+          </a>
+        </div>
+      )}
     </div>
   );
 }

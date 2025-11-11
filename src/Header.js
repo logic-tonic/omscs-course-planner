@@ -17,6 +17,17 @@ export default function Header() {
             <span className="eatstash-mobile-text">Try my recipe app!</span>
           </Button>
           <a 
+            href="https://www.buymeacoffee.com/logictonic" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="coffee-button"
+          >
+            <img 
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" 
+              alt="Buy Me A Coffee" 
+            />
+          </a>
+          <a 
             href="https://github.com/logic-tonic/omscs-course-planner" 
             target="_blank" 
             rel="noreferrer"

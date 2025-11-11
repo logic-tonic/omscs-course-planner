@@ -22,24 +22,43 @@
     width: 3em;
 }
 
+.Header .actions .coffee-button {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.Header .actions .coffee-button img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.Header .actions .coffee-button:hover img {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
 .Header .actions .eatstash-button {
     background-color: var(--accent-gold) !important;
     border: 1px solid var(--accent-gold);
     color: var(--text-dark);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 14px;
-    padding-left: 14px;
+    padding: 8px 14px;
     font-size: 1.4rem;
     font-weight: 500;
-    border-radius: 3.75px;
+    border-radius: 8px;
     transition: all 0.2s ease;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Header .actions .eatstash-button:hover {
     background-color: var(--accent-gold-dark) !important;
     border-color: var(--accent-gold-dark);
     color: var(--white);
+    transform: translateY(-2px);
 }
 
 .eatstash-button:focus{
@@ -49,6 +68,25 @@
 @media only screen and (max-width: 600px) {
     .Header {
         flex-direction: column;
+    }
+    
+    .Header .actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .Header .actions .eatstash-button {
+        order: 1;
+        margin-bottom: 0.5em;
+    }
+    
+    .Header .actions .coffee-button {
+        order: 2;
+        margin-bottom: 0.5em;
+    }
+    
+    .Header .actions .github {
+        order: 3;
     }
 }
 
