@@ -70,6 +70,7 @@ function Planner() {
       },
       {
         "codes": [
+          "CS-7295",
           "CS-8803-O21"
         ],
         "creditHours": 3,
