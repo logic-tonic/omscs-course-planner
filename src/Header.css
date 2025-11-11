@@ -72,18 +72,16 @@
     
     .Header .actions {
         flex-direction: column;
-        gap: 0.4em;
+        gap: 0.6em;
         justify-content: center;
     }
     
     .Header .actions .eatstash-button {
         order: 1;
-        margin-bottom: 0.5em;
     }
     
     .Header .actions .coffee-button {
         order: 2;
-        margin-bottom: 0.5em;
     }
     
     .Header .actions .github {
