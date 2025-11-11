@@ -4,7 +4,7 @@ import ComputingSystemsPlanner from "./ComputingSystemsPlanner"
 import HCIPlanner from "./HCIPlanner"
 import BasicTable from "./BasicTable";
 import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRoboticsPlanner";
-import InteractiveIntelligencePlanner from "./InteractiveIntelligencePlanner";
+import ArtificialIntelligencePlanner from "./ArtificialIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
 import ComputerGraphicsPlanner from "./ComputerGraphicsPlanner.js";
 import './Planner.css';
@@ -241,7 +241,7 @@ function Planner() {
           <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
           <option value="Computing Systems">Computing Systems</option>
           <option value="Human-Computer Interaction">Human-Computer Interaction</option>
-          <option value="Interactive Intelligence">Interactive Intelligence</option>
+          <option value="Artificial Intelligence">Artificial Intelligence</option>
           <option value="Machine Learning">Machine Learning</option>
           <option value="Computer Graphics">Computer Graphics</option>
         </Form.Select>
@@ -250,7 +250,7 @@ function Planner() {
       { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      { chosenSpecialization === Specialization.InteractiveIntelligence && <InteractiveIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      { chosenSpecialization === Specialization.ArtificialIntelligence && <ArtificialIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       <h2>Chosen Course Plan:</h2>

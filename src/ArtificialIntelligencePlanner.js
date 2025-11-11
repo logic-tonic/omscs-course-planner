@@ -27,7 +27,7 @@ const electivesPartThree = [
     "Introduction to Cognitive Science",
 ];
 
-function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCourses }) {
+function ArtificialIntelligencePlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
       <h2>Core Courses</h2>
@@ -88,4 +88,4 @@ function InteractiveIntelligencePlanner({ courses, addToCourseList, selectedCour
   );
 }
 
-export default InteractiveIntelligencePlanner;
+export default ArtificialIntelligencePlanner;

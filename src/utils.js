@@ -76,7 +76,7 @@ export const Specialization = {
     ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',
     ComputingSystems: 'Computing Systems',
     HumanComputerInteraction: 'Human-Computer Interaction',
-    InteractiveIntelligence: 'Interactive Intelligence',
+    ArtificialIntelligence: 'Artificial Intelligence',
     MachineLearning: 'Machine Learning',
     ComputerGraphicsPlanner: 'Computer Graphics'
 }
