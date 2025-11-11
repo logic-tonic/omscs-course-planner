@@ -71,7 +71,8 @@
     }
     
     .Header .actions {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 0.4em;
         justify-content: center;
     }
     
