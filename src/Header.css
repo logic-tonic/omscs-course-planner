@@ -23,9 +23,9 @@
 }
 
 .Header .actions .eatstash-button {
-    background-color: #FFDD00 !important;
-    border: 1px solid #FFDD00;
-    color: black;
+    background-color: var(--accent-gold) !important;
+    border: 1px solid var(--accent-gold);
+    color: var(--text-dark);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 14px;
@@ -33,12 +33,13 @@
     font-size: 1.4rem;
     font-weight: 500;
     border-radius: 3.75px;
+    transition: all 0.2s ease;
 }
 
 .Header .actions .eatstash-button:hover {
-    background-color: #e6c700 !important;
-    border-color : #e6c700;
-    color: white;
+    background-color: var(--accent-gold-dark) !important;
+    border-color: var(--accent-gold-dark);
+    color: var(--white);
 }
 
 .eatstash-button:focus{

@@ -18,15 +18,22 @@
 }
 
 
+.Planner .button-container .danger {
+    background-color: var(--danger-red);
+    border-color: var(--danger-red);
+    color: var(--white);
+    transition: all 0.2s ease;
+}
+
 .Planner .button-container .danger:hover {
-    background-color: darkred;
-    border-color: darkred;
+    background-color: var(--danger-red-dark);
+    border-color: var(--danger-red-dark);
 }
 
 .Planner .eatstash-button {
-    background-color: #FFDD00 !important;
-    border: 1px solid #FFDD00;
-    color: black;
+    background-color: var(--accent-gold) !important;
+    border: 1px solid var(--accent-gold);
+    color: var(--text-dark);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 14px;
@@ -35,12 +42,13 @@
     font-weight: 500;
     border-radius: 3.75px;
     margin-top: 20px;
+    transition: all 0.2s ease;
 }
 
 .Planner .eatstash-button:hover {
-    background-color: #e6c700 !important;
-    border-color : #e6c700;
-    color: white;
+    background-color: var(--accent-gold-dark) !important;
+    border-color: var(--accent-gold-dark);
+    color: var(--white);
 }
 
 .eatstash-button:focus{
@@ -48,7 +56,8 @@
 }
 
 .Planner .count {
-    color: green;
+    color: var(--success-green);
+    font-weight: 600;
 }
 
 .tab-pane {
