@@ -33,7 +33,7 @@
 .Planner .eatstash-button {
     background-color: var(--accent-gold) !important;
     border: 1px solid var(--accent-gold);
-    color: var(--text-dark);
+    color: var(--white);
     padding: 8px 14px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -46,8 +46,8 @@
 }
 
 .Planner .eatstash-button:hover {
-    background-color: var(--accent-gold-dark) !important;
-    border-color: var(--accent-gold-dark);
+    background-color: var(--accent-gold-light) !important;
+    border-color: var(--accent-gold-light);
     color: var(--white);
     transform: translateY(-2px);
 }

@@ -2,8 +2,9 @@
 :root {
   --primary-blue: #1E5FA8;
   --primary-blue-dark: #164A85;
-  --accent-gold: #F0AB00;
-  --accent-gold-dark: #D69500;
+  --accent-gold: #B8860B;
+  --accent-gold-dark: #8B6914;
+  --accent-gold-light: #D4A929;
   --success-green: #2D7A3E;
   --danger-red: #C92A2A;
   --danger-red-dark: #A61E1E;
