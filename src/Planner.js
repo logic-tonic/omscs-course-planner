@@ -153,11 +153,24 @@ function Planner() {
         ],
         "creditHours": 3,
         "description": "This course aims to understand the basic principles behind modern kinematic and physics-based animation techniques.",
-        "id": "external-import-CS-CS-7496",
+        "id": "external-import-CS-7496",
         "isDeprecated": false,
         "isFoundational": true,
         "name": "Computer Animation",
         "officialURL": "https://omscs.gatech.edu/cs-7496-computer-animation",
+        "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-8803-O27"
+        ],
+        "creditHours": 3,
+        "description": "The CGAI course offers a comprehensive introduction to modern computer graphics, focusing on techniques that have emerged over the past decade, with a particular emphasis on AI-powered advancements in modeling, rendering, simulation, and animation.",
+        "id": "external-import-CS-8803-O27",
+        "isDeprecated": false,
+        "isFoundational": false,
+        "name": "Computer Graphics in the AI Era",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o27-computer-graphics-ai-era",
         "reviewCount": 0,
       }
     ])

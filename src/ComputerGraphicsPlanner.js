@@ -18,6 +18,7 @@ const electives = [
   "Introduction to Computer Vision",
   "Foundations of Computer Graphics",
   "Computer Animation",
+  "Computer Graphics in the AI Era"
 ]
 
 
