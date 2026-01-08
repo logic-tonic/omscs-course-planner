@@ -19,6 +19,7 @@ class OMSCentralScraper {
     this.currentData = [];
     this.scrapedData = [];
     this.differences = [];
+    this.newCourses = []; // Courses on OMSCentral not in data.json
   }
 
   async initialize() {
@@ -248,6 +249,9 @@ class OMSCentralScraper {
 
     console.log(`Successfully scraped ${omsCentralData.length} courses from OMSCentral`);
 
+    // Track which OMSCentral courses were matched
+    const matchedOMSCentralSlugs = new Set();
+
     // Process each course from your current data and match with OMSCentral data
     for (let i = 0; i < this.currentData.length; i++) {
       const course = this.currentData[i];
@@ -259,6 +263,8 @@ class OMSCentralScraper {
       const matchingCourse = this.findMatchingCourse(course, omsCentralData);
       
       if (matchingCourse) {
+        matchedOMSCentralSlugs.add(matchingCourse.slug);
+        
         const scrapedData = {
           rating: matchingCourse.rating,
           difficulty: matchingCourse.difficulty,
@@ -295,6 +301,31 @@ class OMSCentralScraper {
           scraped: null
         });
       }
+    }
+
+    // Find NEW courses on OMSCentral that don't exist in our data
+    console.log('\nChecking for new courses on OMSCentral...');
+    for (const omsCourse of omsCentralData) {
+      if (!matchedOMSCentralSlugs.has(omsCourse.slug)) {
+        // This course exists on OMSCentral but not in our data.json
+        const existsInCurrentData = this.currentData.some(c => 
+          c.name.toLowerCase() === omsCourse.name.toLowerCase() ||
+          (c.codes && omsCourse.codes && c.codes.some(code => 
+            omsCourse.codes.some(omsCode => 
+              code.toLowerCase().replace(/[-\s]/g, '') === omsCode.toLowerCase().replace(/[-\s]/g, '')
+            )
+          ))
+        );
+        
+        if (!existsInCurrentData) {
+          console.log(`NEW COURSE FOUND: ${omsCourse.name} (${omsCourse.codes.join(', ')})`);
+          this.newCourses.push(omsCourse);
+        }
+      }
+    }
+    
+    if (this.newCourses.length > 0) {
+      console.log(`\nFound ${this.newCourses.length} new courses on OMSCentral!`);
     }
   }
 
@@ -440,6 +471,38 @@ class OMSCentralScraper {
     const dataPath = `scraped-data-${timestamp}.json`;
     await fs.writeFile(dataPath, JSON.stringify(this.scrapedData, null, 2));
     console.log(`Complete scraped data saved to: ${dataPath}`);
+
+    // Save new courses report
+    if (this.newCourses.length > 0) {
+      const newCoursesPath = `new-courses-${timestamp}.json`;
+      
+      // Generate data.json-compatible entries for new courses
+      const newCourseEntries = this.newCourses.map(course => ({
+        name: course.name,
+        slug: course.slug,
+        id: `scraped-${course.slug}`,
+        codes: course.codes || [],
+        description: "",
+        isDeprecated: false,
+        creditHours: 3,
+        isFoundational: false, // Default to false, can be updated manually
+        reviewCount: course.reviewCount || 0,
+        rating: course.rating,
+        difficulty: course.difficulty,
+        workload: course.workload
+      }));
+      
+      await fs.writeFile(newCoursesPath, JSON.stringify(newCourseEntries, null, 2));
+      
+      console.log(`\n--- NEW COURSES ON OMSCENTRAL ---`);
+      console.log(`Found ${this.newCourses.length} courses on OMSCentral that aren't in your data.json:`);
+      this.newCourses.forEach(course => {
+        console.log(`  - ${course.name} (${course.codes.join(', ')})`);
+        if (course.rating) console.log(`    Rating: ${course.rating}, Difficulty: ${course.difficulty}, Workload: ${course.workload}`);
+      });
+      console.log(`\nNew courses saved to: ${newCoursesPath}`);
+      console.log(`You can copy these entries into data.json and remove any manual additions from Planner.js`);
+    }
   }
 
   async cleanup() {
