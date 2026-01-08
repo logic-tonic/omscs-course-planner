@@ -70,7 +70,8 @@ export const freeElectives = [
     "Database System Implementation",
     "Quantum Hardware",
     "Computer Animation",
-    "Computer Graphics in the AI Era"
+    "Computer Graphics in the AI Era",
+    "Health Sensing and Interventions"
 ]
 export const Specialization = {
     ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',

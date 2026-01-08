@@ -80,7 +80,6 @@ function Planner() {
         "officialURL": "https://omscs.gatech.edu/cs-8803-o20-quantum-hardware",
         "reviewCount": 0,
       },
-
       {
         "codes": [
           "CS-8803-O27"
@@ -92,6 +91,18 @@ function Planner() {
         "isFoundational": false,
         "name": "Computer Graphics in the AI Era",
         "officialURL": "https://omscs.gatech.edu/cs-8803-o27-computer-graphics-ai-era",
+        "reviewCount": 0,
+      },
+      {
+        "codes": [
+          "CS-8803-O29"
+        ],
+        "creditHours": 3,
+        "description": "Health sensing and interventions (HSI) aims to bridge the gap between the medical sciences and computing.",
+        "isDeprecated": false,
+        "isFoundational": false,
+        "name": "Health Sensing and Interventions",
+        "officialURL": "https://omscs.gatech.edu/cs-8803-o29-health-sensing-and-interventions",
         "reviewCount": 0,
       }
     ])
