@@ -40,7 +40,7 @@
                 "officialURL": "https://omscs.gatech.edu/cs-8803-o13-quantum-computing",
                 "name": "Special Topics: Quantum Computing",
                 "_updatedAt": "2022-08-25T21:43:35Z",
-                "slug": "special-topics-quantum-computing",
+                "slug": "quantum-computing",
                 "id": "26e53feb-fbd0-4233-8218-dfb7f56cc46d",
                 "description": "The goal of this course is to provide students in CS and ECE with the fundamental background on quantum computing and equip them with the skills to write code and optimize quantum programs on real quantum computers.",
                 "textbooks": [
@@ -80,10 +80,10 @@
                         "_key": "d21a69086f85"
                     }
                 ],
-                "reviewCount": 22,
-                "rating": 3.64,
-                "difficulty": 3.41,
-                "workload": 12.41
+                "reviewCount": 24,
+                "rating": 3.58,
+                "difficulty": 3.42,
+                "workload": 11.92
             },
             {
                 "_createdAt": "2022-08-19T21:31:17Z",
@@ -1243,6 +1243,110 @@
                 "rating": 2.6,
                 "difficulty": 2.88,
                 "workload": 11.36
+            },
+            {
+                "codes": [
+                  "CS-6422"
+                ],
+                "creditHours": 3,
+                "description": "This course offers a hands-on dive into designing and implementing relational database management systems.",
+                "id": "external-import-CS-6422",
+                "isDeprecated": false,
+                "isFoundational": true,
+                "name": "Database System Implementation",
+                "officialURL": "https://omscs.gatech.edu/cs-6422-database-system-implementation",
+                "slug": "database-system-implementation",
+                "reviewCount": 2,
+                "rating": 3.5,
+                "difficulty": 2,
+                "workload": 9.5
+            },
+            {
+                "codes": [
+                  "CS-6435",
+                  "CS-8803-O16"
+                ],
+                "creditHours": 3,
+                "slug": "digital-health-equity",
+                "description": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities.",
+                "id": "external-import-CS-8803-O16",
+                "isDeprecated": false,
+                "isFoundational": true,
+                "name": "Digital Health Equity",
+                "officialURL": "https://omscs.gatech.edu/cs-8803-o16-digital-health-equity",
+                "reviewCount": 1,
+                "rating": 4,
+                "difficulty": 2,
+                "workload": 10
+            },
+            {
+                "codes": [
+                  "CS-7496"
+                ],
+                "creditHours": 3,
+                "description": "This course aims to understand the basic principles behind modern kinematic and physics-based animation techniques.",
+                "id": "external-import-CS-7496",
+                "isDeprecated": false,
+                "isFoundational": true,
+                "name": "Computer Animation",
+                "officialURL": "https://omscs.gatech.edu/cs-7496-computer-animation",
+                "reviewCount": 0,
+                "slug": "computer-animation",
+                "rating": null,
+                "difficulty": null,
+                "workload": null
+            },
+            {
+                "codes": [
+                  "CS-7295",
+                  "CS-8803-O21"
+                ],
+                "creditHours": 3,
+                "description": "This course explores the software and hardware aspects of GPU development.",
+                "id": "external-import-CS-8803-O21",
+                "isDeprecated": false,
+                "isFoundational": true,
+                "name": "Special Topics: GPU Hardware and Software",
+                "officialURL": "https://omscs.gatech.edu/cs-8803-o21-gpu-hardware-and-software",
+                "slug": "gpu-hardware-and-software",
+                "reviewCount": 0,
+                "rating": null,
+                "difficulty": null,
+                "workload": null
+            },
+            {
+                "codes": [
+                  "CS-6491"
+                ],
+                "creditHours": 3,
+                "description": "This course explores the mathematical, physical, and perceptual principles behind computer graphics, focusing on techniques for creating, representing, and displaying three dimensional shapes and their properties",
+                "id": "external-import-CS-6491",
+                "isDeprecated": false,
+                "isFoundational": true,
+                "name": "Foundations of Computer Graphics",
+                "officialURL": "https://omscs.gatech.edu/cs-6491-foundations-computer-graphics",
+                "slug": "foundations-of-computer-graphics",
+                "reviewCount": 0,
+                "rating": null,
+                "difficulty": null,
+                "workload": null
+            },
+            {
+                "codes": [
+                  "CS-8803-O24"
+                ],
+                "creditHours": 3,
+                "description": "This course serves as a general introduction to research methods and CS research more specifically.",
+                "id": "external-import-CS-8803-O24",
+                "isDeprecated": false,
+                "isFoundational": false,
+                "name": "Intro to Research",
+                "officialURL": "https://omscs.gatech.edu/cs-8803-o24-intro-research",
+                "slug": "intro-to-research",
+                "reviewCount": 0,
+                "rating": null,
+                "difficulty": null,
+                "workload": null
             },
             {
                 "textbooks": [

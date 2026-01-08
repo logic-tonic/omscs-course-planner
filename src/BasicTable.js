@@ -69,7 +69,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
   }
 
   const formatNumber = (value) => {
-    return Number.isNaN(value) || typeof value === "undefined"
+    return value === null || Number.isNaN(value) || typeof value === "undefined" || !Number.isFinite(value)
       ? "N/A"
       : value.toFixed(2);
   }
@@ -153,7 +153,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                     <td>
                       <div>{ name }</div>
                       <div>
-                        <a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - {slug ? <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a> : "No reviews yet"}
+                        <a href={officialURL} target="_blank" rel="noreferrer">GT Official</a> - {slug ? <a href={"https://www.omscentral.com/courses/" + slug + "/reviews"} target="_blank" rel="noreferrer">Reviews</a> : "No review page yet"}
                       </div>
                     </td>
                     <td>{ formatNumber(rating) }</td>

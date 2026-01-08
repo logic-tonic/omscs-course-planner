@@ -56,34 +56,6 @@ function Planner() {
     return cleanedReviews.concat([
       {
         "codes": [
-          "CS-6435",
-          "CS-8803-O16",
-        ],
-        "creditHours": 3,
-        "description": "Digital Health Equity introduces individual, interpersonal, and societal influences on health, and how such influences create health disparities.",
-        "id": "external-import-CS-8803-O16",
-        "isDeprecated": false,
-        "isFoundational": true,
-        "name": "Digital Health Equity",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o16-digital-health-equity",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-7295",
-          "CS-8803-O21"
-        ],
-        "creditHours": 3,
-        "description": "This course explores the software and hardware aspects of GPU development.",
-        "id": "external-import-CS-8803-O21",
-        "isDeprecated": false,
-        "isFoundational": true,
-        "name": "Special Topics: GPU Hardware and Software",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o21-gpu-hardware-and-software",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
           "CS-8803-O23"
         ],
         "creditHours": 3,
@@ -93,45 +65,6 @@ function Planner() {
         "isFoundational": false,
         "name": "Modern Internet Research Methods",
         "officialURL": "https://omscs.gatech.edu/cs-8803-o23-modern-internet-research-methods",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-8803-O24"
-        ],
-        "creditHours": 3,
-        "description": "This course serves as a general introduction to research methods and CS research more specifically.",
-        "id": "external-import-CS-8803-O24",
-        "isDeprecated": false,
-        "isFoundational": false,
-        "name": "Intro to Research",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o24-intro-research",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-6422"
-        ],
-        "creditHours": 3,
-        "description": "This course offers a hands-on dive into designing and implementing relational database management systems.",
-        "id": "external-import-CS-6422",
-        "isDeprecated": false,
-        "isFoundational": true,
-        "name": "Database System Implementation",
-        "officialURL": "https://omscs.gatech.edu/cs-6422-database-system-implementation",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-6491"
-        ],
-        "creditHours": 3,
-        "description": "This course explores the mathematical, physical, and perceptual principles behind computer graphics, focusing on techniques for creating, representing, and displaying three dimensional shapes and their properties",
-        "id": "external-import-CS-6491",
-        "isDeprecated": false,
-        "isFoundational": true,
-        "name": "Foundations of Computer Graphics",
-        "officialURL": "https://omscs.gatech.edu/cs-6491-foundations-computer-graphics",
         "reviewCount": 0,
       },
       {
@@ -147,19 +80,7 @@ function Planner() {
         "officialURL": "https://omscs.gatech.edu/cs-8803-o20-quantum-hardware",
         "reviewCount": 0,
       },
-      {
-        "codes": [
-          "CS-7496"
-        ],
-        "creditHours": 3,
-        "description": "This course aims to understand the basic principles behind modern kinematic and physics-based animation techniques.",
-        "id": "external-import-CS-7496",
-        "isDeprecated": false,
-        "isFoundational": true,
-        "name": "Computer Animation",
-        "officialURL": "https://omscs.gatech.edu/cs-7496-computer-animation",
-        "reviewCount": 0,
-      },
+
       {
         "codes": [
           "CS-8803-O27"
