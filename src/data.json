@@ -31,10 +31,10 @@
                 "_type": "course",
                 "slug": "special-topics-applied-natural-language-processing",
                 "_id": "11a77ce5-5647-4707-9912-13ed376c30a2",
-                "reviewCount": 10,
-                "rating": 4.1,
-                "difficulty": 2.9,
-                "workload": 11.7
+                "reviewCount": 12,
+                "rating": 3.83,
+                "difficulty": 2.75,
+                "workload": 11.17
             },
             {
                 "officialURL": "https://omscs.gatech.edu/cs-8803-o13-quantum-computing",
@@ -107,7 +107,7 @@
                 "id": "270c4d16-25dd-4f69-9e41-b50e73ed74e2",
                 "_id": "270c4d16-25dd-4f69-9e41-b50e73ed74e2",
                 "isFoundational": false,
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "slug": "special-topics-digital-public-policy",
@@ -131,7 +131,7 @@
                 "creditHours": 3,
                 "isDeprecated": false,
                 "isFoundational": false,
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "_type": "course",
@@ -157,10 +157,10 @@
                 "isDeprecated": false,
                 "creditHours": 3,
                 "id": "37caec13-5946-4223-8bff-377d5880c51f",
-                "reviewCount": 26,
-                "rating": 4,
-                "difficulty": 2.88,
-                "workload": 10.58
+                "reviewCount": 29,
+                "rating": 4.03,
+                "difficulty": 2.86,
+                "workload": 10.24
             },
             {
                 "creditHours": 1,
@@ -184,7 +184,7 @@
                 "codes": [
                     "CS-8001-OED"
                 ],
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "name": "Cyber-Physical Security in Electric Energy Systems",
@@ -209,7 +209,7 @@
                 "_id": "5cbd1444-ec69-4092-82b0-2d9ccf39ec6c",
                 "isFoundational": false,
                 "slug": "cyber-physical-security-in-electric-energy-systems",
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "codes": [
@@ -233,7 +233,7 @@
                 ],
                 "_updatedAt": "2022-08-24T17:42:25Z",
                 "creditHours": 1,
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "codes": [
@@ -257,7 +257,7 @@
                 "creditHours": 1,
                 "isDeprecated": false,
                 "_createdAt": "2022-08-19T21:30:26Z",
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "id": "b2a2694d-c1c4-4dad-9b99-f1bab67d2c2a",
@@ -371,10 +371,10 @@
                 "_id": "d604ba2a-98bd-4b6a-a4bb-4d6a76c8a51d",
                 "_createdAt": "2022-08-15T14:50:39Z",
                 "isDeprecated": false,
-                "reviewCount": 10,
-                "rating": 3.1,
-                "difficulty": 2.3,
-                "workload": 5.4
+                "reviewCount": 11,
+                "rating": 3.09,
+                "difficulty": 2.18,
+                "workload": 5
             },
             {
                 "description": "A broad spectrum of information security: threats, basic cryptography, software vulnerabilities, programming for malice, operating system protections, network security, privacy, data mining, computer crime.",
@@ -429,10 +429,10 @@
                         "_type": "reference"
                     }
                 ],
-                "reviewCount": 482,
-                "rating": 3.44,
+                "reviewCount": 489,
+                "rating": 3.43,
                 "difficulty": 2.57,
-                "workload": 10.6
+                "workload": 10.64
             },
             {
                 "_rev": "vLev53Cwnp4JOI2CCP4J8G",
@@ -540,10 +540,10 @@
                 "name": "Graduate Introduction to Operating Systems",
                 "officialURL": "https://omscs.gatech.edu/cs-6200-introduction-operating-systems",
                 "isFoundational": true,
-                "reviewCount": 364,
-                "rating": 4.37,
-                "difficulty": 3.7,
-                "workload": 18.48
+                "reviewCount": 372,
+                "rating": 4.38,
+                "difficulty": 3.69,
+                "workload": 18.4
             },
             {
                 "codes": [
@@ -586,10 +586,10 @@
                 "description": "Introduction to graduate-level topics in operating systems using research papers, textbook excerpts, and projects. Provides students thorough comprehension of distributed and parallel computer systems.",
                 "_updatedAt": "2022-08-24T19:56:40Z",
                 "slug": "advanced-operating-systems",
-                "reviewCount": 138,
+                "reviewCount": 141,
                 "rating": 4.03,
-                "difficulty": 4.15,
-                "workload": 17.15
+                "difficulty": 4.14,
+                "workload": 17.18
             },
             {
                 "name": "Secure Computer Systems",
@@ -633,10 +633,10 @@
                         }
                     }
                 },
-                "reviewCount": 39,
-                "rating": 3,
-                "difficulty": 3.54,
-                "workload": 15.46
+                "reviewCount": 40,
+                "rating": 2.95,
+                "difficulty": 3.58,
+                "workload": 15.33
             },
             {
                 "programs": [
@@ -687,10 +687,10 @@
                 "_id": "external-import-CS-6250",
                 "isFoundational": true,
                 "isDeprecated": false,
-                "reviewCount": 497,
+                "reviewCount": 498,
                 "rating": 3.47,
                 "difficulty": 2.42,
-                "workload": 8.9
+                "workload": 8.89
             },
             {
                 "codes": [
@@ -749,10 +749,10 @@
                 "description": "Cryptographic algorithms, cryptanalysis, symmetric cryptography, public key cryptography, DES, AES, RSA, hash and MAC functions, digital signatures, pseudo-random generators, cryptographic protocols, SSL//TLS, SET.",
                 "name": "Applied Cryptography",
                 "officialURL": "https://omscs.gatech.edu/cs-6260-applied-cryptography",
-                "reviewCount": 50,
-                "rating": 3.34,
-                "difficulty": 3.74,
-                "workload": 16.52
+                "reviewCount": 52,
+                "rating": 3.38,
+                "difficulty": 3.67,
+                "workload": 16.13
             },
             {
                 "officialURL": "https://omscs.gatech.edu/cs-6262-network-security",
@@ -790,10 +790,10 @@
                 ],
                 "_type": "course",
                 "isFoundational": true,
-                "reviewCount": 141,
-                "rating": 3.19,
+                "reviewCount": 144,
+                "rating": 3.15,
                 "difficulty": 3,
-                "workload": 12.72
+                "workload": 12.84
             },
             {
                 "name": "Introduction to Cyber-Physical Systems Security",
@@ -843,10 +843,10 @@
                     }
                 ],
                 "isFoundational": true,
-                "reviewCount": 80,
-                "rating": 3.31,
+                "reviewCount": 81,
+                "rating": 3.33,
                 "difficulty": 2.64,
-                "workload": 10.45
+                "workload": 10.44
             },
             {
                 "_updatedAt": "2022-08-24T20:00:09Z",
@@ -997,10 +997,10 @@
                 ],
                 "name": "High-Performance Computer Architecture",
                 "isDeprecated": false,
-                "reviewCount": 139,
-                "rating": 3.85,
-                "difficulty": 3.64,
-                "workload": 15.32
+                "reviewCount": 142,
+                "rating": 3.84,
+                "difficulty": 3.63,
+                "workload": 15.19
             },
             {
                 "_updatedAt": "2022-08-25T21:39:04Z",
@@ -1090,10 +1090,10 @@
                 "isDeprecated": false,
                 "isFoundational": true,
                 "description": "The process of developing software systems. Includes development and assessment of processes, their instantiation in actual product development, and techniques ensuring quality of developed products.",
-                "reviewCount": 370,
+                "reviewCount": 371,
                 "rating": 3.56,
                 "difficulty": 2.32,
-                "workload": 9.06
+                "workload": 9.07
             },
             {
                 "_createdAt": "2022-07-05T23:23:15Z",
@@ -1239,10 +1239,10 @@
                 "_createdAt": "2022-07-05T23:23:15Z",
                 "isDeprecated": false,
                 "name": "Database Systems Concepts and Design",
-                "reviewCount": 274,
-                "rating": 2.58,
+                "reviewCount": 276,
+                "rating": 2.6,
                 "difficulty": 2.88,
-                "workload": 11.34
+                "workload": 11.36
             },
             {
                 "textbooks": [
@@ -1287,10 +1287,10 @@
                 "name": "Introduction to Health Informatics",
                 "_updatedAt": "2022-08-25T21:41:03Z",
                 "slug": "introduction-to-health-informatics",
-                "reviewCount": 119,
-                "rating": 2.64,
-                "difficulty": 2.27,
-                "workload": 10.13
+                "reviewCount": 123,
+                "rating": 2.69,
+                "difficulty": 2.24,
+                "workload": 10.18
             },
             {
                 "isFoundational": true,
@@ -1340,10 +1340,10 @@
                     "VGD"
                 ],
                 "description": "Techniques for electronic game design and programming, including graphics, game engines, animation, behavioral control for autonomous characters, interaction, social and interface issues of multi-user play.",
-                "reviewCount": 40,
-                "rating": 4.15,
-                "difficulty": 2.33,
-                "workload": 12.93
+                "reviewCount": 41,
+                "rating": 4.17,
+                "difficulty": 2.34,
+                "workload": 13.1
             },
             {
                 "programs": [
@@ -1372,10 +1372,10 @@
                 ],
                 "name": "Educational Technology: Conceptual Foundations",
                 "_type": "course",
-                "reviewCount": 104,
-                "rating": 4.03,
-                "difficulty": 2.84,
-                "workload": 14.42
+                "reviewCount": 105,
+                "rating": 4,
+                "difficulty": 2.82,
+                "workload": 14.45
             },
             {
                 "creditHours": 3,
@@ -1515,10 +1515,10 @@
                     }
                 ],
                 "name": "Introduction to Computer Vision",
-                "reviewCount": 210,
-                "rating": 3.71,
+                "reviewCount": 211,
+                "rating": 3.72,
                 "difficulty": 4.09,
-                "workload": 21.79
+                "workload": 21.77
             },
             {
                 "slug": "introduction-to-graduate-algorithms",
@@ -1568,9 +1568,9 @@
                 "_id": "external-import-CS-6515",
                 "_createdAt": "2022-07-05T23:23:15Z",
                 "id": "external-import-CS-6515",
-                "reviewCount": 496,
+                "reviewCount": 503,
                 "rating": 3.28,
-                "difficulty": 4.06,
+                "difficulty": 4.05,
                 "workload": 19.2
             },
             {
@@ -1610,10 +1610,10 @@
                 "_type": "course",
                 "_id": "external-import-CS-6601",
                 "slug": "artificial-intelligence",
-                "reviewCount": 306,
-                "rating": 4.07,
+                "reviewCount": 310,
+                "rating": 4.06,
                 "difficulty": 4.06,
-                "workload": 22.48
+                "workload": 22.46
             },
             {
                 "syllabus": {
@@ -1649,9 +1649,9 @@
                 "_rev": "iLpqNfBINCDhaBRaVOHJTb",
                 "_type": "course",
                 "_id": "external-import-CS-6603",
-                "reviewCount": 124,
+                "reviewCount": 127,
                 "rating": 2.57,
-                "difficulty": 1.56,
+                "difficulty": 1.57,
                 "workload": 6.65
             },
             {
@@ -1756,7 +1756,7 @@
                 ],
                 "_type": "course",
                 "id": "external-import-CS-6727",
-                "reviewCount": 0
+                "reviewCount": null
             },
             {
                 "_type": "course",
@@ -1855,10 +1855,10 @@
                 "syllabus": {
                     "url": "https://omscs6750.gatech.edu/fall-2022/"
                 },
-                "reviewCount": 283,
+                "reviewCount": 288,
                 "rating": 4.05,
-                "difficulty": 2.55,
-                "workload": 12.2
+                "difficulty": 2.56,
+                "workload": 12.18
             },
             {
                 "_rev": "iLpqNfBINCDhaBRaVOI1nD",
@@ -1954,10 +1954,10 @@
                 "name": "Distributed Computing",
                 "officialURL": "https://omscs.gatech.edu/cs-7210-distributed-computing",
                 "creditHours": 3,
-                "reviewCount": 50,
-                "rating": 3.42,
-                "difficulty": 4.6,
-                "workload": 48.08
+                "reviewCount": 53,
+                "rating": 3.45,
+                "difficulty": 4.58,
+                "workload": 46.96
             },
             {
                 "tags": [
@@ -2083,10 +2083,10 @@
                 "isDeprecated": false,
                 "isFoundational": true,
                 "_updatedAt": "2022-08-25T21:39:13Z",
-                "reviewCount": 48,
-                "rating": 4.13,
-                "difficulty": 2.83,
-                "workload": 11.5
+                "reviewCount": 50,
+                "rating": 4.16,
+                "difficulty": 2.8,
+                "workload": 11.46
             },
             {
                 "isFoundational": true,
@@ -2123,10 +2123,10 @@
                 ],
                 "_createdAt": "2022-07-05T23:23:15Z",
                 "id": "external-import-CS-7637",
-                "reviewCount": 356,
+                "reviewCount": 358,
                 "rating": 3.54,
                 "difficulty": 3.06,
-                "workload": 14.14
+                "workload": 14.13
             },
             {
                 "_rev": "mbY12LhOv6ednSbMOdlWTC",
@@ -2173,10 +2173,10 @@
                     }
                 ],
                 "_updatedAt": "2023-01-11T16:45:08Z",
-                "reviewCount": 329,
-                "rating": 3.96,
+                "reviewCount": 334,
+                "rating": 3.97,
                 "difficulty": 3,
-                "workload": 12.92
+                "workload": 12.9
             },
             {
                 "description": "Cyber Physical Systems (CPS), including examples. Design methods. Formalisms: Different equations, finite-state machines. Analysis. Formal methods. Design processes, Model-Based Systems Engineering, Reference documents and regulations.",
@@ -2262,10 +2262,10 @@
                 "_updatedAt": "2022-08-25T21:41:36Z",
                 "officialURL": "https://omscs.gatech.edu/cs-7641-machine-learning",
                 "isFoundational": true,
-                "reviewCount": 494,
+                "reviewCount": 502,
                 "rating": 3.11,
                 "difficulty": 4.13,
-                "workload": 22.45
+                "workload": 22.41
             },
             {
                 "_type": "course",
@@ -2310,10 +2310,10 @@
                     "RL"
                 ],
                 "_rev": "iLpqNfBINCDhaBRaVOIKVz",
-                "reviewCount": 223,
-                "rating": 3.9,
+                "reviewCount": 225,
+                "rating": 3.88,
                 "difficulty": 4.21,
-                "workload": 22.26
+                "workload": 22.28
             },
             {
                 "creditHours": 3,
@@ -2363,10 +2363,10 @@
                 ],
                 "description": "This course will cover theory and practice of deep learning, including neural network and structured models, optimization algorithms, and applications to perception and Artificial Intelligence.",
                 "_id": "external-import-CS-7643",
-                "reviewCount": 113,
-                "rating": 4.01,
-                "difficulty": 4.05,
-                "workload": 19.2
+                "reviewCount": 117,
+                "rating": 4.03,
+                "difficulty": 4.07,
+                "workload": 19.22
             },
             {
                 "codes": [
@@ -2421,10 +2421,10 @@
                     }
                 ],
                 "isFoundational": true,
-                "reviewCount": 469,
-                "rating": 3.89,
+                "reviewCount": 472,
+                "rating": 3.9,
                 "difficulty": 2.65,
-                "workload": 12.05
+                "workload": 12.09
             },
             {
                 "officialURL": "https://omscs.gatech.edu/cs-8803-o08-compilers-theory-and-practice",
@@ -2467,10 +2467,10 @@
                 "slug": "special-topics-compilers-theory-and-practice",
                 "isDeprecated": false,
                 "isFoundational": true,
-                "reviewCount": 25,
-                "rating": 4.2,
-                "difficulty": 4.64,
-                "workload": 28
+                "reviewCount": 27,
+                "rating": 4.19,
+                "difficulty": 4.67,
+                "workload": 27.33
             },
             {
                 "name": "Special Topics: Systems Design for Cloud Computing",
@@ -2557,10 +2557,10 @@
                 "id": "external-import-CSE-6040",
                 "tags": [],
                 "isDeprecated": false,
-                "reviewCount": 127,
-                "rating": 4.32,
+                "reviewCount": 128,
+                "rating": 4.33,
                 "difficulty": 3.15,
-                "workload": 10.14
+                "workload": 10.13
             },
             {
                 "name": "High Performance Computing",
@@ -2640,10 +2640,10 @@
                 "syllabus": {
                     "url": "https://poloclub.github.io/cse6242-2022fall-online/"
                 },
-                "reviewCount": 293,
-                "rating": 2.89,
-                "difficulty": 3.22,
-                "workload": 15.93
+                "reviewCount": 297,
+                "rating": 2.88,
+                "difficulty": 3.21,
+                "workload": 15.86
             },
             {
                 "codes": [
@@ -2687,10 +2687,10 @@
                     }
                 ],
                 "_rev": "iLpqNfBINCDhaBRaVK3AQ3",
-                "reviewCount": 82,
-                "rating": 3.69,
+                "reviewCount": 83,
+                "rating": 3.71,
                 "difficulty": 4.11,
-                "workload": 27.24
+                "workload": 27.1
             },
             {
                 "_updatedAt": "2022-08-25T21:42:04Z",
@@ -2895,10 +2895,10 @@
                 "codes": [
                     "INTA-6450"
                 ],
-                "reviewCount": 41,
-                "rating": 2.29,
+                "reviewCount": 43,
+                "rating": 2.3,
                 "difficulty": 1.63,
-                "workload": 4.83
+                "workload": 4.84
             },
             {
                 "_id": "external-import-ISYE-6402",
@@ -2958,10 +2958,10 @@
                 ],
                 "_type": "course",
                 "officialURL": "https://omscs.gatech.edu/isye-6402-time-series-analysis",
-                "reviewCount": 38,
-                "rating": 2.13,
-                "difficulty": 4.13,
-                "workload": 15.29
+                "reviewCount": 39,
+                "rating": 2.21,
+                "difficulty": 4.15,
+                "workload": 15.28
             },
             {
                 "_rev": "959qsafI8uoLDPJecfV9yz",
@@ -2987,10 +2987,10 @@
                 "creditHours": 3,
                 "_updatedAt": "2022-08-24T17:45:44Z",
                 "isFoundational": false,
-                "reviewCount": 117,
+                "reviewCount": 119,
                 "rating": 3.06,
-                "difficulty": 2.91,
-                "workload": 9.52
+                "difficulty": 2.9,
+                "workload": 9.5
             },
             {
                 "programs": [
@@ -3130,10 +3130,10 @@
                         "_key": "a8c0ba9d8ff8"
                     }
                 ],
-                "reviewCount": 179,
+                "reviewCount": 181,
                 "rating": 4.12,
                 "difficulty": 2.83,
-                "workload": 9.96
+                "workload": 9.95
             },
             {
                 "_id": "external-import-ISYE-6644",
@@ -3252,10 +3252,10 @@
                 ],
                 "_type": "course",
                 "name": "Deterministic Optimization",
-                "reviewCount": 52,
+                "reviewCount": 55,
                 "rating": 3.73,
-                "difficulty": 3.85,
-                "workload": 13.17
+                "difficulty": 3.75,
+                "workload": 12.84
             },
             {
                 "_id": "external-import-ISYE-6740",
@@ -3357,10 +3357,10 @@
                 "isFoundational": false,
                 "creditHours": 3,
                 "name": "Special Topics: High-Dimensional Data Analytics",
-                "reviewCount": 43,
-                "rating": 4.21,
-                "difficulty": 4.14,
-                "workload": 17.84
+                "reviewCount": 44,
+                "rating": 4.16,
+                "difficulty": 4.11,
+                "workload": 17.59
             },
             {
                 "description": "This course teaches the scientific process of transforming data into insights for making better business decisions. The use of examples places business analytics techniques in context and teaches students how to avoid the common pitfalls, emphasizing the importance of building proper models.",
@@ -3386,10 +3386,10 @@
                     "MGT-6203"
                 ],
                 "_createdAt": "2022-07-05T23:23:15Z",
-                "reviewCount": 128,
-                "rating": 2.35,
-                "difficulty": 1.94,
-                "workload": 5.77
+                "reviewCount": 130,
+                "rating": 2.37,
+                "difficulty": 1.92,
+                "workload": 5.72
             },
             {
                 "textbooks": [
@@ -3437,10 +3437,10 @@
                 "_rev": "iLpqNfBINCDhaBRaVOHnpf",
                 "tags": [],
                 "isFoundational": false,
-                "reviewCount": 45,
-                "rating": 4.04,
-                "difficulty": 1.24,
-                "workload": 3.4
+                "reviewCount": 46,
+                "rating": 4.07,
+                "difficulty": 1.26,
+                "workload": 3.46
             },
             {
                 "_id": "external-import-MGT-6727",
@@ -3526,10 +3526,10 @@
                 "tags": [],
                 "name": "Special Topics: Business Fundamentals for Analytics",
                 "_createdAt": "2022-07-05T23:23:15Z",
-                "reviewCount": 100,
-                "rating": 2.45,
-                "difficulty": 2.95,
-                "workload": 8.02
+                "reviewCount": 101,
+                "rating": 2.46,
+                "difficulty": 2.94,
+                "workload": 7.97
             },
             {
                 "isDeprecated": false,
