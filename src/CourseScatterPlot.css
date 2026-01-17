@@ -1,0 +1,14 @@
+.scatter-plot-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.plotly-container {
+    width: 100%;
+    min-height: 450px;
+}
+
+/* Ensure Plotly's internal tooltips don't have pointer events issues */
+.js-plotly-plot .hoverlayer {
+    pointer-events: none;
+}
