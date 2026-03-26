@@ -27,8 +27,8 @@ const Stats = ({ selectedCourses }) => {
           <Card className="stats-card h-100 shadow-sm">
             <Card.Body>
               <Card.Title className="text-muted small text-uppercase">Total Credits</Card.Title>
-              <Card.Text className="h3 mb-0">{totalCredits}</Card.Text>
-              <Card.Text className="text-muted small">{selectedCourses.length} classes</Card.Text>
+              <Card.Text className="h3 mb-0">{totalCredits} / 30</Card.Text>
+              <Card.Text className="text-muted small">{selectedCourses.length} of 10 courses</Card.Text>
             </Card.Body>
           </Card>
         </Col>
