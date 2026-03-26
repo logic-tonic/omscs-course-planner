@@ -13,9 +13,10 @@ const Stats = ({ selectedCourses }) => {
   
   const averageDifficulty = (selectedCourses.reduce((sum, course) => sum + (course.difficulty || 0), 0) / selectedCourses.length).toFixed(2);
   
-  const totalWorkloadVal = selectedCourses.reduce((sum, course) => sum + (course.workload || 0), 0);
-  const averageWorkload = (totalWorkloadVal / selectedCourses.length).toFixed(2);
-  const totalWorkload = totalWorkloadVal.toFixed(2);
+  const workloads = selectedCourses.map(course => course.workload).filter(w => w > 0);
+  const averageWorkload = workloads.length > 0 ? (workloads.reduce((a, b) => a + b, 0) / workloads.length).toFixed(2) : 'N/A';
+  const minWorkload = workloads.length > 0 ? Math.min(...workloads).toFixed(1) : null;
+  const maxWorkload = workloads.length > 0 ? Math.max(...workloads).toFixed(1) : null;
 
   const foundationalCount = selectedCourses.filter(course => course.isFoundational).length;
 
@@ -55,7 +56,7 @@ const Stats = ({ selectedCourses }) => {
             <Card.Body>
               <Card.Title className="text-muted small text-uppercase">Avg. Workload</Card.Title>
               <Card.Text className="h3 mb-0">{averageWorkload} hrs/wk</Card.Text>
-              <Card.Text className="text-muted small">Total plan: {totalWorkload} hrs/wk</Card.Text>
+              <Card.Text className="text-muted small">{minWorkload ? `Range: ${minWorkload} – ${maxWorkload} hrs/wk` : 'No workload data'}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
