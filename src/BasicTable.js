@@ -98,6 +98,9 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                 <th onClick={ handleHeaderClick } className="hide-mobile">
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
+                <th onClick={ handleHeaderClick } className="hide-mobile col-codes">
+                  Code(s) {currentlySortedBy === "Code(s)" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -153,6 +156,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                     <td>{ formatNumber(workload) }</td>
                     <td className="hide-mobile">{ reviewCount }</td>
                     <td className="hide-mobile">{ isFoundational ? "yes" : "no" }</td>
+                    <td className="hide-mobile col-codes">{ codes.join(', ') }</td>
                   </tr>
                   )
                 )}

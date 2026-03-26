@@ -9,6 +9,12 @@
     border-bottom: 2px solid var(--color-border);
 }
 
+.tableContainer .table .col-codes {
+    max-width: 10ch;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .tableContainer .table .row-selected td {
     background-color: var(--color-primary-subtle) !important;
 }
