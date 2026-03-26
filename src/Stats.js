@@ -7,7 +7,7 @@ const Stats = ({ selectedCourses }) => {
     return null;
   }
 
-  const totalCredits = selectedCourses.reduce((sum, course) => sum + (course.creditHours || 0), 0);
+  const totalCredits = selectedCourses.reduce((sum, course) => sum + (course.creditHours || 3), 0);
   
   const averageRating = (selectedCourses.reduce((sum, course) => sum + (course.rating || 0), 0) / selectedCourses.length).toFixed(2);
   
