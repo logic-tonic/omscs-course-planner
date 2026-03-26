@@ -4,8 +4,8 @@ import { Form, Row, Col, Card } from 'react-bootstrap';
 import './CourseScatterPlot.css';
 
 const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
-  const [xAxis, setXAxis] = useState('difficulty');
-  const [yAxis, setYAxis] = useState('workload');
+  const [xAxis, setXAxis] = useState('workload');
+  const [yAxis, setYAxis] = useState('rating');
 
   const axisOptions = [
     { label: 'Rating', value: 'rating' },
