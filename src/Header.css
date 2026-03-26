@@ -19,7 +19,13 @@
 }
 
 .Header .actions .github {
-    width: 3em;
+    width: 2em;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.Header .actions a:hover .github {
+    opacity: 0.8;
 }
 
 .Header .actions .coffee-button {
@@ -29,7 +35,7 @@
 }
 
 .Header .actions .coffee-button img {
-    height: 40px;
+    height: 32px;
     width: auto;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -40,25 +46,25 @@
 }
 
 .Header .actions .eatstash-button {
-    background-color: var(--color-accent) !important;
-    border: 1px solid var(--color-accent);
-    color: var(--color-text);
+    background-color: transparent !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
     padding: 8px 14px;
-    font-size: 1.4rem;
+    font-size: 0.85rem;
     font-weight: 500;
     border-radius: 8px;
     transition: all 0.2s ease;
-    height: 40px;
+    height: 36px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
 .Header .actions .eatstash-button:hover {
-    background-color: var(--color-accent-hover) !important;
-    border-color: var(--color-accent-hover);
+    background-color: var(--color-surface-raised) !important;
+    border-color: var(--color-border-strong);
     color: var(--color-text);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .eatstash-button:focus{

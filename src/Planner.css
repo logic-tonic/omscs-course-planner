@@ -19,21 +19,22 @@
 
 
 .Planner .button-container .danger {
-    background-color: var(--color-danger);
-    border-color: var(--color-danger);
-    color: var(--color-text-on-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-danger);
+    color: var(--color-danger);
     transition: all 0.2s ease;
 }
 
 .Planner .button-container .danger:hover {
-    background-color: #DC2626;
-    border-color: #DC2626;
+    background-color: var(--color-danger-bg);
+    border-color: var(--color-danger);
+    color: var(--color-danger);
 }
 
 .Planner .eatstash-button {
-    background-color: var(--color-accent) !important;
-    border: 1px solid var(--color-accent);
-    color: var(--color-text);
+    background-color: transparent !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
     padding: 8px 14px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -46,8 +47,8 @@
 }
 
 .Planner .eatstash-button:hover {
-    background-color: var(--color-accent-hover) !important;
-    border-color: var(--color-accent-hover);
+    background-color: var(--color-surface-raised) !important;
+    border-color: var(--color-border-strong);
     color: var(--color-text);
     transform: translateY(-2px);
 }
