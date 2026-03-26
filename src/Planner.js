@@ -222,31 +222,31 @@ function Planner() {
       {chosenCourseList.length > 0 && <Stats selectedCourses={chosenCourseList} />}
       <CourseScatterPlot allCourses={reviews.filter(c => freeElectives.includes(c.name))} selectedCourses={chosenCourseList} />
 
+      </div>
       {chosenCourseList.length > 0 && (
-        <div className="footer-buttons">
-          <Button 
-            href="https://eatstash.com/" 
-            target="_blank" 
+        <footer className="footer-buttons">
+          <Button
+            href="https://eatstash.com/"
+            target="_blank"
             rel="noopener"
             className="eatstash-button"
           >
             <span className="eatstash-desktop-text">Try my recipe app, EatStash!</span>
             <span className="eatstash-mobile-text">Try my recipe app!</span>
           </Button>
-          <a 
-            href="https://www.buymeacoffee.com/logictonic" 
-            target="_blank" 
+          <a
+            href="https://www.buymeacoffee.com/logictonic"
+            target="_blank"
             rel="noopener noreferrer"
             className="coffee-button"
           >
-            <img 
-              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" 
-              alt="Buy Me A Coffee" 
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
+              alt="Buy Me A Coffee"
             />
           </a>
-        </div>
+        </footer>
       )}
-      </div>
     </div>
   );
 }
