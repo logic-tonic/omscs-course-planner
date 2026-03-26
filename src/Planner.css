@@ -183,7 +183,11 @@
     }
 
     .sticky-counter-text {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
+    }
+
+    .sticky-counter-separator {
+        margin: 0 0.4rem;
     }
 
     .button-container {

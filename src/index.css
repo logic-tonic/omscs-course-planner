@@ -34,20 +34,6 @@
   --color-danger: #EF4444;
   --color-danger-bg: #FEF2F2;
 
-  /* Legacy aliases (migrating away) */
-  --primary-blue: #6366F1;
-  --primary-blue-dark: #4F46E5;
-  --accent-gold: #F59E0B;
-  --accent-gold-dark: #D97706;
-  --accent-gold-light: #F59E0B;
-  --success-green: #16A34A;
-  --danger-red: #EF4444;
-  --danger-red-dark: #DC2626;
-  --neutral-light: #F4F4F5;
-  --neutral-medium: #E4E4E7;
-  --text-dark: #18181B;
-  --text-medium: #52525B;
-  --white: #FFFFFF;
 }
 
 body {
