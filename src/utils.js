@@ -71,7 +71,8 @@ export const freeElectives = [
     "Quantum Hardware",
     "Computer Animation",
     "Computer Graphics in the AI Era",
-    "Health Sensing and Interventions"
+    "Health Sensing and Interventions",
+    "Statistical Modeling and Regression Analysis"
 ]
 export const Specialization = {
     ComputationalPerceptionAndRobotics: 'Computational Perception & Robotics',

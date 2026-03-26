@@ -19,36 +19,38 @@
 
 
 .Planner .button-container .danger {
-    background-color: var(--danger-red);
-    border-color: var(--danger-red);
-    color: var(--white);
+    background-color: transparent;
+    border: 1px solid var(--color-danger);
+    color: var(--color-danger);
     transition: all 0.2s ease;
 }
 
 .Planner .button-container .danger:hover {
-    background-color: var(--danger-red-dark);
-    border-color: var(--danger-red-dark);
+    background-color: var(--color-danger-bg);
+    border-color: var(--color-danger);
+    color: var(--color-danger);
 }
 
 .Planner .eatstash-button {
-    background-color: var(--accent-gold) !important;
-    border: 1px solid var(--accent-gold);
-    color: var(--white);
-    padding: 8px 14px;
-    font-size: 1.4rem;
+    background-color: transparent !important;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 0 14px;
+    font-size: 0.85rem;
     font-weight: 500;
     border-radius: 8px;
     transition: all 0.2s ease;
-    height: 40px;
+    height: 36px;
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
 .Planner .eatstash-button:hover {
-    background-color: var(--accent-gold-light) !important;
-    border-color: var(--accent-gold-light);
-    color: var(--white);
+    background-color: var(--color-surface-raised) !important;
+    border-color: var(--color-border-strong);
+    color: var(--color-text);
     transform: translateY(-2px);
 }
 
@@ -56,9 +58,41 @@
     outline-style: none;
 }
 
+/* Section headings in planners (Core Courses, Electives, Free Electives) */
+.section-plan h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Pick instructions (Pick two of:, Pick three of:) */
+.section-plan h3 {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Explanatory text and links */
+.section-plan h4 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Notes */
+.section-plan h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    font-style: italic;
+}
+
 .Planner .count {
-    color: var(--success-green);
+    color: var(--color-success);
     font-weight: 600;
+    font-size: 1rem !important;
+    font-style: normal !important;
 }
 
 .Planner .footer-buttons {
@@ -73,17 +107,53 @@
     display: flex;
     align-items: center;
     line-height: 0;
+    height: 34px;
 }
 
 .Planner .footer-buttons .coffee-button img {
-    height: 40px;
+    height: 100%;
     width: auto;
+    border-radius: 8px;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .Planner .footer-buttons .coffee-button:hover img {
     transform: translateY(-2px);
     opacity: 0.9;
+}
+
+/* Sticky course counter */
+.sticky-counter {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.6rem 1rem;
+    margin: 1rem -2rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.sticky-counter-text {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.sticky-counter-text.requirement-met {
+    color: var(--color-success);
+}
+
+.sticky-counter-text.requirement-warn {
+    color: var(--color-danger);
+}
+
+.sticky-counter-separator {
+    color: var(--color-border-strong);
+    margin: 0 0.75rem;
+    font-weight: 300;
 }
 
 .tab-pane {
@@ -111,6 +181,19 @@
 }
 
 @media screen and (max-width: 768px) {
+    .sticky-counter {
+        margin: 1rem -1rem 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .sticky-counter-text {
+        font-size: 0.8rem;
+    }
+
+    .sticky-counter-separator {
+        margin: 0 0.4rem;
+    }
+
     .button-container {
         flex-direction: column;
         align-items: flex-start;

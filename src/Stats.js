@@ -7,17 +7,24 @@ const Stats = ({ selectedCourses }) => {
     return null;
   }
 
-  const totalCredits = selectedCourses.reduce((sum, course) => sum + (course.creditHours || 0), 0);
+  const totalCredits = selectedCourses.reduce((sum, course) => sum + (course.creditHours || 3), 0);
   
-  const averageRating = (selectedCourses.reduce((sum, course) => sum + (course.rating || 0), 0) / selectedCourses.length).toFixed(2);
+  const ratings = selectedCourses.map(course => course.rating).filter(r => r > 0);
+  const averageRating = ratings.length > 0 ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(2) : 'N/A';
+
+  const difficulties = selectedCourses.map(course => course.difficulty).filter(d => d > 0);
+  const averageDifficulty = difficulties.length > 0 ? (difficulties.reduce((a, b) => a + b, 0) / difficulties.length).toFixed(2) : 'N/A';
   
-  const averageDifficulty = (selectedCourses.reduce((sum, course) => sum + (course.difficulty || 0), 0) / selectedCourses.length).toFixed(2);
-  
-  const totalWorkloadVal = selectedCourses.reduce((sum, course) => sum + (course.workload || 0), 0);
-  const averageWorkload = (totalWorkloadVal / selectedCourses.length).toFixed(2);
-  const totalWorkload = totalWorkloadVal.toFixed(2);
+  const workloads = selectedCourses.map(course => course.workload).filter(w => w > 0);
+  const averageWorkload = workloads.length > 0 ? (workloads.reduce((a, b) => a + b, 0) / workloads.length).toFixed(2) : 'N/A';
+  const minWorkload = workloads.length > 0 ? Math.min(...workloads).toFixed(1) : null;
+  const maxWorkload = workloads.length > 0 ? Math.max(...workloads).toFixed(1) : null;
 
   const foundationalCount = selectedCourses.filter(course => course.isFoundational).length;
+
+  const nonCsCseHours = selectedCourses
+    .filter(course => course.codes && course.codes.every(code => !code.startsWith('CS') && !code.startsWith('CSE')))
+    .reduce((sum, course) => sum + (course.creditHours || 3), 0);
 
   return (
     <div className="stats-section">
@@ -27,8 +34,8 @@ const Stats = ({ selectedCourses }) => {
           <Card className="stats-card h-100 shadow-sm">
             <Card.Body>
               <Card.Title className="text-muted small text-uppercase">Total Credits</Card.Title>
-              <Card.Text className="h3 mb-0">{totalCredits}</Card.Text>
-              <Card.Text className="text-muted small">{selectedCourses.length} classes</Card.Text>
+              <Card.Text className="h3 mb-0">{totalCredits} / 30</Card.Text>
+              <Card.Text className="text-muted small">{selectedCourses.length} of 10 courses</Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -55,7 +62,7 @@ const Stats = ({ selectedCourses }) => {
             <Card.Body>
               <Card.Title className="text-muted small text-uppercase">Avg. Workload</Card.Title>
               <Card.Text className="h3 mb-0">{averageWorkload} hrs/wk</Card.Text>
-              <Card.Text className="text-muted small">Total plan: {totalWorkload} hrs/wk</Card.Text>
+              <Card.Text className="text-muted small">{minWorkload ? `Range: ${minWorkload} – ${maxWorkload} hrs/wk` : 'No workload data'}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -63,8 +70,17 @@ const Stats = ({ selectedCourses }) => {
           <Card className="stats-card h-100 shadow-sm">
             <Card.Body>
               <Card.Title className="text-muted small text-uppercase">Foundational</Card.Title>
-              <Card.Text className="h3 mb-0">{foundationalCount}</Card.Text>
-              <Card.Text className="text-muted small">Required: 2 (B or better)</Card.Text>
+              <Card.Text className="h3 mb-0">{foundationalCount} / 2</Card.Text>
+              <Card.Text className="text-muted small">B or better, within 12 months</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4} sm={6}>
+          <Card className={`stats-card h-100 shadow-sm${nonCsCseHours > 6 ? ' border-danger' : ''}`}>
+            <Card.Body>
+              <Card.Title className="text-muted small text-uppercase">Non-CS/CSE Hours</Card.Title>
+              <Card.Text className="h3 mb-0">{nonCsCseHours} / 6</Card.Text>
+              <Card.Text className="text-muted small">{nonCsCseHours > 6 ? 'Exceeds 6-hour limit' : 'Max 6 hours allowed'}</Card.Text>
             </Card.Body>
           </Card>
         </Col>

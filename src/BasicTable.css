@@ -5,19 +5,52 @@
 .tableContainer .table thead {
     position: sticky;
     top: 0;
-    background-color: var(--neutral-light);
-    border-bottom: 2px solid var(--neutral-medium);
+    z-index: 1010;
+    background-color: var(--color-surface-raised);
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* Offset thead below the sticky counter when inside the plan section */
+.section-plan .tableContainer .table thead {
+    top: 33px;
+}
+
+.tableContainer .table .col-codes {
+    max-width: 10ch;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.tableContainer .table .row-selected td {
+    background-color: var(--color-primary-subtle) !important;
 }
 
 .tableContainer .course-checkbox {
-    height: 30px;
-    width: 30px
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
 }
 
 @media only screen and (max-width: 600px) {
     .tableContainer {
-        overflow-x: scroll;
-        margin-left: -2em;
-        margin-right: -2em;
+        overflow-x: auto;
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    .tableContainer .hide-mobile {
+        display: none;
+    }
+
+    .tableContainer .table td,
+    .tableContainer .table th {
+        font-size: 13px;
+        padding: 0.4rem;
+    }
+
+    .tableContainer .course-checkbox {
+        height: 28px;
+        width: 28px;
     }
 }

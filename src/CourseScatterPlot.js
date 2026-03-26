@@ -4,8 +4,8 @@ import { Form, Row, Col, Card } from 'react-bootstrap';
 import './CourseScatterPlot.css';
 
 const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
-  const [xAxis, setXAxis] = useState('difficulty');
-  const [yAxis, setYAxis] = useState('workload');
+  const [xAxis, setXAxis] = useState('workload');
+  const [yAxis, setYAxis] = useState('rating');
 
   const axisOptions = [
     { label: 'Rating', value: 'rating' },
@@ -23,43 +23,49 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
       otherCourses: {
         x: other.map(c => c[xAxis]),
         y: other.map(c => c[yAxis]),
-        text: other.map(c => `${c.name}<br>${c.codes?.[0] || ''}`),
-        customdata: other.map(c => [c.rating, c.difficulty, c.workload]),
+        text: other.map(c => c.name),
+        customdata: other.map(c => [c.rating, c.difficulty, c.workload, c.reviewCount || 0, c.codes?.[0] || '']),
         name: 'Other Courses',
         mode: 'markers',
         type: 'scatter',
-        marker: { 
-          color: '#8884d8', 
-          opacity: 0.5, 
+        marker: {
+          color: '#A1A1AA',
+          opacity: 0.5,
           size: 10,
           line: { color: 'white', width: 1 }
         },
-        hovertemplate: 
-          '<b>%{text}</b><br><br>' +
-          'Rating: %{customdata[0]}<br>' +
-          'Difficulty: %{customdata[1]}<br>' +
-          'Workload: %{customdata[2]} hrs/wk<br>' +
+        hovertemplate:
+          '  <b>%{text}</b>  ' +
+          '<br>  %{customdata[4]}  ' +
+          '<br>' +
+          '<br>  Rating: %{customdata[0]}  ' +
+          '<br>  Difficulty: %{customdata[1]}  ' +
+          '<br>  Workload: %{customdata[2]} hrs/wk  ' +
+          '<br>  Reviews: %{customdata[3]}  ' +
           '<extra></extra>'
       },
       myCourses: {
         x: mine.map(c => c[xAxis]),
         y: mine.map(c => c[yAxis]),
-        text: mine.map(c => `${c.name}<br>${c.codes?.[0] || ''}`),
-        customdata: mine.map(c => [c.rating, c.difficulty, c.workload]),
+        text: mine.map(c => c.name),
+        customdata: mine.map(c => [c.rating, c.difficulty, c.workload, c.reviewCount || 0, c.codes?.[0] || '']),
         name: 'My Plan',
         mode: 'markers',
         type: 'scatter',
-        marker: { 
-          color: '#ff7300', 
-          size: 14, 
+        marker: {
+          color: '#6366F1',
+          size: 14,
           symbol: 'star',
           line: { color: 'white', width: 1.5 }
         },
-        hovertemplate: 
-          '<b>%{text}</b><br><br>' +
-          'Rating: %{customdata[0]}<br>' +
-          'Difficulty: %{customdata[1]}<br>' +
-          'Workload: %{customdata[2]} hrs/wk<br>' +
+        hovertemplate:
+          '  <b>%{text}</b>  ' +
+          '<br>  %{customdata[4]}  ' +
+          '<br>' +
+          '<br>  Rating: %{customdata[0]}  ' +
+          '<br>  Difficulty: %{customdata[1]}  ' +
+          '<br>  Workload: %{customdata[2]} hrs/wk  ' +
+          '<br>  Reviews: %{customdata[3]}  ' +
           '<extra></extra>'
       }
     };
@@ -111,12 +117,12 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
                   font: {
                     size: 16,
                     family: 'Arial, sans-serif',
-                    color: '#495057',
+                    color: '#52525B',
                     weight: 'bold'
                   }
                 },
-                gridcolor: '#f0f0f0',
-                zerolinecolor: '#f0f0f0',
+                gridcolor: '#F0F0F3',
+                zerolinecolor: '#F0F0F3',
                 tickfont: { size: 12 }
               },
               yaxis: {
@@ -125,12 +131,12 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
                   font: {
                     size: 16,
                     family: 'Arial, sans-serif',
-                    color: '#495057',
+                    color: '#52525B',
                     weight: 'bold'
                   }
                 },
-                gridcolor: '#f0f0f0',
-                zerolinecolor: '#f0f0f0',
+                gridcolor: '#F0F0F3',
+                zerolinecolor: '#F0F0F3',
                 tickfont: { size: 12 }
               },
               hoverlabel: {
@@ -138,8 +144,8 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
                 bordercolor: '#888',
                 font: {
                   size: 14,
-                  family: 'Arial, sans-serif',
-                  color: '#000'
+                  family: 'Inter, -apple-system, sans-serif',
+                  color: '#18181B'
                 }
               },
               hovermode: 'closest',

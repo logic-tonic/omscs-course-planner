@@ -92,19 +92,13 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                 <th onClick={ handleHeaderClick }>
                   Workload {currentlySortedBy === "Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick } className="hide-mobile">
                   Reviews {currentlySortedBy === "Reviews" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick } className="hide-mobile">
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th onClick={ handleHeaderClick }>
-                  Rating:Difficulty {currentlySortedBy === "Rating:Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th onClick={ handleHeaderClick }>
-                  Rating:Workload {currentlySortedBy === "Rating:Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th onClick={ handleHeaderClick }>
+                <th onClick={ handleHeaderClick } className="hide-mobile col-codes">
                   Code(s) {currentlySortedBy === "Code(s)" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
               </tr>
@@ -132,10 +126,12 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                 ) => (
                   <tr
                     key={id}
+                    className={selectedCourses && selectedCourses.find(row => row.id === id) ? 'row-selected' : ''}
                   >
                     { showIndex && <td>{index + 1}</td> }
                     { showCheckbox && <td>
-                      <input type="checkbox" className="course-checkbox" 
+                      <input type="checkbox" className="course-checkbox"
+                        aria-label={`Add ${name} to course list`}
                         checked={selectedCourses && selectedCourses.find(row => row.id === id)}
                         onChange={(event) => addToCourseList({ 
                           id,
@@ -159,11 +155,9 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                     <td>{ formatNumber(rating) }</td>
                     <td>{ formatNumber(difficulty) }</td>
                     <td>{ formatNumber(workload) }</td>
-                    <td>{ reviewCount }</td>
-                    <td>{ isFoundational ? "yes" : "no" }</td>
-                    <td>{ formatNumber(rating / difficulty) }</td>
-                    <td>{ formatNumber(rating / workload) }</td>
-                    <td>{ codes.join(', ') }</td>
+                    <td className="hide-mobile">{ reviewCount }</td>
+                    <td className="hide-mobile">{ isFoundational ? "yes" : "no" }</td>
+                    <td className="hide-mobile col-codes">{ codes.join(', ') }</td>
                   </tr>
                   )
                 )}
