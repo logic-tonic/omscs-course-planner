@@ -68,24 +68,28 @@
 @media only screen and (max-width: 600px) {
     .Header {
         flex-direction: column;
+        gap: 0.5em;
     }
-    
+
     .Header .actions {
-        flex-direction: column;
-        gap: 0.6em;
+        flex-direction: row;
+        gap: 0.5em;
         justify-content: center;
+        flex-wrap: wrap;
     }
-    
+
     .Header .actions .eatstash-button {
-        order: 1;
+        font-size: 0.85rem;
+        padding: 4px 10px;
+        height: 32px;
     }
-    
-    .Header .actions .coffee-button {
-        order: 2;
+
+    .Header .actions .coffee-button img {
+        height: 32px;
     }
-    
+
     .Header .actions .github {
-        order: 3;
+        width: 2em;
     }
 }
 

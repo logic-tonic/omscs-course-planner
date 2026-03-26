@@ -190,11 +190,23 @@ body h6 {
 @media only screen and (max-width: 600px) {
   .section-plan,
   .section-review {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .section-header {
+    font-size: 1.1rem;
+  }
+
+  body h2 {
     font-size: 1.25rem;
+  }
+
+  body h3 {
+    font-size: 1.1rem;
+  }
+
+  body h4, body h5 {
+    font-size: 1rem;
   }
 }

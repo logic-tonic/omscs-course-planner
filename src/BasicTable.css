@@ -10,14 +10,31 @@
 }
 
 .tableContainer .course-checkbox {
-    height: 30px;
-    width: 30px
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
 }
 
 @media only screen and (max-width: 600px) {
     .tableContainer {
-        overflow-x: scroll;
+        overflow-x: auto;
         margin-left: -1rem;
         margin-right: -1rem;
+    }
+
+    .tableContainer .hide-mobile {
+        display: none;
+    }
+
+    .tableContainer .table td,
+    .tableContainer .table th {
+        font-size: 13px;
+        padding: 0.4rem;
+    }
+
+    .tableContainer .course-checkbox {
+        height: 28px;
+        width: 28px;
     }
 }
