@@ -9,9 +9,11 @@ const Stats = ({ selectedCourses }) => {
 
   const totalCredits = selectedCourses.reduce((sum, course) => sum + (course.creditHours || 3), 0);
   
-  const averageRating = (selectedCourses.reduce((sum, course) => sum + (course.rating || 0), 0) / selectedCourses.length).toFixed(2);
-  
-  const averageDifficulty = (selectedCourses.reduce((sum, course) => sum + (course.difficulty || 0), 0) / selectedCourses.length).toFixed(2);
+  const ratings = selectedCourses.map(course => course.rating).filter(r => r > 0);
+  const averageRating = ratings.length > 0 ? (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(2) : 'N/A';
+
+  const difficulties = selectedCourses.map(course => course.difficulty).filter(d => d > 0);
+  const averageDifficulty = difficulties.length > 0 ? (difficulties.reduce((a, b) => a + b, 0) / difficulties.length).toFixed(2) : 'N/A';
   
   const workloads = selectedCourses.map(course => course.workload).filter(w => w > 0);
   const averageWorkload = workloads.length > 0 ? (workloads.reduce((a, b) => a + b, 0) / workloads.length).toFixed(2) : 'N/A';
