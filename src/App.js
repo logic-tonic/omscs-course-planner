@@ -20,9 +20,6 @@ function App() {
             <li><a href="https://registrar.gatech.edu/current-students/calendars" target="_blank" rel="noreferrer">Academic calendar</a></li>
             <li>The degree worksheets <a href="https://www.cc.gatech.edu/graduate-forms-procedures" target="_blank" rel="noreferrer">here</a> and <a href="https://degreeaudit.gatech.edu/" target="_blank" rel="noreferrer">here</a></li>
           </ul>
-
-          <p><b>Note:</b> OMSCS periodically offers seminars as CS8001 sections. They are one credit hour, graded pass/fail or audit, and do not count toward foundational or graduation requirements. Registration follows the standard process (time tickets, priority, and wait lists), and specific offerings for each semester are announced to the omscs-official email list during Phase II registration. For a history of past seminars, see the <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">Seminars page</a>. Note that seminars are not included in the course list below. After a trial of non-credit seminars through Georgia Tech Professional Education, the program has returned to CS8001 seminars; GTPE may still be used for other non-credit offerings in the future.</p>
-
           <h2>Degree requirements</h2>
           <p>All requirements below are from either the official <a href="https://omscs.gatech.edu/degree-requirements" target="_blank" rel="noreferrer">degree requirements</a> or the official <a href="https://omscs.gatech.edu/admission-criteria" target="_blank" rel="noreferrer">admission criteria</a>.</p>
           <ul>
@@ -34,6 +31,12 @@ function App() {
             <li>New students are strongly recommended to start with only one class. Maximum enrollment is 7 credit hours in Fall/Spring and 5 credit hours in Summer.</li>
             <li>Students may take up to 2 consecutive semesters off (summer counts as a semester). Sitting out 3 or more consecutive semesters requires applying for readmission with no guarantee of being readmitted. Note: withdrawing (receiving a "W") counts as enrollment for that semester, but dropping a course does not.</li>
           </ul>
+
+
+          <p><b>Note:</b> OMSCS periodically offers seminars as CS8001 sections. They are one credit hour, graded pass/fail or audit, and do not count toward foundational or graduation requirements. Registration follows the standard process (time tickets, priority, and wait lists), and specific offerings for each semester are announced to the omscs-official email list during Phase II registration. For a history of past seminars, see the <a href="https://omscs.gatech.edu/cs-8001-seminars" target="_blank" rel="noreferrer">Seminars page</a>. Note that seminars are not included in the course list below. After a trial of non-credit seminars through Georgia Tech Professional Education, the program has returned to CS8001 seminars; GTPE may still be used for other non-credit offerings in the future.</p>
+
+          <p><b>Note:</b> OMSCS students can pursue <a href="https://omscs.gatech.edu/research-opportunities" target="_blank" rel="noreferrer">research opportunities</a> beyond the standard course list. <b><a href="https://vip.gatech.edu/" target="_blank" rel="noreferrer">Vertically Integrated Projects (VIP)</a></b> courses count as free electives only—they cannot fulfill specialization or foundational requirements, and because they use the "VIP" subject code, they count toward the 6-hour non-CS/CSE and/or 4000-level limit. Contact the <a href="https://vip.gatech.edu/contact" target="_blank" rel="noreferrer">VIP program directly</a> for more info. <b>CS 8903</b> is a faculty-approved, letter-graded, typically 3-credit independent project that counts as a free elective (not foundational, not non-CS/CSE). Research projects are emailed out before each semester, and you can apply via <a href="https://buzzme.cc.gatech.edu/" target="_blank" rel="noreferrer">Buzzme</a>.</p>
+
         </div>
         <Planner />
       </div>
