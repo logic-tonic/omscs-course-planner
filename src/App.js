@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="App-body">
-        <details className="section-intro" open>
+        <details className="section-intro">
           <summary>Program Info & Degree Requirements</summary>
           <h2>Overview</h2>
           <p>Welcome! This site helps you plan your course list for Georgia Tech's Online Masters of Science in Computer Science (OMSCS). Data is from the <a href="https://omscs.gatech.edu/current-courses" target="_blank" rel="noreferrer">official OMSCS site</a> and <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and is regularly updated.
