@@ -41,7 +41,6 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, sele
       <h5 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h5>
       <h2>Electives</h2>
       <h3>Pick three (3) courses from Perception and Robotics, with at least one (1) course from each:</h3>
-      <br />
       <h4>Perception</h4>
       <BasicTable 
         rows={ courses.filter(course => electivesPartOne.includes(course.name)) }

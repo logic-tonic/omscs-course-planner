@@ -39,6 +39,13 @@
         margin-right: -1rem;
     }
 
+    /* overflow-x: auto creates a new scroll container, so the thead
+       sticks relative to .tableContainer instead of the viewport.
+       Reset top so headers don't get pushed down. */
+    .section-plan .tableContainer .table thead {
+        top: 0;
+    }
+
     .tableContainer .hide-mobile {
         display: none;
     }
