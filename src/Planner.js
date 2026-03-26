@@ -173,7 +173,7 @@ function Planner() {
         <div className="section-header"><span className="section-step">1</span> Build Your Plan</div>
         <h2>Pick a specialization to begin:</h2>
         <div className="button-container">
-          <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization">
+          <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization" aria-label="Choose your specialization">
             <option>Choose your specialization</option>
             <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
             <option value="Computing Systems">Computing Systems</option>

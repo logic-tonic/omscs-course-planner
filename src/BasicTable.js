@@ -130,7 +130,8 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                   >
                     { showIndex && <td>{index + 1}</td> }
                     { showCheckbox && <td>
-                      <input type="checkbox" className="course-checkbox" 
+                      <input type="checkbox" className="course-checkbox"
+                        aria-label={`Add ${name} to course list`}
                         checked={selectedCourses && selectedCourses.find(row => row.id === id)}
                         onChange={(event) => addToCourseList({ 
                           id,

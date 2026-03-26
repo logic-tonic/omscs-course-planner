@@ -23,11 +23,11 @@
   /* Text */
   --color-text: #18181B;
   --color-text-secondary: #52525B;
-  --color-text-tertiary: #A1A1AA;
+  --color-text-tertiary: #71717A;
   --color-text-on-primary: #FFFFFF;
 
   /* Semantic — Status */
-  --color-success: #22C55E;
+  --color-success: #16A34A;
   --color-success-bg: #F0FDF4;
   --color-warning: #F59E0B;
   --color-warning-bg: #FFFBEB;
@@ -40,7 +40,7 @@
   --accent-gold: #F59E0B;
   --accent-gold-dark: #D97706;
   --accent-gold-light: #F59E0B;
-  --success-green: #22C55E;
+  --success-green: #16A34A;
   --danger-red: #EF4444;
   --danger-red-dark: #DC2626;
   --neutral-light: #F4F4F5;
