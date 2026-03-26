@@ -56,9 +56,41 @@
     outline-style: none;
 }
 
+/* Section headings in planners (Core Courses, Electives, Free Electives) */
+.section-plan h2 {
+    margin-top: 2rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Pick instructions (Pick two of:, Pick three of:) */
+.section-plan h3 {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Explanatory text and links */
+.section-plan h4 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Notes */
+.section-plan h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    font-style: italic;
+}
+
 .Planner .count {
     color: var(--color-success);
     font-weight: 600;
+    font-size: 1rem !important;
+    font-style: normal !important;
 }
 
 .Planner .footer-buttons {
