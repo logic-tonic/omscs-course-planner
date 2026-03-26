@@ -98,15 +98,6 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                 <th onClick={ handleHeaderClick }>
                   Foundational? {currentlySortedBy === "Foundational?" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
                 </th>
-                <th onClick={ handleHeaderClick }>
-                  Rating:Difficulty {currentlySortedBy === "Rating:Difficulty" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th onClick={ handleHeaderClick }>
-                  Rating:Workload {currentlySortedBy === "Rating:Workload" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
-                <th onClick={ handleHeaderClick }>
-                  Code(s) {currentlySortedBy === "Code(s)" ? (sortDirection == "ascending" ? <span className="arrow">↑</span> : <span className="arrow">↓</span>) : null}
-                </th>
               </tr>
             </thead>
             <tbody>
@@ -161,9 +152,6 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                     <td>{ formatNumber(workload) }</td>
                     <td>{ reviewCount }</td>
                     <td>{ isFoundational ? "yes" : "no" }</td>
-                    <td>{ formatNumber(rating / difficulty) }</td>
-                    <td>{ formatNumber(rating / workload) }</td>
-                    <td>{ codes.join(', ') }</td>
                   </tr>
                   )
                 )}
