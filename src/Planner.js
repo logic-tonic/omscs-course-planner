@@ -7,6 +7,8 @@ import ComputationalPerceptionRoboticsPlanner from "./ComputationalPerceptionRob
 import ArtificialIntelligencePlanner from "./ArtificialIntelligencePlanner";
 import MachineLearningPlanner from "./MachineLearningPlanner";
 import ComputerGraphicsPlanner from "./ComputerGraphicsPlanner.js";
+import Stats from "./Stats";
+import CourseScatterPlot from "./CourseScatterPlot";
 import './Planner.css';
 import data from "./data.json";
 import {LocalStorageKeys, Specialization, writeToLocalStorage, readFromLocalStorage} from './utils.js'
@@ -185,6 +187,11 @@ function Planner() {
       { chosenSpecialization === Specialization.ArtificialIntelligence && <ArtificialIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+      
+      {chosenCourseList.length > 0 && <Stats selectedCourses={chosenCourseList} />}
+
+      <CourseScatterPlot allCourses={reviews} selectedCourses={chosenCourseList} />
+
       <h2>Chosen Course Plan:</h2>
       <h3 className="count">{chosenCourseList.length}/10 classes selected</h3>
       <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">

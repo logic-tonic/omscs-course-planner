@@ -1,0 +1,32 @@
+.stats-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+}
+
+.stats-title {
+    margin-bottom: 1.5rem;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.stats-card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card .card-title {
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+}
+
+.stats-card .h3 {
+    font-weight: 800;
+    color: #0d6efd;
+}
