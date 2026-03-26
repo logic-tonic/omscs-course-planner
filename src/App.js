@@ -26,10 +26,13 @@ function App() {
           <h2>Degree requirements</h2>
           <p>All requirements below are from either the official <a href="https://omscs.gatech.edu/degree-requirements" target="_blank" rel="noreferrer">degree requirements</a> or the official <a href="https://omscs.gatech.edu/admission-criteria" target="_blank" rel="noreferrer">admission criteria</a>.</p>
           <ul>
-            <li>The OMSCS degree requires students to complete the requirements of one <a href="https://omscs.gatech.edu/specializations" target="_blank" rel="noreferrer">specialization</a>. Specializations each require 15 to 18 credit hours, and a grade of B or above is required for all courses fulfilling specialization requirements. The remaining 12-15 hours (4-5 courses) are “free” electives and can be any courses offered through the OMSCS program. </li>
-            <li>The OMSCS degree requires students to complete 30 total credit hours (10 courses). A grade of C or above is required for a course to count toward this 30 credit-hour requirement. Students may take any free elective courses offered through the OMSCS program to complete the 30 credit-hour requirement beyond the requirements of their specialization. A maximum of 6 credit hours may be taken with a subject code other than CS or CSE.</li>
+            <li>The OMSCS degree requires students to complete the requirements of one <a href="https://omscs.gatech.edu/specializations" target="_blank" rel="noreferrer">specialization</a>. Specializations each require 15 to 18 credit hours, and a grade of B or above is required for all courses fulfilling specialization requirements. The remaining 12-15 hours (4-5 courses) are "free" electives and can be any courses offered through the OMSCS program. A grade of C or above is required for free electives.</li>
+            <li>The OMSCS degree requires students to complete 30 total credit hours (10 courses). A maximum of 6 credit hours may be taken at the 4000-level and/or with a subject code other than CS or CSE.</li>
             <li>A cumulative GPA of 3.0 is required to graduate.</li>
-            <li>To be able to continue in the program after the first 12 months from your date of matriculation, you must complete a foundational coursework requirement of 2 courses with a grade of B or better.</li>
+            <li>To be able to continue in the program after the first 12 months (3 consecutive semesters) from your date of matriculation, you must complete a foundational coursework requirement of 2 courses with a grade of B or better. New students are restricted to foundational courses only until this requirement is met.</li>
+            <li>Students must complete the degree within 6 years of matriculation.</li>
+            <li>New students are strongly recommended to start with only one class. Maximum enrollment is 7 credit hours in Fall/Spring and 5 credit hours in Summer.</li>
+            <li>Students may take up to 2 consecutive semesters off (summer counts as a semester). Sitting out 3 or more consecutive semesters requires applying for readmission with no guarantee of being readmitted. Note: withdrawing (receiving a "W") counts as enrollment for that semester, but dropping a course does not.</li>
           </ul>
         </div>
         <Planner />

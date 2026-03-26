@@ -22,6 +22,10 @@ const Stats = ({ selectedCourses }) => {
 
   const foundationalCount = selectedCourses.filter(course => course.isFoundational).length;
 
+  const nonCsCseHours = selectedCourses
+    .filter(course => course.codes && course.codes.every(code => !code.startsWith('CS') && !code.startsWith('CSE')))
+    .reduce((sum, course) => sum + (course.creditHours || 3), 0);
+
   return (
     <div className="stats-section">
       <h2 className="stats-title">Plan Statistics</h2>
@@ -66,8 +70,17 @@ const Stats = ({ selectedCourses }) => {
           <Card className="stats-card h-100 shadow-sm">
             <Card.Body>
               <Card.Title className="text-muted small text-uppercase">Foundational</Card.Title>
-              <Card.Text className="h3 mb-0">{foundationalCount}</Card.Text>
-              <Card.Text className="text-muted small">Required: 2 (B or better)</Card.Text>
+              <Card.Text className="h3 mb-0">{foundationalCount} / 2</Card.Text>
+              <Card.Text className="text-muted small">B or better, within 12 months</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4} sm={6}>
+          <Card className={`stats-card h-100 shadow-sm${nonCsCseHours > 6 ? ' border-danger' : ''}`}>
+            <Card.Body>
+              <Card.Title className="text-muted small text-uppercase">Non-CS/CSE Hours</Card.Title>
+              <Card.Text className="h3 mb-0">{nonCsCseHours} / 6</Card.Text>
+              <Card.Text className="text-muted small">{nonCsCseHours > 6 ? 'Exceeds 6-hour limit' : 'Max 6 hours allowed'}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
