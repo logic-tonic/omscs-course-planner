@@ -11,7 +11,7 @@ import Stats from "./Stats";
 import CourseScatterPlot from "./CourseScatterPlot";
 import './Planner.css';
 import data from "./data.json";
-import {LocalStorageKeys, Specialization, writeToLocalStorage, readFromLocalStorage} from './utils.js'
+import {LocalStorageKeys, Specialization, writeToLocalStorage, readFromLocalStorage, freeElectives} from './utils.js'
 
 
 function Planner() {
@@ -210,7 +210,7 @@ function Planner() {
       { chosenCourseList.length !== 0 && <h4>Check <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml" target="_blank" rel="noreferrer">omscs.rocks</a> for course availability.</h4>}
 
       {chosenCourseList.length > 0 && <Stats selectedCourses={chosenCourseList} />}
-      <CourseScatterPlot allCourses={reviews} selectedCourses={chosenCourseList} />
+      <CourseScatterPlot allCourses={reviews.filter(c => freeElectives.includes(c.name))} selectedCourses={chosenCourseList} />
 
       {chosenCourseList.length > 0 && (
         <div className="footer-buttons">
