@@ -19,21 +19,21 @@
 
 
 .Planner .button-container .danger {
-    background-color: var(--danger-red);
-    border-color: var(--danger-red);
-    color: var(--white);
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+    color: var(--color-text-on-primary);
     transition: all 0.2s ease;
 }
 
 .Planner .button-container .danger:hover {
-    background-color: var(--danger-red-dark);
-    border-color: var(--danger-red-dark);
+    background-color: #DC2626;
+    border-color: #DC2626;
 }
 
 .Planner .eatstash-button {
-    background-color: var(--accent-gold) !important;
-    border: 1px solid var(--accent-gold);
-    color: var(--white);
+    background-color: var(--color-accent) !important;
+    border: 1px solid var(--color-accent);
+    color: var(--color-text-on-primary);
     padding: 8px 14px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -46,9 +46,9 @@
 }
 
 .Planner .eatstash-button:hover {
-    background-color: var(--accent-gold-light) !important;
-    border-color: var(--accent-gold-light);
-    color: var(--white);
+    background-color: var(--color-accent-hover) !important;
+    border-color: var(--color-accent-hover);
+    color: var(--color-text-on-primary);
     transform: translateY(-2px);
 }
 
@@ -57,7 +57,7 @@
 }
 
 .Planner .count {
-    color: var(--success-green);
+    color: var(--color-success);
     font-weight: 600;
 }
 
@@ -91,8 +91,8 @@
     position: sticky;
     top: 0;
     z-index: 1020;
-    background: var(--white);
-    border-bottom: 1px solid var(--neutral-medium);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
     padding: 0.6rem 1rem;
     margin: 1rem -2rem 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
@@ -103,7 +103,7 @@
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--success-green);
+    color: var(--color-primary);
 }
 
 .tab-pane {

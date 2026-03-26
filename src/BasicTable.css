@@ -5,8 +5,8 @@
 .tableContainer .table thead {
     position: sticky;
     top: 0;
-    background-color: var(--neutral-light);
-    border-bottom: 2px solid var(--neutral-medium);
+    background-color: var(--color-surface-raised);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .tableContainer .course-checkbox {

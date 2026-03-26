@@ -29,7 +29,7 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
         mode: 'markers',
         type: 'scatter',
         marker: { 
-          color: '#8884d8', 
+          color: '#A1A1AA',
           opacity: 0.5, 
           size: 10,
           line: { color: 'white', width: 1 }
@@ -50,7 +50,7 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
         mode: 'markers',
         type: 'scatter',
         marker: { 
-          color: '#ff7300', 
+          color: '#6366F1',
           size: 14, 
           symbol: 'star',
           line: { color: 'white', width: 1.5 }
@@ -111,12 +111,12 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
                   font: {
                     size: 16,
                     family: 'Arial, sans-serif',
-                    color: '#495057',
+                    color: '#52525B',
                     weight: 'bold'
                   }
                 },
-                gridcolor: '#f0f0f0',
-                zerolinecolor: '#f0f0f0',
+                gridcolor: '#F0F0F3',
+                zerolinecolor: '#F0F0F3',
                 tickfont: { size: 12 }
               },
               yaxis: {
@@ -125,12 +125,12 @@ const CourseScatterPlot = ({ allCourses, selectedCourses }) => {
                   font: {
                     size: 16,
                     family: 'Arial, sans-serif',
-                    color: '#495057',
+                    color: '#52525B',
                     weight: 'bold'
                   }
                 },
-                gridcolor: '#f0f0f0',
-                zerolinecolor: '#f0f0f0',
+                gridcolor: '#F0F0F3',
+                zerolinecolor: '#F0F0F3',
                 tickfont: { size: 12 }
               },
               hoverlabel: {

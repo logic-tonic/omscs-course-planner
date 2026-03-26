@@ -21,3 +21,20 @@
 
 - `data.json` is ~170KB/3800 lines — don't read the whole thing unnecessarily
 - Course data is nested under `pageProps.courses[]`
+
+## Design Direction
+
+- Modern, clean tool aesthetic (Linear/Notion vibes)
+- Audience: busy OMSCS grad students who want to plan fast
+- Desktop-primary, responsive on tablet/mobile
+- System font stack, no custom fonts
+- Suggest a cohesive color palette — propose it before implementing
+- Prefer subtle shadows, rounded corners, good whitespace
+
+## UX Priorities
+
+- Course picker is the core interaction — info sections above it should be collapsed by default
+- Degree requirements should be accessible but not dominate the page
+- Selection state must be visually obvious
+- Progress toward degree completion should be visible without scrolling to the bottom
+- Tables should be scannable — don't show every column by default

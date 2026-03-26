@@ -1,17 +1,52 @@
 /* Color Palette */
 :root {
-  --primary-blue: #1E5FA8;
-  --primary-blue-dark: #164A85;
-  --accent-gold: #B8860B;
-  --accent-gold-dark: #8B6914;
-  --accent-gold-light: #D4A929;
-  --success-green: #2D7A3E;
-  --danger-red: #C92A2A;
-  --danger-red-dark: #A61E1E;
-  --neutral-light: #F5F5F5;
-  --neutral-medium: #E0E0E0;
-  --text-dark: #212529;
-  --text-medium: #6C757D;
+  /* Primary */
+  --color-primary: #6366F1;
+  --color-primary-hover: #4F46E5;
+  --color-primary-subtle: #EEF2FF;
+
+  /* Accent */
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+
+  /* Backgrounds & Surfaces */
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #F4F4F5;
+  --color-surface-hover: #F0F0F3;
+
+  /* Borders */
+  --color-border: #E4E4E7;
+  --color-border-subtle: #F0F0F3;
+  --color-border-strong: #A1A1AA;
+
+  /* Text */
+  --color-text: #18181B;
+  --color-text-secondary: #52525B;
+  --color-text-tertiary: #A1A1AA;
+  --color-text-on-primary: #FFFFFF;
+
+  /* Semantic — Status */
+  --color-success: #22C55E;
+  --color-success-bg: #F0FDF4;
+  --color-warning: #F59E0B;
+  --color-warning-bg: #FFFBEB;
+  --color-danger: #EF4444;
+  --color-danger-bg: #FEF2F2;
+
+  /* Legacy aliases (migrating away) */
+  --primary-blue: #6366F1;
+  --primary-blue-dark: #4F46E5;
+  --accent-gold: #F59E0B;
+  --accent-gold-dark: #D97706;
+  --accent-gold-light: #F59E0B;
+  --success-green: #22C55E;
+  --danger-red: #EF4444;
+  --danger-red-dark: #DC2626;
+  --neutral-light: #F4F4F5;
+  --neutral-medium: #E4E4E7;
+  --text-dark: #18181B;
+  --text-medium: #52525B;
   --white: #FFFFFF;
 }
 
@@ -21,7 +56,8 @@ body {
     'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--text-dark);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
@@ -33,22 +69,22 @@ body {
 
 /* Link Styles */
 a {
-  color: var(--primary-blue);
+  color: var(--color-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--primary-blue-dark);
+  color: var(--color-primary-hover);
   text-decoration: underline;
 }
 
 a:visited {
-  color: var(--primary-blue-dark);
+  color: var(--color-primary-hover);
 }
 
 a:active {
-  color: var(--accent-gold-dark);
+  color: var(--color-primary-hover);
 }
 
 button, input, select, textarea, .btn {
@@ -118,11 +154,11 @@ body h6 {
 /* Section Layout */
 .section-plan,
 .section-review {
-  border: 1px solid var(--neutral-medium);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2.5rem;
-  background: var(--white);
+  background: var(--color-surface);
 }
 
 .section-header {
@@ -131,15 +167,15 @@ body h6 {
   font-weight: 700;
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--primary-blue);
+  border-bottom: 2px solid var(--color-primary);
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
 .section-step {
-  background: var(--primary-blue);
-  color: var(--white);
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
