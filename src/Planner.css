@@ -102,8 +102,22 @@
 .sticky-counter-text {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-primary);
+}
+
+.sticky-counter-text.requirement-met {
+    color: var(--color-success);
+}
+
+.sticky-counter-text.requirement-warn {
+    color: var(--color-danger);
+}
+
+.sticky-counter-separator {
+    color: var(--color-border-strong);
+    margin: 0 0.75rem;
+    font-weight: 300;
 }
 
 .tab-pane {

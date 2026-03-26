@@ -186,7 +186,17 @@ function Planner() {
         </div>
         {chosenSpecialization && (
           <div className="sticky-counter">
-            <span className="sticky-counter-text">{chosenCourseList.length}/10 classes selected</span>
+            <span className={`sticky-counter-text ${chosenCourseList.length >= 10 ? 'requirement-met' : ''}`}>
+              {chosenCourseList.length}/10 classes
+            </span>
+            <span className="sticky-counter-separator">|</span>
+            <span className={`sticky-counter-text ${chosenCourseList.filter(c => c.isFoundational).length >= 2 ? 'requirement-met' : ''}`}>
+              {chosenCourseList.filter(c => c.isFoundational).length}/2 foundational
+            </span>
+            <span className="sticky-counter-separator">|</span>
+            <span className={`sticky-counter-text ${chosenCourseList.filter(c => { const code = c.codes?.[0] || ''; return !code.startsWith('CS') && !code.startsWith('CSE'); }).reduce((sum, c) => sum + (c.creditHours || 3), 0) > 6 ? 'requirement-warn' : ''}`}>
+              {chosenCourseList.filter(c => { const code = c.codes?.[0] || ''; return !code.startsWith('CS') && !code.startsWith('CSE'); }).reduce((sum, c) => sum + (c.creditHours || 3), 0)}/6 non-CS hrs
+            </span>
           </div>
         )}
         { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
