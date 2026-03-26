@@ -5,8 +5,14 @@
 .tableContainer .table thead {
     position: sticky;
     top: 0;
+    z-index: 1010;
     background-color: var(--color-surface-raised);
     border-bottom: 2px solid var(--color-border);
+}
+
+/* Offset thead below the sticky counter when inside the plan section */
+.section-plan .tableContainer .table thead {
+    top: 33px;
 }
 
 .tableContainer .table .col-codes {
