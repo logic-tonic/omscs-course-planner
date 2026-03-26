@@ -9,6 +9,10 @@
     border-bottom: 2px solid var(--color-border);
 }
 
+.tableContainer .table .row-selected td {
+    background-color: var(--color-primary-subtle) !important;
+}
+
 .tableContainer .course-checkbox {
     height: 24px;
     width: 24px;

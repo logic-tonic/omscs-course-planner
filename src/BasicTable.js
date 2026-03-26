@@ -123,6 +123,7 @@ function BasicTable({ tableId, rows, addToCourseList, showCheckbox, showIndex = 
                 ) => (
                   <tr
                     key={id}
+                    className={selectedCourses && selectedCourses.find(row => row.id === id) ? 'row-selected' : ''}
                   >
                     { showIndex && <td>{index + 1}</td> }
                     { showCheckbox && <td>
