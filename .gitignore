@@ -27,3 +27,6 @@ yarn-error.log*
 
 # data backups
 src/data-backups/
+
+# task tracking
+TASKS.md
