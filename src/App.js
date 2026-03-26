@@ -7,7 +7,8 @@ function App() {
     <div className="App">
       <Header />
       <div className="App-body">
-        <div className="requirements">
+        <details className="section-intro" open>
+          <summary>Program Info & Degree Requirements</summary>
           <h2>Overview</h2>
           <p>Welcome! This site helps you plan your course list for Georgia Tech's Online Masters of Science in Computer Science (OMSCS). Data is from the <a href="https://omscs.gatech.edu/current-courses" target="_blank" rel="noreferrer">official OMSCS site</a> and <a href="https://www.omscentral.com/" target='blank' rel="noreferrer">OMSCentral</a> and is regularly updated.
           </p>
@@ -37,7 +38,7 @@ function App() {
 
           <p><b>Note:</b> OMSCS students can pursue <a href="https://omscs.gatech.edu/research-opportunities" target="_blank" rel="noreferrer">research opportunities</a> beyond the standard course list. <b><a href="https://vip.gatech.edu/" target="_blank" rel="noreferrer">Vertically Integrated Projects (VIP)</a></b> courses count as free electives only—they cannot fulfill specialization or foundational requirements, and because they use the "VIP" subject code, they count toward the 6-hour non-CS/CSE and/or 4000-level limit. Contact the <a href="https://vip.gatech.edu/contact" target="_blank" rel="noreferrer">VIP program directly</a> for more info. <b>CS 8903</b> is a faculty-approved, letter-graded, typically 3-credit independent project that counts as a free elective (not foundational, not non-CS/CSE). Research projects are emailed out before each semester, and you can apply via <a href="https://buzzme.cc.gatech.edu/" target="_blank" rel="noreferrer">Buzzme</a>.</p>
 
-        </div>
+        </details>
         <Planner />
       </div>
     </div>

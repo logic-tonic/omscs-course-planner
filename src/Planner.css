@@ -86,6 +86,26 @@
     opacity: 0.9;
 }
 
+/* Sticky course counter */
+.sticky-counter {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background: var(--white);
+    border-bottom: 1px solid var(--neutral-medium);
+    padding: 0.6rem 1rem;
+    margin: 1rem -2rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.sticky-counter-text {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--success-green);
+}
+
 .tab-pane {
     opacity: 100;
 }
@@ -111,6 +131,15 @@
 }
 
 @media screen and (max-width: 768px) {
+    .sticky-counter {
+        margin: 1rem -1rem 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .sticky-counter-text {
+        font-size: 0.95rem;
+    }
+
     .button-container {
         flex-direction: column;
         align-items: flex-start;

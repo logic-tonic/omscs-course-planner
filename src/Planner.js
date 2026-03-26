@@ -169,27 +169,37 @@ function Planner() {
 
   return (
     <div className="Planner">
-      <h2>Pick a specialization to begin:</h2>
-      <div className="button-container">
-        <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization">
-          <option>Choose your specialization</option>
-          <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
-          <option value="Computing Systems">Computing Systems</option>
-          <option value="Human-Computer Interaction">Human-Computer Interaction</option>
-          <option value="Artificial Intelligence">Artificial Intelligence</option>
-          <option value="Machine Learning">Machine Learning</option>
-          <option value="Computer Graphics">Computer Graphics</option>
-        </Form.Select>
-        {chosenSpecialization && <Button variant="danger" className="danger" onClick={ handleReset }>Clear all choices</Button> }
+      <div className="section-plan">
+        <div className="section-header"><span className="section-step">1</span> Build Your Plan</div>
+        <h2>Pick a specialization to begin:</h2>
+        <div className="button-container">
+          <Form.Select size="lg" onChange={ handleSpecializationChange } value={chosenSpecialization} className="specialization">
+            <option>Choose your specialization</option>
+            <option value="Computational Perception & Robotics">Computational Perception & Robotics</option>
+            <option value="Computing Systems">Computing Systems</option>
+            <option value="Human-Computer Interaction">Human-Computer Interaction</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Computer Graphics">Computer Graphics</option>
+          </Form.Select>
+          {chosenSpecialization && <Button variant="danger" className="danger" onClick={ handleReset }>Clear all choices</Button> }
+        </div>
+        {chosenSpecialization && (
+          <div className="sticky-counter">
+            <span className="sticky-counter-text">{chosenCourseList.length}/10 classes selected</span>
+          </div>
+        )}
+        { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+        { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+        { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+        { chosenSpecialization === Specialization.ArtificialIntelligence && <ArtificialIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+        { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
+        { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
       </div>
-      { chosenSpecialization === Specialization.ComputingSystems && <ComputingSystemsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      { chosenSpecialization === Specialization.HumanComputerInteraction && <HCIPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      { chosenSpecialization === Specialization.ComputationalPerceptionAndRobotics && <ComputationalPerceptionRoboticsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      { chosenSpecialization === Specialization.ArtificialIntelligence && <ArtificialIntelligencePlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      { chosenSpecialization === Specialization.MachineLearning && <MachineLearningPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      { chosenSpecialization === Specialization.ComputerGraphicsPlanner && <ComputerGraphicsPlanner courses={reviews} addToCourseList={ addToCourseList } selectedCourses={ chosenCourseList } /> }
-      
-      <h2>Chosen Course Plan:</h2>
+
+      <div className="section-review">
+        <div className="section-header"><span className="section-step">2</span> Review Your Plan</div>
+        <h2>Chosen Course Plan:</h2>
       <h3 className="count">{chosenCourseList.length}/10 classes selected</h3>
       <Tabs defaultActiveKey="simple" id="course-plan-tabs" className="mb-3">
         <Tab eventKey="simple" title="Simple view">
@@ -236,6 +246,7 @@ function Planner() {
           </a>
         </div>
       )}
+      </div>
     </div>
   );
 }

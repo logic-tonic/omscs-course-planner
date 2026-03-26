@@ -5,6 +5,47 @@
   margin: 0;
 }
 
+/* Collapsible intro section */
+.section-intro {
+  border: 1px solid var(--neutral-medium);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  background: var(--white);
+}
+
+.section-intro summary {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  color: var(--primary-blue);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-intro summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-intro summary::before {
+  content: '\25B6';
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.section-intro[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.section-intro summary:hover {
+  color: var(--primary-blue-dark);
+}
+
 @media only screen and (max-width: 600px) {
   .App {
     margin: 2em;
@@ -12,5 +53,14 @@
 
   .App .Header h1 {
     margin-bottom: 2vh;
+  }
+
+  .section-intro {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-intro summary {
+    font-size: 1.25rem;
   }
 }
