@@ -4,7 +4,7 @@ import GithubIcon from "./assets/github-mark.png";
 
 export default function Header() {
   return (
-    <div className='Header'>
+    <header className='Header'>
         <h1>OMSCS Course Planner</h1>
         <div className="actions">
           <Button 
@@ -37,6 +37,6 @@ export default function Header() {
             <img className="github" src={ GithubIcon } alt="Github"/>
           </a>
         </div>
-    </div>
+    </header>
   );
 }

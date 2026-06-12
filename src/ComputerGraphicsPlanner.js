@@ -32,7 +32,7 @@ function ComputerGraphicsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</p>
       <h3>Pick one (1) of: </h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
@@ -40,7 +40,7 @@ function ComputerGraphicsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</p>
       <h2>Electives (9 hours)</h2>
       <h3>Pick three (3) of: </h3>
       <BasicTable 
@@ -49,7 +49,7 @@ function ComputerGraphicsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => electives.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => electives.includes(course.name)).length}</p>
       <h2>Free Electives (15 hours)</h2>
       <h3>Pick five (5) of:</h3>
       <BasicTable 
@@ -58,7 +58,7 @@ function ComputerGraphicsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h5 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)).length}</h5>
+      <p className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)).length}</p>
     </div>
   );
 }

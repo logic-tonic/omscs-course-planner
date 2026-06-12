@@ -31,7 +31,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, sele
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</p>
       <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
@@ -39,7 +39,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, sele
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h5 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h5>
+      <p className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</p>
       <h2>Electives (9 hours)</h2>
       <h3>Pick three (3) courses from Perception and Robotics, with at least one (1) course from each:</h3>
       <h4>Perception</h4>
@@ -49,7 +49,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, sele
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartOne.includes(course.name)).length}</h5>
+      <p className="count">Picked {selectedCourses.filter(course => electivesPartOne.includes(course.name)).length}</p>
       <h4>Robotics</h4>
       <BasicTable 
         rows={ courses.filter(course => electivesPartTwo.includes(course.name)) }
@@ -57,7 +57,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, sele
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h5 className="count">Picked {selectedCourses.filter(course => electivesPartTwo.includes(course.name)).length}</h5>
+      <p className="count">Picked {selectedCourses.filter(course => electivesPartTwo.includes(course.name)).length}</p>
       <h2>Free Electives (15 hours)</h2>
       <h3>Pick five (5) free electives.</h3>
       <h4>Free electives may be any courses offered through the OMSCS program. If you take extra specialization core courses and/or extra specialization elective courses beyond what is required in your chosen specialization, the extra course(s) can be used only towards the "free" electives.</h4>
@@ -67,7 +67,7 @@ function ComputationalPerceptionRoboticsPlanner({ courses, addToCourseList, sele
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h5 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)).length}</h5>
+      <p className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electivesPartOne).concat(electivesPartTwo).includes(course.name)).length}</p>
     </div>
   );
 }
