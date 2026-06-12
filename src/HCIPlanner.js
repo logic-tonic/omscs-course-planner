@@ -14,7 +14,8 @@ const electivesPartOne = [
 ];
 const electivesPartTwo = [
   "Introduction to Health Informatics",
-  "Game Artificial Intelligence"
+  "Game Artificial Intelligence",
+  "Health Sensing and Interventions"
 ];
 
 function HCIPlanner({ courses, addToCourseList, selectedCourses }) {

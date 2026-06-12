@@ -10,10 +10,13 @@ const coreCoursesPartTwo = [
 ];
 const electives = [
   "Introduction to Computer Vision",
+  "Artificial Intelligence",
   "AI, Ethics, and Society",
   "Network Science: Methods and Applications",
   "Reinforcement Learning and Decision Making",
   "Deep Learning",
+  "Game Artificial Intelligence",
+  "Knowledge-Based AI",
   "Machine Learning for Trading",
   "Natural Language Processing",
   "Data and Visual Analytics",

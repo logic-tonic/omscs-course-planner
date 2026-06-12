@@ -56,59 +56,7 @@ function Planner() {
       if (review.name === "Security Incident Response") { return Object.assign(review, { officialURL: "https://omscs.gatech.edu/cs-6261-security-incident-response" }) }
       else { return review }
     })
-    return cleanedReviews.concat([
-      {
-        "codes": [
-          "CS-8803-O23"
-        ],
-        "creditHours": 3,
-        "description": "This is a research oriented course that covers new developments in Internet measurement techniques, with an emphasis on topics related to reliability, freedom and security of modern Internet platforms.",
-        "id": "external-import-CS-8803-O23",
-        "isDeprecated": false,
-        "isFoundational": false,
-        "name": "Modern Internet Research Methods",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o23-modern-internet-research-methods",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-8803-O20"
-        ],
-        "creditHours": 3,
-        "description": "Quantum computing promises exponential speedups for a class of important problems.",
-        "id": "external-import-CS-8803-O20",
-        "isDeprecated": false,
-        "isFoundational": false,
-        "name": "Quantum Hardware",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o20-quantum-hardware",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-8803-O27"
-        ],
-        "creditHours": 3,
-        "description": "The CGAI course offers a comprehensive introduction to modern computer graphics, focusing on techniques that have emerged over the past decade, with a particular emphasis on AI-powered advancements in modeling, rendering, simulation, and animation.",
-        "id": "external-import-CS-8803-O27",
-        "isDeprecated": false,
-        "isFoundational": false,
-        "name": "Computer Graphics in the AI Era",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o27-computer-graphics-ai-era",
-        "reviewCount": 0,
-      },
-      {
-        "codes": [
-          "CS-8803-O29"
-        ],
-        "creditHours": 3,
-        "description": "Health sensing and interventions (HSI) aims to bridge the gap between the medical sciences and computing.",
-        "isDeprecated": false,
-        "isFoundational": false,
-        "name": "Health Sensing and Interventions",
-        "officialURL": "https://omscs.gatech.edu/cs-8803-o29-health-sensing-and-interventions",
-        "reviewCount": 0,
-      }
-    ])
+    return cleanedReviews
   }
   
   const fetchReviews = () => {

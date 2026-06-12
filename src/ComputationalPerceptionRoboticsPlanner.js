@@ -13,7 +13,8 @@ const electivesPartOne = [
   "Computational Photography",
   "Introduction to Computer Vision",
   "Cyber Physical Design and Analysis",
-  "Natural Language Processing"
+  "Natural Language Processing",
+  "Health Sensing and Interventions"
 ];
 const electivesPartTwo = [
   "Artificial Intelligence Techniques for Robotics",
