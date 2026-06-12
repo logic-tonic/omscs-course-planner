@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="App-body">
+      <main className="App-body">
         <details className="section-intro">
           <summary>Program Info & Degree Requirements</summary>
           <h2>Overview</h2>
@@ -40,7 +40,7 @@ function App() {
 
         </details>
         <Planner />
-      </div>
+      </main>
     </div>
   );
 }

@@ -81,11 +81,13 @@
 }
 
 /* Notes */
-.section-plan h5 {
+.section-plan h5,
+.section-plan .note {
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--color-text-tertiary);
     font-style: italic;
+    margin: 0.5rem 0;
 }
 
 .Planner .count {
@@ -93,6 +95,7 @@
     font-weight: 600;
     font-size: 1rem !important;
     font-style: normal !important;
+    margin: 0.5rem 0;
 }
 
 .Planner .footer-buttons {
@@ -139,7 +142,7 @@
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
     font-weight: 700;
     font-size: 1rem;
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 .sticky-counter-text.requirement-met {

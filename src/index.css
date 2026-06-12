@@ -4,6 +4,8 @@
   --color-primary: #6366F1;
   --color-primary-hover: #4F46E5;
   --color-primary-subtle: #EEF2FF;
+  /* darker shade for text on white — meets WCAG AA 4.5:1 */
+  --color-primary-text: #4F46E5;
 
   /* Accent */
   --color-accent: #F59E0B;
@@ -27,11 +29,11 @@
   --color-text-on-primary: #FFFFFF;
 
   /* Semantic — Status */
-  --color-success: #16A34A;
+  --color-success: #15803D;
   --color-success-bg: #F0FDF4;
   --color-warning: #F59E0B;
   --color-warning-bg: #FFFBEB;
-  --color-danger: #EF4444;
+  --color-danger: #DC2626;
   --color-danger-bg: #FEF2F2;
 
 }

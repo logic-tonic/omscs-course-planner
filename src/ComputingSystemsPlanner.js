@@ -40,7 +40,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
   return (
     <div>
       <h2>Core Courses (9 hours)</h2>
-      <h5>Note: Any Core Courses in excess of the 9 hour (3 class) requirement may be used as Computing Systems Electives.</h5>
+      <p className="note">Note: Any Core Courses in excess of the 9 hour (3 class) requirement may be used as Computing Systems Electives.</p>
       <h3>Pick two (2) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartOne.includes(course.name)) }
@@ -48,7 +48,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => coreCoursesPartOne.includes(course.name)).length}</p>
       <h3>Pick one (1) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCoursesPartTwo.includes(course.name)) }
@@ -56,7 +56,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</p>
       <h2>Electives (9 hours)</h2>
       <h3>Pick three (3) of:</h3>
       <BasicTable 
@@ -65,7 +65,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => electives.includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => electives.includes(course.name)).length}</p>
       <h2>Free Electives (12 hours)</h2>
       <h3>Pick four (4) free electives.</h3>
       <h4>Free electives may be any courses offered through the OMSCS program. If you take extra specialization core courses and/or extra specialization elective courses beyond what is required in your chosen specialization, the extra course(s) can be used only towards the "free" electives.</h4>
@@ -75,7 +75,7 @@ function ComputingSystemsPlanner({ courses, addToCourseList, selectedCourses }) 
         showCheckbox
         selectedCourses={ selectedCourses }
       />
-      <h4 className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)).length}</h4>
+      <p className="count">Picked {selectedCourses.filter(course => freeElectives.includes(course.name) && !coreCoursesPartOne.concat(coreCoursesPartTwo).concat(electives).includes(course.name)).length}</p>
     </div>
   );
 }
