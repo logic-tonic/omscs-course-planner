@@ -21,7 +21,7 @@ const electivesPartTwo = [
 function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
-      <h2>Core Courses</h2>
+      <h2>Core Courses (6 hours)</h2>
       <h3>Pick two (2) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => coreCourses.includes(course.name)) }
@@ -30,7 +30,7 @@ function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
         selectedCourses={ selectedCourses }
       />
       <h5 className="count">Picked {selectedCourses.filter(course => coreCourses.includes(course.name)).length}</h5>
-      <h2>Electives</h2>
+      <h2>Electives (9 hours)</h2>
       <h3>Pick three (3) courses from the two sub-areas below, including at least one from each sub-area:</h3>
       <h4>Sub-area: Design and evaluation concepts</h4>
       <BasicTable 
@@ -48,7 +48,7 @@ function HCIPlanner({ courses, addToCourseList, selectedCourses }) {
         selectedCourses={ selectedCourses }
       />
       <h5 className="count">Picked {selectedCourses.filter(course => electivesPartTwo.includes(course.name)).length}</h5>
-      <h2>Free Electives</h2>
+      <h2>Free Electives (15 hours)</h2>
       <h3>Pick five (5) free electives.</h3>
       <h4>Free electives may be any courses offered through the OMSCS program. If you take extra specialization core courses and/or extra specialization elective courses beyond what is required in your chosen specialization, the extra course(s) can be used only towards the "free" electives.</h4>
       <BasicTable 

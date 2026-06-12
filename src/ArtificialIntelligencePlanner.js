@@ -28,7 +28,7 @@ const electivesPartTwo = [
 function ArtificialIntelligencePlanner({ courses, addToCourseList, selectedCourses }) {
   return (
     <div>
-      <h2>Core Courses</h2>
+      <h2>Core Courses (9 hours)</h2>
       <h5>Note: Any core courses in excess of the 9 hour requirement may be used as electives.</h5>
       <h3>Pick one (1) of:</h3>
       <BasicTable 
@@ -46,7 +46,7 @@ function ArtificialIntelligencePlanner({ courses, addToCourseList, selectedCours
         selectedCourses={ selectedCourses }
       />
       <h5 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h5>
-      <h2>Electives</h2>
+      <h2>Electives (6 hours)</h2>
       <h3>Pick two (2) courses from the two (2) sections below:</h3>
       <h4>AI Methods:</h4>
       <BasicTable
@@ -64,7 +64,7 @@ function ArtificialIntelligencePlanner({ courses, addToCourseList, selectedCours
         selectedCourses={ selectedCourses }
       />
       <h5 className="count">Picked {selectedCourses.filter(course => electivesPartTwo.includes(course.name)).length}</h5>
-      <h2>Free Electives</h2>
+      <h2>Free Electives (15 hours)</h2>
       <h3>Pick five (5) free electives.</h3>
       <h4>Free electives may be any courses offered through the OMSCS program. If you take extra specialization core courses and/or extra specialization elective courses beyond what is required in your chosen specialization, the extra course(s) can be used only towards the "free" electives.</h4>
       <BasicTable 
