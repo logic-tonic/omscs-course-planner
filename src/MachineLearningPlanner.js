@@ -45,6 +45,7 @@ function MachineLearningPlanner({ courses, addToCourseList, selectedCourses }) {
       />
       <h5 className="count">Picked {selectedCourses.filter(course => coreCoursesPartTwo.includes(course.name)).length}</h5>
       <h2>Electives (9 hours)</h2>
+      <h5>Note: Elective ML courses must have at least 1/3 of their graded content based on Machine Learning.</h5>
       <h3>Pick three (3) of:</h3>
       <BasicTable 
         rows={ courses.filter(course => electives.includes(course.name)) }
