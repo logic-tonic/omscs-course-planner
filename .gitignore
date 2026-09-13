@@ -28,5 +28,10 @@ yarn-error.log*
 # data backups
 src/data-backups/
 
+# scraper reports
+course-differences-*.json
+scraped-data-*.json
+new-courses-*.json
+
 # task tracking
 TASKS.md
